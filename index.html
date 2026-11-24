@@ -3,25 +3,28 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>어썸엔터테인먼트 10주년 종무식 AI 영상 기획안 (v13)</title>
+  <title>어썸엔터테인먼트 10주년 종무식 AI 영상 기획안 (v14)</title>
   <style>
 
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
 :root {
   --bg-stage: #0F1115;
   --aw-blue: #1D7FF2;
   --aw-blue-soft: #EDF5FF;
   --aw-ink: #0B0C0E;
   --aw-mist: #F6F8FB;
-  --font-sans: "Pretendard Variable", "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, -apple-system, sans-serif;
-  --font-mono: ui-monospace, "JetBrains Mono", Consolas, monospace;
+  --font-sans: "Pretendard Variable", "Pretendard", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --font-mono: var(--font-sans);
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
+button, input, textarea, select { font-family: inherit; }
 html, body {
   width: 100%; height: 100%;
   background: var(--bg-stage);
   color: #F4F4F5;
   font-family: var(--font-sans);
   font-size: 16px;
+  letter-spacing: -0.015em;
   word-break: keep-all;
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
@@ -30,7 +33,6 @@ html, body {
 body.scroll-mode { overflow-y: auto; overflow-x: hidden; }
 .c-blue { color: #54A5FF; }
 .p-0 { padding: 0 !important; }
-.max-w-980 { max-width: 980px; }
 .gap-14 { gap: 14px; }
 .gap-16 { gap: 16px; }
 .gap-18 { gap: 18px; }
@@ -47,7 +49,7 @@ body.scroll-mode { overflow-y: auto; overflow-x: hidden; }
 .row-between { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; }
 
 .ln { display: block; }
-h1, h2, h3, h4, .sb-punch, .bo-banner, .closing-thesis, .cs-sub { text-wrap: balance; }
+.sb-punch, .bo-banner, .closing-thesis, .cs-sub { text-wrap: balance; }
 p, li, .sc-vis, .scope-line, .tcr-foot, .na-line { text-wrap: pretty; }
 
 .chap-link:focus, .aw-btn-primary:focus, .hub-card:focus, .tl-card:focus, .inline-jump-btn:focus { outline: none; }
@@ -84,7 +86,7 @@ body.scroll-mode .slide-wrap .slide { transform: scale(var(--scroll-scale, 0.72)
 .jump-back-pill {
   display: none; position: absolute; top: 14px; right: 14px; z-index: 40;
   background: var(--aw-ink); color: #FFFFFF; border: 1px solid var(--aw-blue);
-  padding: 6px 14px; font-size: 15px; font-weight: 800; cursor: pointer; border-radius: 6px;
+  padding: 6px 14px; font-size: 15px; font-weight: 800; cursor: pointer; border-radius: 6px; white-space: nowrap;
 }
 body.scroll-mode .slide-wrap:hover .jump-back-pill { display: inline-flex; }
 
@@ -109,7 +111,7 @@ body.scroll-mode .side-arrow { display: none; }
   padding: 0 18px; z-index: 80; gap: 10px;
 }
 .dock-left { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-.dock-counter { font-size: 15px; font-weight: 800; font-family: var(--font-mono); color: #FFFFFF; }
+.dock-counter { font-size: 15px; font-weight: 700; font-family: var(--font-sans); font-variant-numeric: tabular-nums; color: #FFFFFF; }
 .dock-progress { width: 64px; height: 4px; background: #23262E; overflow: hidden; border-radius: 2px; }
 #progressFill { height: 100%; width: 2.86%; background: var(--aw-blue); transition: width 0.2s ease; }
 .dock-nav { display: flex; align-items: center; gap: 16px; }
@@ -138,123 +140,125 @@ body.scroll-mode .side-arrow { display: none; }
 
 .page-dot {
   position: absolute; bottom: 18px; right: 26px;
-  color: #94A3B8; font-family: var(--font-mono);
+  color: #94A3B8; font-family: var(--font-sans); font-variant-numeric: tabular-nums;
   font-size: 16px; font-weight: 700; pointer-events: none; z-index: 20;
 }
 .s-body { flex: 1; min-height: 0; display: flex; flex-direction: column; justify-content: space-between; }
 
 /* Awesome Wordmark */
 .aw-mark { display: inline-flex; align-items: center; gap: 9px; }
-.aw-word { font-size: 23px; font-weight: 900; letter-spacing: -0.03em; }
+.aw-word { font-size: 23px; font-weight: 800; letter-spacing: -0.03em; }
 .aw-pill {
-  font-size: 16px; font-weight: 900; font-family: var(--font-mono);
+  font-size: 16px; font-weight: 800; font-family: var(--font-sans); font-variant-numeric: tabular-nums;
   color: var(--aw-blue); border: 1.5px solid var(--aw-blue);
   padding: 1px 8px; line-height: 1.3; border-radius: 4px;
 }
 
 /* Split Covers */
-.aw-cover-split { display: grid; grid-template-columns: 540px 740px; width: 1280px; height: 720px; }
-.cs-left { padding: 44px 42px 44px 52px; display: flex; flex-direction: column; justify-content: space-between; }
+.aw-cover-split { display: grid; grid-template-columns: 560px 720px; width: 1280px; height: 720px; }
+.cs-left { padding: 44px 38px 44px 48px; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; }
 .cs-left.dark { background: var(--aw-ink); color: #FFFFFF; }
 .cs-left.light { background: #FFFFFF; color: var(--aw-ink); }
-.cs-body { display: flex; flex-direction: column; gap: 16px; }
-.cs-tag { font-size: 16px; font-weight: 800; font-family: var(--font-mono); }
+.cs-body { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.cs-tag { font-size: 16px; font-weight: 700; font-family: var(--font-sans); font-variant-numeric: tabular-nums; letter-spacing: 0.01em; white-space: nowrap; }
 .cs-tag.dark { color: #54A5FF; }
 .cs-tag.light { color: var(--aw-blue); }
-.cs-h1 { font-size: 44px; line-height: 1.22; font-weight: 900; letter-spacing: -0.025em; }
+.cs-h1 { font-size: 38px; line-height: 1.24; font-weight: 800; letter-spacing: -0.03em; }
+.cs-h1 .ln { white-space: nowrap; }
 .cs-h1.dark { color: #FFFFFF; }
 .cs-h1.light { color: var(--aw-ink); }
-.cs-sub { font-size: 19px; line-height: 1.58; }
+.cs-sub { font-size: 18.5px; line-height: 1.58; letter-spacing: -0.015em; }
 .cs-sub.dark { color: #E4E6EB; }
 .cs-sub.light { color: #27272A; }
 .cs-foot { border-top: 1px solid #23262E; padding-top: 20px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
 .cs-foot.light { border-top-color: #E5E7EB; }
-.cs-meta { font-size: 16.5px; font-weight: 700; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.cs-meta { font-size: 16.5px; font-weight: 700; display: flex; gap: 10px; align-items: center; flex-wrap: nowrap; white-space: nowrap; }
 .cs-meta.dark { color: #E4E4E7; }
 .cs-meta.light { color: #27272A; }
 .cs-dot { color: var(--aw-blue); }
 .aw-btn-primary {
   background: var(--aw-blue); color: #FFFFFF; border: none; border-radius: 6px;
-  padding: 12px 24px; font-size: 17px; font-weight: 900; cursor: pointer;
+  padding: 12px 24px; font-size: 17px; font-weight: 700; cursor: pointer; white-space: nowrap;
 }
 .aw-btn-primary:hover { background: #146AD1; }
-.cs-photo { width: 740px; height: 720px; overflow: hidden; }
+.cs-photo { width: 720px; height: 720px; overflow: hidden; }
 .cs-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.cs-mosaic { display: flex; flex-direction: column; gap: 4px; background: var(--aw-ink); height: 720px; }
+.cs-mosaic { display: flex; flex-direction: column; gap: 4px; background: var(--aw-ink); width: 720px; height: 720px; }
 .csm-top { flex: 1.15; overflow: hidden; }
 .csm-bot { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 4px; }
 .csm-bot > div { overflow: hidden; }
 .cs-mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Typography */
-.eyebrow { font-size: 16px; font-weight: 900; font-family: var(--font-mono); margin-bottom: 6px; }
+.eyebrow { font-size: 16px; font-weight: 700; font-family: var(--font-sans); font-variant-numeric: tabular-nums; letter-spacing: 0.01em; margin-bottom: 6px; white-space: nowrap; }
 .eyebrow.dark { color: #54A5FF; }
 .eyebrow.light { color: var(--aw-blue); }
-.h2-dark { font-size: 40px; line-height: 1.2; font-weight: 900; letter-spacing: -0.02em; color: #FFFFFF; }
-.h2-dark-sm { font-size: 32px; line-height: 1.24; font-weight: 900; letter-spacing: -0.02em; color: #FFFFFF; }
-.h2-light { font-size: 40px; line-height: 1.2; font-weight: 900; letter-spacing: -0.025em; color: var(--aw-ink); }
-.h2-light-sm { font-size: 31px; line-height: 1.24; font-weight: 900; letter-spacing: -0.02em; color: var(--aw-ink); }
-.h2-ppf { font-size: 29px; line-height: 1.24; font-weight: 900; letter-spacing: -0.02em; }
+.h2-dark { font-size: 34px; line-height: 1.24; font-weight: 800; letter-spacing: -0.03em; color: #FFFFFF; white-space: nowrap; }
+.h2-dark-sm { font-size: 29px; line-height: 1.24; font-weight: 800; letter-spacing: -0.025em; color: #FFFFFF; white-space: nowrap; }
+.h2-light { font-size: 34px; line-height: 1.24; font-weight: 800; letter-spacing: -0.03em; color: var(--aw-ink); white-space: nowrap; }
+.h2-light-sm { font-size: 29px; line-height: 1.24; font-weight: 800; letter-spacing: -0.025em; color: var(--aw-ink); white-space: nowrap; }
+.h2-ppf { font-size: 29px; line-height: 1.24; font-weight: 800; letter-spacing: -0.025em; white-space: nowrap; }
 .h2-ppf.dark { color: #FFFFFF; }
 .h2-ppf.light { color: var(--aw-ink); }
 .hl-blue { color: var(--aw-blue); background: transparent; padding: 0; }
 
 /* S02 KPI */
 .kpi-col { border-top: 2px solid var(--aw-ink); padding-top: 16px; }
-.kpi-num { font-size: 56px; font-weight: 900; letter-spacing: -0.03em; color: var(--aw-ink); line-height: 1.05; margin-bottom: 8px; }
-.kpi-label { font-size: 20px; font-weight: 800; color: var(--aw-blue); margin-bottom: 6px; }
-.kpi-desc { font-size: 17.5px; line-height: 1.5; color: #3F3F46; }
-.scope-line { border-top: 1px solid #CBD5E1; padding: 14px 56px 0 0; font-size: 17.5px; line-height: 1.52; color: #18181B; }
+.kpi-num { font-size: 56px; font-weight: 800; font-variant-numeric: tabular-nums; letter-spacing: -0.03em; color: var(--aw-ink); line-height: 1.05; margin-bottom: 8px; white-space: nowrap; }
+.kpi-label { font-size: 20px; font-weight: 800; color: var(--aw-blue); margin-bottom: 6px; white-space: nowrap; }
+.kpi-desc { font-size: 17.5px; line-height: 1.5; color: #3F3F46; letter-spacing: -0.015em; }
+.scope-line { border-top: 1px solid #CBD5E1; padding: 14px 56px 0 0; font-size: 17.5px; line-height: 1.52; color: #18181B; letter-spacing: -0.015em; }
 
 /* S03 3-Track Hub */
 .hub-card {
   border: 1px solid #E5E7EB; border-top: 3px solid var(--aw-blue); border-radius: 8px;
-  background: #FFFFFF; padding: 18px; text-align: left; cursor: pointer;
+  background: #FFFFFF; padding: 18px; text-align: left; cursor: pointer; min-width: 0;
   display: flex; flex-direction: column; transition: transform 0.18s, border-color 0.18s;
 }
 .hub-card:hover { transform: translateY(-3px); border-color: var(--aw-blue); }
 .hub-img { width: 100%; height: 192px; overflow: hidden; margin-bottom: 14px; flex-shrink: 0; border-radius: 6px; }
 .hub-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.hub-top { display: flex; justify-content: space-between; align-items: center; font-size: 16px; font-weight: 900; font-family: var(--font-mono); color: var(--aw-blue); margin-bottom: 6px; }
-.hub-tag { font-family: var(--font-sans); color: #52525B; font-size: 16px; font-weight: 700; }
-.hub-title { font-size: 22px; font-weight: 900; color: var(--aw-ink); line-height: 1.25; margin-bottom: 10px; }
-.hub-desc { font-size: 17.5px; line-height: 1.52; color: #27272A; }
+.hub-top { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 16px; font-weight: 800; font-family: var(--font-sans); font-variant-numeric: tabular-nums; color: var(--aw-blue); margin-bottom: 6px; white-space: nowrap; }
+.hub-tag { font-family: var(--font-sans); color: #52525B; font-size: 16px; font-weight: 600; white-space: nowrap; }
+.hub-title { font-size: 21px; font-weight: 800; color: var(--aw-ink); line-height: 1.26; letter-spacing: -0.025em; margin-bottom: 3px; white-space: nowrap; }
+.hub-sub { font-size: 16px; font-weight: 700; color: var(--aw-blue); line-height: 1.32; letter-spacing: -0.015em; margin-bottom: 10px; white-space: nowrap; }
+.hub-desc { font-size: 17px; line-height: 1.52; color: #27272A; letter-spacing: -0.015em; }
 .hub-foot {
   margin-top: auto; border-top: 1px solid #F1F5F9; padding-top: 12px;
   display: flex; justify-content: space-between; align-items: center;
-  font-size: 16.5px; color: #18181B; gap: 8px;
+  font-size: 16px; color: #18181B; gap: 8px; white-space: nowrap;
 }
-.hub-foot strong { color: var(--aw-blue); font-weight: 900; flex-shrink: 0; }
+.hub-foot strong { color: var(--aw-blue); font-weight: 800; flex-shrink: 0; }
 
 /* Hairline 3-Col Slides (S06 & S18) */
-.hair-col { border-left: 1px solid #262A34; padding-left: 24px; display: flex; flex-direction: column; justify-content: center; }
+.hair-col { border-left: 1px solid #262A34; padding-left: 24px; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
 .hair-col.light { border-left-color: #CBD5E1; }
-.hc-num { font-size: 42px; font-weight: 900; color: #54A5FF; font-family: var(--font-mono); margin-bottom: 10px; }
+.hc-num { font-size: 40px; font-weight: 800; color: #54A5FF; font-family: var(--font-sans); font-variant-numeric: tabular-nums; margin-bottom: 10px; }
 .hc-num.light { color: var(--aw-blue); font-size: 36px; padding: 0; background: transparent; }
-.hc-title { font-size: 23px; font-weight: 900; margin-bottom: 12px; line-height: 1.3; }
+.hc-title { font-size: 20px; font-weight: 800; margin-bottom: 12px; line-height: 1.3; letter-spacing: -0.02em; white-space: nowrap; }
 .hc-title.dark { color: #FFFFFF; }
 .hc-title.light { color: var(--aw-ink); }
-.hc-body { font-size: 18px; line-height: 1.58; }
+.hc-body { font-size: 18px; line-height: 1.58; letter-spacing: -0.015em; }
 .hc-body.dark { color: #ECEEF2; }
 .hc-body.light { color: #18181B; }
-.closing-thesis { font-size: 18.5px; font-weight: 800; border-top: 1px solid; padding: 14px 56px 0 0; }
+.closing-thesis { font-size: 18.5px; font-weight: 700; border-top: 1px solid; padding: 14px 56px 0 0; letter-spacing: -0.015em; }
 .closing-thesis.dark { color: #54A5FF; border-top-color: #262A34; }
 .closing-thesis.light { color: var(--aw-ink); border-top-color: #CBD5E1; }
 
 /* Dual Col Rule (S04 & S16) */
 .two-col-rule { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; flex: 1; min-height: 0; align-items: stretch; }
-.tcr-col { display: flex; flex-direction: column; justify-content: space-between; }
+.tcr-col { display: flex; flex-direction: column; justify-content: space-between; min-width: 0; }
 .tcr-col.right-pad { padding-right: 16px; }
-.tcr-h2 { font-size: 31px; font-weight: 900; color: #FFFFFF; line-height: 1.24; margin-top: 4px; }
+.tcr-h2 { font-size: 26px; font-weight: 800; color: #FFFFFF; line-height: 1.24; letter-spacing: -0.025em; margin-top: 4px; white-space: nowrap; }
 .tcr-stack { display: flex; flex-direction: column; gap: 16px; margin: 12px 0; }
 .split2-row { border-top: 1px solid #262A34; padding-top: 12px; }
-.split2-row h4 { font-size: 19px; font-weight: 800; color: #54A5FF; margin-bottom: 6px; }
-.split2-row p { font-size: 17.5px; line-height: 1.54; color: #ECEEF2; }
-.tcr-foot { border-left: 3px solid var(--aw-blue); padding: 6px 48px 6px 14px; font-size: 17px; font-weight: 700; color: #F4F4F5; line-height: 1.5; }
+.split2-row h4 { font-size: 18px; font-weight: 800; color: #54A5FF; margin-bottom: 6px; letter-spacing: -0.02em; white-space: nowrap; }
+.split2-row p { font-size: 17.5px; line-height: 1.54; color: #ECEEF2; letter-spacing: -0.015em; }
+.tcr-foot { border-left: 3px solid var(--aw-blue); padding: 6px 48px 6px 14px; font-size: 17px; font-weight: 700; color: #F4F4F5; line-height: 1.5; letter-spacing: -0.015em; }
 
 /* Storyboard Split + Diptych */
 .sb-split { display: grid; grid-template-columns: 660px 620px; width: 1280px; height: 720px; }
-.sb-left { display: flex; flex-direction: column; height: 720px; }
+.sb-left { display: flex; flex-direction: column; height: 720px; min-width: 0; }
 .sb-left.dark { background: var(--aw-ink); }
 .sb-left.light { background: #FFFFFF; }
 .sb-photo { width: 660px; height: 405px; overflow: hidden; flex-shrink: 0; }
@@ -263,32 +267,32 @@ body.scroll-mode .side-arrow { display: none; }
 .sb-diptych > div { overflow: hidden; }
 .sb-diptych img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .sb-left-info { flex: 1; min-height: 0; padding: 24px 32px 26px 46px; display: flex; flex-direction: column; justify-content: center; gap: 20px; }
-.sb-punch { border-left: 3px solid var(--aw-blue); font-size: 20px; font-weight: 800; line-height: 1.48; padding: 4px 0 4px 18px; background: transparent; }
+.sb-punch { border-left: 3px solid var(--aw-blue); font-size: 20px; font-weight: 800; line-height: 1.48; padding: 4px 0 4px 18px; background: transparent; letter-spacing: -0.02em; }
 .sb-punch.dark { color: #FFFFFF; }
 .sb-punch.light { color: var(--aw-ink); }
 .sb-specs { border-top: 1px solid #262A34; padding-top: 14px; display: flex; flex-direction: column; gap: 8px; }
 .sb-specs.light { border-top-color: #E5E7EB; }
 .sb-specs > div { display: flex; align-items: center; gap: 12px; font-size: 16px; line-height: 1.38; flex-wrap: nowrap; }
-.sb-specs strong { font-family: var(--font-mono); font-size: 16px; font-weight: 900; flex-shrink: 0; }
+.sb-specs strong { font-family: var(--font-sans); font-variant-numeric: tabular-nums; font-size: 16px; font-weight: 800; flex-shrink: 0; }
 .sb-specs.dark strong { color: #54A5FF; }
 .sb-specs.light strong { color: var(--aw-blue); }
 .sb-specs.dark span { color: #ECEEF2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .sb-specs.light span { color: #3F3F46; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .inline-jump-btn {
   margin-left: auto; background: var(--aw-blue); color: #FFFFFF; border: none; border-radius: 6px;
-  padding: 6px 14px; font-size: 16px; font-weight: 900; cursor: pointer; flex-shrink: 0;
+  padding: 6px 14px; font-size: 16px; font-weight: 700; cursor: pointer; flex-shrink: 0; white-space: nowrap;
 }
 
-.sb-right { height: 720px; padding: 36px 48px 54px 38px; display: flex; flex-direction: column; justify-content: flex-start; gap: 20px; }
+.sb-right { height: 720px; padding: 36px 48px 54px 38px; display: flex; flex-direction: column; justify-content: flex-start; gap: 20px; min-width: 0; }
 .sb-right.dark { background: var(--aw-ink); border-left: 1px solid #23262E; }
 .sb-right.light { background: #FFFFFF; border-left: 1px solid #F1F5F9; }
-.sb-tag { font-size: 16px; font-weight: 800; font-family: var(--font-mono); display: inline-block; }
+.sb-tag { font-size: 16px; font-weight: 700; font-family: var(--font-sans); font-variant-numeric: tabular-nums; display: inline-block; white-space: nowrap; }
 .sb-tag.dark { color: #54A5FF; }
 .sb-tag.light { color: var(--aw-blue); background: transparent; padding: 0; }
-.sb-title { font-size: 31px; font-weight: 900; line-height: 1.22; margin-top: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.sb-title { font-size: 27px; font-weight: 800; line-height: 1.24; letter-spacing: -0.025em; margin-top: 8px; white-space: nowrap; }
 .sb-title.dark { color: #FFFFFF; }
 .sb-title.light { color: var(--aw-ink); }
-.sb-sub { font-size: 17px; font-weight: 600; line-height: 1.38; margin-top: 6px; }
+.sb-sub { font-size: 16.5px; font-weight: 600; line-height: 1.38; margin-top: 6px; letter-spacing: -0.015em; white-space: nowrap; }
 .sb-sub.dark { color: #A1A1AA; }
 .sb-sub.light { color: #64748B; }
 
@@ -296,15 +300,15 @@ body.scroll-mode .side-arrow { display: none; }
 .sb-row { border-top: 1px solid; padding-top: 12px; }
 .sb-row.dark { border-top-color: #262A34; }
 .sb-row.light { border-top-color: #E4E7EC; }
-.sb-row span { display: block; font-size: 16px; font-weight: 900; font-family: var(--font-mono); margin-bottom: 6px; }
+.sb-row span { display: block; font-size: 16px; font-weight: 800; font-family: var(--font-sans); font-variant-numeric: tabular-nums; margin-bottom: 6px; white-space: nowrap; }
 .sb-row.dark span { color: #54A5FF; }
 .sb-row.light span { color: var(--aw-blue); }
-.sb-row p { font-size: 17.5px; line-height: 1.54; }
+.sb-row p { font-size: 17.5px; line-height: 1.54; letter-spacing: -0.015em; }
 .sb-row.dark p { color: #ECEEF2; }
 .sb-row.light p { color: #18181B; }
 
 .sb-beats { list-style: none; display: flex; flex-direction: column; gap: 6px; }
-.sb-beats li { position: relative; padding-left: 16px; font-size: 17.5px; line-height: 1.5; }
+.sb-beats li { position: relative; padding-left: 16px; font-size: 17.5px; line-height: 1.5; letter-spacing: -0.015em; }
 .sb-beats li::before {
   content: ""; position: absolute; left: 2px; top: 10px;
   width: 5px; height: 5px; border-radius: 999px; background: var(--aw-blue);
@@ -319,23 +323,23 @@ body.scroll-mode .side-arrow { display: none; }
 }
 .tl-card {
   border: 1px solid #E5E7EB; border-top: 3px solid var(--aw-blue); border-radius: 8px;
-  background: #FFFFFF; padding: 12px; text-align: left; cursor: pointer;
+  background: #FFFFFF; padding: 12px; text-align: left; cursor: pointer; min-width: 0;
   display: flex; flex-direction: column; gap: 5px; transition: transform 0.18s;
 }
 .tl-card.dark { border-color: #272B36; border-top: 3px solid var(--aw-blue); background: #14171F; }
 .tl-card:hover { transform: translateY(-2px); border-color: var(--aw-blue); }
 .tl-thumb { width: 100%; height: 102px; overflow: hidden; margin-bottom: 4px; flex-shrink: 0; border-radius: 6px; }
 .tl-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.tl-meta { font-size: 16px; font-weight: 900; font-family: var(--font-mono); color: var(--aw-blue); }
+.tl-meta { font-size: 16px; font-weight: 800; font-family: var(--font-sans); font-variant-numeric: tabular-nums; color: var(--aw-blue); white-space: nowrap; }
 .tl-meta.dark { color: #54A5FF; }
-.tl-title { font-size: 18.5px; font-weight: 900; line-height: 1.24; color: var(--aw-ink); }
+.tl-title { font-size: 18px; font-weight: 800; line-height: 1.26; letter-spacing: -0.02em; color: var(--aw-ink); white-space: nowrap; }
 .tl-title.dark { color: #FFFFFF; }
-.tl-note { font-size: 16px; line-height: 1.38; color: #3F3F46; }
+.tl-note { font-size: 16px; line-height: 1.38; color: #3F3F46; letter-spacing: -0.015em; }
 .tl-note.dark { color: #D4D4D8; }
 
 .bo-banner {
   background: #141923; border-left: 3px solid var(--aw-blue); color: #FFFFFF;
-  padding: 10px 16px; font-size: 17.5px; font-weight: 800; line-height: 1.4; border-radius: 6px;
+  padding: 10px 16px; font-size: 17px; font-weight: 700; line-height: 1.4; border-radius: 6px; white-space: nowrap;
 }
 .bo-banner.light {
   background: var(--aw-mist); border-left: 3px solid var(--aw-blue); color: var(--aw-ink);
@@ -344,80 +348,80 @@ body.scroll-mode .side-arrow { display: none; }
 /* S14, S15, S16, S26 Poetic Stanza Script Spreads */
 .script-col {
   background: #FFFFFF; border: 1px solid #E5E7EB; border-top: 3px solid var(--aw-blue); border-radius: 8px;
-  padding: 18px 20px; display: flex; flex-direction: column; gap: 10px;
+  padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0;
 }
 .script-col.wide { padding: 20px 24px; gap: 12px; }
 .script-col.accent-blue { background: #FFFFFF; border-top-color: var(--aw-ink); }
-.sc-tc { font-size: 16px; font-weight: 900; font-family: var(--font-mono); color: var(--aw-blue); }
-.sc-title { font-size: 21px; font-weight: 900; color: var(--aw-ink); line-height: 1.24; }
-.sc-vis { font-size: 16px; line-height: 1.44; color: #27272A; background: var(--aw-mist); border-left: 3px solid var(--aw-blue); padding: 8px 12px; font-weight: 600; border-radius: 6px; }
+.sc-tc { font-size: 16px; font-weight: 800; font-family: var(--font-sans); font-variant-numeric: tabular-nums; color: var(--aw-blue); white-space: nowrap; }
+.sc-title { font-size: 19px; font-weight: 800; color: var(--aw-ink); line-height: 1.26; letter-spacing: -0.02em; white-space: nowrap; }
+.sc-vis { font-size: 16px; line-height: 1.44; color: #27272A; background: var(--aw-mist); border-left: 3px solid var(--aw-blue); padding: 8px 12px; font-weight: 600; border-radius: 6px; letter-spacing: -0.015em; }
 
 .sc-na { display: flex; flex-direction: column; gap: 12px; }
 .na-stanza { display: flex; flex-direction: column; gap: 3px; }
-.na-line { display: block; font-size: 17px; line-height: 1.48; color: #18181B; font-weight: 600; }
+.na-line { display: block; font-size: 17px; line-height: 1.48; color: #18181B; font-weight: 600; letter-spacing: -0.015em; }
 .sc-na.wide .na-line { font-size: 18px; line-height: 1.52; }
-.na-line.dark { display: block; font-size: 17px; line-height: 1.52; color: #FFFFFF; font-weight: 700; }
+.na-line.dark { display: block; font-size: 17px; line-height: 1.52; color: #FFFFFF; font-weight: 700; letter-spacing: -0.015em; }
 
 .bo-items-wrap { display: flex; flex-direction: column; gap: 12px; }
 .bo-item { border-top: 1px solid #E5E7EB; padding-top: 9px; }
-.bo-item-tc { font-size: 16px; font-weight: 900; font-family: var(--font-mono); color: var(--aw-blue); margin-bottom: 4px; }
+.bo-item-tc { font-size: 16px; font-weight: 800; font-family: var(--font-sans); font-variant-numeric: tabular-nums; color: var(--aw-blue); margin-bottom: 4px; white-space: nowrap; }
 .bo-item-lines { display: flex; flex-direction: column; gap: 2px; }
 .bo-item-lines .na-line { font-size: 16.5px; line-height: 1.44; }
 
 .sc2-stack { display: flex; flex-direction: column; gap: 18px; }
 .sc2-row { border-top: 1px solid #262A34; padding-top: 12px; display: flex; flex-direction: column; gap: 8px; }
-.sc2-head { font-size: 17px; font-weight: 900; color: #54A5FF; font-family: var(--font-mono); }
-.sc2-vis { font-size: 16px; line-height: 1.44; color: #D4D4D8; }
+.sc2-head { font-size: 17px; font-weight: 800; color: #54A5FF; font-family: var(--font-sans); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sc2-vis { font-size: 16px; line-height: 1.44; color: #D4D4D8; letter-spacing: -0.015em; }
 .sc2-na { border-left: 3px solid var(--aw-blue); padding: 10px 14px; background: #141923; display: flex; flex-direction: column; gap: 4px; border-radius: 6px; }
 .sr-only-copy { position: fixed; left: -9999px; top: 0; width: 1px; height: 1px; opacity: 0; }
 
 /* S28 Character Roster */
-.char-col { display: flex; flex-direction: column; border-top: 2px solid var(--aw-ink); padding-top: 12px; }
+.char-col { display: flex; flex-direction: column; border-top: 2px solid var(--aw-ink); padding-top: 12px; min-width: 0; }
 .char-img { width: 100%; height: 175px; overflow: hidden; margin-bottom: 10px; flex-shrink: 0; border-radius: 6px; }
 .char-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.char-chan { font-size: 16px; font-weight: 800; font-family: var(--font-mono); color: var(--aw-blue); margin-bottom: 3px; }
-.char-name { font-size: 22px; font-weight: 900; color: var(--aw-ink); margin-bottom: 8px; }
-.char-lock { font-size: 16.5px; line-height: 1.48; color: #18181B; }
-.char-snd { margin-top: auto; border-top: 1px solid #CBD5E1; padding: 8px 14px 6px 10px; font-size: 16px; font-weight: 700; line-height: 1.42; color: var(--aw-ink); background: var(--aw-mist); border-radius: 6px; }
+.char-chan { font-size: 16px; font-weight: 700; font-family: var(--font-sans); font-variant-numeric: tabular-nums; color: var(--aw-blue); margin-bottom: 3px; white-space: nowrap; }
+.char-name { font-size: 20px; font-weight: 800; color: var(--aw-ink); margin-bottom: 8px; letter-spacing: -0.02em; white-space: nowrap; }
+.char-lock { font-size: 16.5px; line-height: 1.48; color: #18181B; letter-spacing: -0.015em; }
+.char-snd { margin-top: auto; border-top: 1px solid #CBD5E1; padding: 8px 14px 6px 10px; font-size: 16px; font-weight: 700; line-height: 1.42; color: var(--aw-ink); background: var(--aw-mist); border-radius: 6px; letter-spacing: -0.015em; }
 
 /* S32 & S33 Verified References */
-.ref-line-card { display: flex; flex-direction: column; justify-content: space-between; padding: 14px 0 12px 0; text-decoration: none; }
+.ref-line-card { display: flex; flex-direction: column; justify-content: space-between; padding: 14px 0 12px 0; text-decoration: none; min-width: 0; }
 .ref-line-card.light { border-top: 2px solid var(--aw-ink); color: var(--aw-ink); }
 .ref-line-card.light.key-ref { border-top: 3px solid var(--aw-blue); background: var(--aw-mist); padding: 14px 14px 12px 14px; border-radius: 6px; }
 .ref-line-card.dark { border-top: 2px solid var(--aw-blue); color: #FFFFFF; }
 .ref-line-card:hover .rlc-title { text-decoration: underline; }
-.rlc-top { display: flex; justify-content: space-between; font-size: 16px; font-weight: 800; margin-bottom: 8px; }
+.rlc-top { display: flex; justify-content: space-between; font-size: 16px; font-weight: 700; margin-bottom: 8px; white-space: nowrap; }
 .rlc-top.light { color: var(--aw-blue); }
 .rlc-top.dark { color: #54A5FF; }
-.rlc-title { font-size: 19px; font-weight: 900; line-height: 1.3; margin-bottom: 8px; }
-.rlc-note { font-size: 16.5px; line-height: 1.5; }
+.rlc-title { font-size: 17.5px; font-weight: 800; line-height: 1.3; letter-spacing: -0.02em; margin-bottom: 8px; white-space: nowrap; }
+.rlc-note { font-size: 16.5px; line-height: 1.5; letter-spacing: -0.015em; }
 .rlc-note.light { color: #27272A; }
 .rlc-note.dark { color: #ECEEF2; }
 
 /* S34 Bonus 5 Pool */
-.bonus-col { background: #FFFFFF; border: 1px solid #E5E7EB; border-top: 3px solid var(--aw-blue); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; }
+.bonus-col { background: #FFFFFF; border: 1px solid #E5E7EB; border-top: 3px solid var(--aw-blue); border-radius: 8px; padding: 12px; display: flex; flex-direction: column; min-width: 0; }
 .bonus-img { width: 100%; height: 170px; overflow: hidden; margin-bottom: 12px; flex-shrink: 0; border-radius: 6px; }
 .bonus-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.bonus-tag { font-size: 16px; font-weight: 900; font-family: var(--font-mono); color: var(--aw-blue); margin-bottom: 4px; }
-.bonus-title { font-size: 20px; font-weight: 900; color: var(--aw-ink); margin-bottom: 8px; line-height: 1.24; }
-.bonus-desc { font-size: 16.5px; line-height: 1.5; color: #27272A; }
+.bonus-tag { font-size: 16px; font-weight: 800; font-family: var(--font-sans); font-variant-numeric: tabular-nums; color: var(--aw-blue); margin-bottom: 4px; white-space: nowrap; }
+.bonus-title { font-size: 17px; font-weight: 800; color: var(--aw-ink); margin-bottom: 8px; line-height: 1.26; letter-spacing: -0.02em; white-space: nowrap; }
+.bonus-desc { font-size: 16.5px; line-height: 1.5; color: #27272A; letter-spacing: -0.015em; }
 
 /* S35 Close & Checklist */
 .close-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; flex: 1; min-height: 0; align-items: stretch; }
-.c2-left, .c2-right { display: flex; flex-direction: column; }
-.c2-sub { font-size: 18px; line-height: 1.54; color: #ECEEF2; margin: 12px 0 18px 0; }
+.c2-left, .c2-right { display: flex; flex-direction: column; min-width: 0; }
+.c2-sub { font-size: 18px; line-height: 1.54; color: #ECEEF2; margin: 12px 0 18px 0; letter-spacing: -0.015em; }
 .slot-rows { display: flex; flex-direction: column; gap: 15px; margin-top: auto; }
 .sr-item { border-top: 1px solid #262A34; padding-top: 12px; display: flex; gap: 14px; align-items: baseline; }
-.sr-k { font-size: 17px; font-weight: 900; color: #54A5FF; font-family: var(--font-mono); }
-.sr-item p { font-size: 17px; line-height: 1.48; color: #ECEEF2; }
+.sr-k { font-size: 17px; font-weight: 800; color: #54A5FF; font-family: var(--font-sans); font-variant-numeric: tabular-nums; }
+.sr-item p { font-size: 17px; line-height: 1.48; color: #ECEEF2; letter-spacing: -0.015em; }
 .c2-rhead { display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px; border-bottom: 1px solid #262A34; padding-bottom: 12px; }
-.c2-rhead span { font-size: 21px; font-weight: 800; color: #FFFFFF; }
-.c2-rhead strong { font-size: 18px; font-family: var(--font-mono); color: #54A5FF; }
+.c2-rhead span { font-size: 21px; font-weight: 800; color: #FFFFFF; white-space: nowrap; }
+.c2-rhead strong { font-size: 18px; font-family: var(--font-sans); font-variant-numeric: tabular-nums; color: #54A5FF; white-space: nowrap; }
 .chk-stack { display: flex; flex-direction: column; gap: 14px; flex: 1; }
-.chk-line { display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid #262A34; padding-bottom: 13px; cursor: pointer; font-size: 17.5px; line-height: 1.46; color: #F4F4F5; }
+.chk-line { display: flex; align-items: flex-start; gap: 12px; border-bottom: 1px solid #262A34; padding-bottom: 13px; cursor: pointer; font-size: 17.5px; line-height: 1.46; color: #F4F4F5; letter-spacing: -0.015em; }
 .chk-line input { margin-top: 4px; accent-color: var(--aw-blue); width: 18px; height: 18px; flex-shrink: 0; }
 .chk-line.done { color: #54A5FF; }
-.sign-off-bar { margin-top: auto; padding-top: 14px; display: flex; justify-content: space-between; font-size: 16px; color: #A1A1AA; padding-right: 56px; }
+.sign-off-bar { margin-top: auto; padding-top: 14px; display: flex; justify-content: space-between; align-items: center; gap: 16px; font-size: 16px; color: #A1A1AA; padding-right: 48px; white-space: nowrap; }
 .sign-off-bar strong { color: #FFFFFF; }
 
 @media print {
@@ -455,7 +459,7 @@ body.scroll-mode .side-arrow { display: none; }
       <span class="aw-pill">10TH</span>
     </div>
           <div class="cs-body">
-            <div class="cs-tag dark">2016 → 2026 → 2036 · 3-TRACK FULL-AI DECK</div>
+            <div class="cs-tag dark">2016 → 2026 · 3-TRACK FULL-AI DECK</div>
             <h1 class="cs-h1 dark"><span class="ln">어썸엔터테인먼트 10주년</span><span class="ln">종무식 영상 기획안</span></h1>
             <p class="cs-sub dark">순수 감동 《당신의 15분》 · 신기획 성장 서사 《47,000개의 질문》 · 공식 캐릭터 《성수동 하루》까지, 억지 과장 없이 어썸의 본질만 담은 3대 노선</p>
           </div>
@@ -484,7 +488,7 @@ body.scroll-mode .side-arrow { display: none; }
       <div class="s-body">
         <div>
           <div class="eyebrow light">AWESOME ENTERTAINMENT · 2016–2026 FACT SHEET</div>
-          <h2 class="h2-light max-w-980">채널 하나가 아니다. <span class="hl-blue">177억 뷰를 만든 회사 전체의 10년</span>이다.</h2>
+          <h2 class="h2-light">채널 하나가 아닌, <span class="hl-blue">177억 뷰를 만든 어썸의 10년</span></h2>
         </div>
         <div class="grid-4 gap-26">
         <div class="kpi-col">
@@ -524,30 +528,33 @@ body.scroll-mode .side-arrow { display: none; }
         
       <div class="s-body gap-18">
         <div>
-          <div class="eyebrow light">PICK YOUR DIRECTION · CLICK ANY TRACK</div>
-          <h2 class="h2-light-sm">어썸의 본질로 설계한 <span class="hl-blue">3가지 순수 풀 AI 노선</span> — 클릭 시 해당 트랙으로 즉시 이동</h2>
+          <div class="eyebrow light">PICK YOUR DIRECTION · 카드 클릭 시 해당 트랙으로 즉시 이동</div>
+          <h2 class="h2-light-sm">어썸의 본질로 설계한 <span class="hl-blue">3가지 풀 AI 제작 노선</span></h2>
         </div>
         <div class="grid-3 gap-24 flex-1-row" style="padding-right: 14px;">
         <button type="button" class="hub-card" onclick="goToSlide(4)">
-          <div class="hub-img"><img data-kv="6" alt="《당신의 15분 — 177억 번의 미소》" /></div>
-          <div class="hub-top"><span>TRACK 01 · 순수 감동 5분</span><span class="hub-tag">05:00 · 6막 18컷</span></div>
-          <h3 class="hub-title">《당신의 15분 — 177억 번의 미소》</h3>
+          <div class="hub-img"><img data-kv="6" alt="《당신의 15분》" /></div>
+          <div class="hub-top"><span>TRACK 01</span><span class="hub-tag">05:00 · 6막 18컷</span></div>
+          <h3 class="hub-title">《당신의 15분》</h3>
+          <div class="hub-sub">177억 번의 미소 · 순수 감동</div>
           <p class="hub-desc">출근길 2호선·혼밥·2016 뚝섬·시청자 편지·오후 6시 정시 퇴근·96F 수미상관까지, 오직 순도 100% 감동으로 밀어붙이는 정통 브랜드 필름.</p>
-          <div class="hub-foot"><span>임직원·대표진·대중 울림 1순위</span><strong>자세히 보기 →</strong></div>
+          <div class="hub-foot"><span>임직원·대중 울림 1순위</span><strong>자세히 보기 →</strong></div>
         </button>
         <button type="button" class="hub-card" onclick="goToSlide(16)">
-          <div class="hub-img"><img data-kv="11" alt="《47,000개의 질문: 어느 시청자의 10년》" /></div>
-          <div class="hub-top"><span>TRACK 02 · 신기획 · 성장 서사</span><span class="hub-tag">04:00 · 6막 18컷</span></div>
-          <h3 class="hub-title">《47,000개의 질문: 어느 시청자의 10년》</h3>
+          <div class="hub-img"><img data-kv="11" alt="《47,000개의 질문》" /></div>
+          <div class="hub-top"><span>TRACK 02</span><span class="hub-tag">04:00 · 6막 18컷</span></div>
+          <h3 class="hub-title">《47,000개의 질문》</h3>
+          <div class="hub-sub">어느 시청자의 10년 · 성장 서사</div>
           <p class="hub-desc">2016년 스무 살의 밤 첫 질문부터 2026년 서른 살까지 — 시청자의 검색창 질문에 답해 온 어썸 47,000편의 10년을 한 사람의 성장으로 엮은 다큐 시네마.</p>
-          <div class="hub-foot"><span>지식·보다·어썸 본질 100% 관통</span><strong>자세히 보기 →</strong></div>
+          <div class="hub-foot"><span>지식·보다 본질 관통</span><strong>자세히 보기 →</strong></div>
         </button>
         <button type="button" class="hub-card" onclick="goToSlide(26)">
-          <div class="hub-img"><img data-kv="5" alt="《작은 친구들의 성수동 10주년 하루》" /></div>
-          <div class="hub-top"><span>TRACK 03 · 공식 캐릭터 단편</span><span class="hub-tag">02:30 · 성수 본사 올스타</span></div>
-          <h3 class="hub-title">《작은 친구들의 성수동 10주년 하루》</h3>
+          <div class="hub-img"><img data-kv="5" alt="《작은 친구들의 하루》" /></div>
+          <div class="hub-top"><span>TRACK 03</span><span class="hub-tag">02:30 · 성수 단편</span></div>
+          <h3 class="hub-title">《작은 친구들의 하루》</h3>
+          <div class="hub-sub">성수동 10주년 · 공식 캐릭터</div>
           <p class="hub-desc">오후 6시 모두 퇴근한 성수 본사에서 무사히·든든이·도도히·고도리가 10주년 축하 스케치북과 슬레이트를 몰래 준비하는 사랑스러운 단편.</p>
-          <div class="hub-foot"><span>IP 팬덤 &amp; 따뜻·유쾌 캐릭터형</span><strong>자세히 보기 →</strong></div>
+          <div class="hub-foot"><span>IP 팬덤 · 따뜻 캐릭터</span><strong>자세히 보기 →</strong></div>
         </button></div>
       </div>
     
@@ -562,21 +569,21 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="tcr-col">
           <div>
             <div class="eyebrow dark">3 AI PD PARALLEL PRODUCTION</div>
-            <h2 class="tcr-h2">어떤 트랙을 골라도 <span class="c-blue">PD 3인 동시 제작</span></h2>
+            <h2 class="tcr-h2">어떤 트랙이든 <span class="c-blue">PD 3인 병렬 제작</span></h2>
           </div>
           <div class="tcr-stack">
         <div class="split2-row">
-          <h4>AI PD 1 · 일상·질문 오프닝 · 2016 뚝섬 · 성우/사운드</h4>
+          <h4>AI PD 1 · 도입·뚝섬·사운드 마스터</h4>
           <p>아침 2호선·2016 자취방 첫 질문·뚝섬 창고 씬을 생성하고, 성우·ElevenLabs 내레이션 및 피아노·첼로 마스터 스템을 제작합니다.</p>
         </div>
 
         <div class="split2-row">
-          <h4>AI PD 2 · 호기심·전사 30+ · 시청자 편지 · 성장 서사</h4>
+          <h4>AI PD 2 · 우주·성장·시청자 편지</h4>
           <p>밤하늘 우주(보다)·2호선 첫 정장(지식·머니·책과삶)·시청자 편지 3편·성수 기획 회의실 씬과 깔끔한 질문 타이포 합성을 담당합니다.</p>
         </div>
 
         <div class="split2-row">
-          <h4>AI PD 3 · 18시 퇴근 · 공식 캐릭터 · 96F 마스터링</h4>
+          <h4>AI PD 3 · 18시 퇴근·캐릭터·피날레</h4>
           <p>성수 오후 6시 퇴근 노을·96F 수미상관 엔딩 및 무사히·든든이·도도히·고도리 공식 시트 1순위 컷(NO MUSIC)과 최종 색보정을 총괄합니다.</p>
         </div></div>
         </div>
@@ -587,12 +594,12 @@ body.scroll-mode .side-arrow { display: none; }
           </div>
           <div class="tcr-stack">
         <div class="split2-row">
-          <h4>01 · 개연성과 본질 집중 — 어썸의 실제 DNA만 남기다</h4>
+          <h4>01 · 어썸의 실제 DNA만 담은 개연성</h4>
           <p>어썸의 진짜 뿌리(엔지니어 출신 창업·직영 30+ 채널·10년 연속 흑자·47,000편의 해답·밤샘 없는 18시 퇴근·공식 IP)만으로 억지 과장 없이 3개 트랙을 설계했습니다.</p>
         </div>
 
         <div class="split2-row">
-          <h4>02 · 인물 립싱크 인터뷰 0초 — 100% 풀 AI 완주 구조</h4>
+          <h4>02 · 립싱크 0초, 100% 풀 AI 완주 구조</h4>
           <p>AI 인물 입 모양 어색함 없이 4~5분 감동을 완주하도록 3~5초 표정·뒷모습·손 매크로·사물 클로즈업·검색창/댓글 타이포 중심으로 구성했습니다.</p>
         </div></div>
           <div class="tcr-foot">원칙 — 3개 트랙 모두 억지 설정 없이 어썸의 실제 이야기만 담으며, 실사 촬영 0% 풀 AI로 즉시 제작 착수 가능합니다.</div>
@@ -617,8 +624,8 @@ body.scroll-mode .side-arrow { display: none; }
       <span class="aw-pill">10TH</span>
     </div>
           <div class="cs-body">
-            <div class="cs-tag light">TRACK 01 · 05:00 · PURE EMOTIONAL FULL AI</div>
-            <h1 class="cs-h1 light"><span class="ln">《당신의 15분</span><span class="ln">— 177억 번의 미소》</span></h1>
+            <div class="cs-tag light">TRACK 01 · 05:00 · PURE EMOTIONAL</div>
+            <h1 class="cs-h1 light"><span class="ln">《당신의 15분》</span><span class="ln">177억 번의 미소</span></h1>
             <p class="cs-sub light">개그와 과장을 덜어내고, 출근길 2호선·2016 뚝섬·시청자 편지 3편·오후 6시 정시 퇴근·96F 수미상관만으로 끝까지 채운 순도 100% 감동 필름</p>
           </div>
           <div class="cs-foot light">
@@ -639,24 +646,24 @@ body.scroll-mode .side-arrow { display: none; }
       <div class="s-body">
         <div>
           <div class="eyebrow dark">TRACK 01 STRATEGY · PURE EMOTIONAL CINEMA</div>
-          <h2 class="h2-dark max-w-980">중간 개그도 과장도 없이 <span class="c-blue">순도 100% 감동으로만 가는 이유</span></h2>
+          <h2 class="h2-dark">개그도 과장도 없이, <span class="c-blue">순도 100% 감동으로 가는 이유</span></h2>
         </div>
         <div class="grid-3 gap-32 flex-1-row">
         <div class="hair-col dark">
           <div class="hc-num dark">01</div>
-          <h3 class="hc-title dark">잡음 없는 순도 100% 감동 모먼트</h3>
+          <h3 class="hc-title dark">잡음 없는 순도 100% 감동</h3>
           <p class="hc-body dark">중간 개그 브레이크나 과장된 전환을 전부 비웠습니다. 첫 프레임 아침 2호선의 미소부터 마지막 수미상관 엔딩까지 단 한 번도 감정선이 끊어지지 않습니다.</p>
         </div>
 
         <div class="hair-col dark">
           <div class="hc-num dark">02</div>
-          <h3 class="hc-title dark">립싱크 0초 · 표정과 사물의 힘</h3>
+          <h3 class="hc-title dark">립싱크 0초 · 표정과 사물</h3>
           <p class="hc-body dark">어색한 AI 인터뷰 대신 3~5초 일상 미소, 2016 뚝섬 두 사람의 뒷모습, 시청자 편지 3편, 노을 지는 책상 위 닳은 삼각대와 18:00 퇴근 뒷모습으로 진심을 전합니다.</p>
         </div>
 
         <div class="hair-col dark">
           <div class="hc-num dark">03</div>
-          <h3 class="hc-title dark">‘177억 번의 미소’ 수미상관 철학</h3>
+          <h3 class="hc-title dark">177억 번의 미소 수미상관</h3>
           <p class="hc-body dark">177억 뷰를 차가운 숫자가 아니라 &#x27;대한민국 시청자의 심심했던 15분마다 피어난 177억 번의 미소&#x27;와 &#x27;만드는 사람을 먼저 지킨 10년&#x27;으로 아름답게 회수합니다.</p>
         </div></div>
         <p class="closing-thesis dark">핵심 — 대한민국 시청자의 가장 심심했던 하루 15분마다 피어난 &#x27;177억 번의 미소&#x27; 하나로 처음부터 끝까지 밀어붙입니다.</p>
@@ -673,7 +680,7 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="row-between">
           <div>
             <div class="eyebrow light">TRACK 01 TIMELINE · 05:00 (300s · PURE EMOTIONAL 6 ACTS · 18 CUTS)</div>
-            <h2 class="h2-light-sm">《당신의 15분 — 177억 번의 미소》 <span class="hl-blue">순수 감동 6막 지도</span></h2>
+            <h2 class="h2-light-sm">《당신의 15분》 <span class="hl-blue">순수 감동 6막 타임라인</span></h2>
           </div>
           <button type="button" class="aw-btn-primary" onclick="goToSlide(13)" style="padding: 9px 18px; font-size: 16px;">5분 풀 스크립트 보기 →</button>
         </div>
@@ -739,7 +746,7 @@ body.scroll-mode .side-arrow { display: none; }
           <div class="sb-rhead">
             <div class="sb-tag light">ACT 1 · CUT 01–04 · 도입 · 1.85:1→2.39:1 매치컷</div>
             <h3 class="sb-title light">하루 중 가장 조용한 15분</h3>
-            <div class="sb-sub light">한강 철교 2호선 · 점심 혼밥 식탁 · 퇴근 버스 · 새벽의 방</div>
+            <div class="sb-sub light">2호선 한강 · 점심 혼밥 · 퇴근 버스 · 새벽의 방</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
@@ -761,13 +768,13 @@ body.scroll-mode .side-arrow { display: none; }
         <span class="page-dot">08</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="8" data-title="ACT 2 · CUT 05–07 2016 뚝섬, 구독자 열두 명의 겨울">
+    <div class="slide-wrap" data-index="8" data-title="ACT 2 · CUT 05–07 2016 뚝섬, 구독자 열두 명">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(8)">PPT 보기 ↗</button>
-      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 09 ACT 2 · CUT 05–07 2016 뚝섬, 구독자 열두 명의 겨울">
+      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 09 ACT 2 · CUT 05–07 2016 뚝섬, 구독자 열두 명">
         
       <div class="sb-split">
         <div class="sb-left dark">
-          <div class="sb-photo"><img data-kv="0" alt="2016 뚝섬, 구독자 열두 명의 겨울" /></div>
+          <div class="sb-photo"><img data-kv="0" alt="2016 뚝섬, 구독자 열두 명" /></div>
           <div class="sb-left-info dark">
             <div class="sb-punch dark"><span class="ln">&quot;자극적이지 않아도 우리가 진짜 궁금한 이야기를 만들면,</span><span class="ln">과연 사람들이 웃어줄까?&quot;</span></div>
             <div class="sb-specs dark">
@@ -779,8 +786,8 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-right dark">
           <div class="sb-rhead">
             <div class="sb-tag dark">ACT 2 · CUT 05–07 · 초심 · 뒷모습 · 실루엣 · 손 클로즈업</div>
-            <h3 class="sb-title dark">2016 뚝섬, 구독자 열두 명의 겨울</h3>
-            <div class="sb-sub dark">비 오는 계단 뒷모습 · 낡은 삼각대 하나 · 첫 번째 댓글</div>
+            <h3 class="sb-title dark">2016 뚝섬, 구독자 열두 명</h3>
+            <div class="sb-sub dark">비 오는 뚝섬 계단 · 삼각대 하나 · 첫 댓글</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
@@ -825,7 +832,7 @@ body.scroll-mode .side-arrow { display: none; }
           <div class="sb-rhead">
             <div class="sb-tag light">ACT 3 · CUT 08–11 · 확장 · 1F 매치컷 · 전사 30+ 빛</div>
             <h3 class="sb-title light">열두 명에서 177억 번의 미소로</h3>
-            <div class="sb-sub light">성수 서울숲 유리 타워 · 30+ 세상의 이야기 · 국경 너머의 미소</div>
+            <div class="sb-sub light">성수 유리 타워 · 30+ 세상 · 세계로 번진 미소</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
@@ -866,7 +873,7 @@ body.scroll-mode .side-arrow { display: none; }
           <div class="sb-rhead">
             <div class="sb-tag dark">ACT 4 · CUT 12–14 · 시청자 편지 · 표정 4초 × 댓글 타이포</div>
             <h3 class="sb-title dark">화면 너머에서 돌아온 편지들</h3>
-            <div class="sb-sub dark">독서실 수험생 · 눈 내리는 타국의 부엌 · 거실 소파의 아버지와 딸</div>
+            <div class="sb-sub dark">독서실 수험생 · 타국의 부엌 · 거실 아버지와 딸</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
@@ -911,7 +918,7 @@ body.scroll-mode .side-arrow { display: none; }
           <div class="sb-rhead">
             <div class="sb-tag light">ACT 5 · CUT 15–17 · 어썸 방식 · 사물 매크로 → 18:00 퇴근</div>
             <h3 class="sb-title light">177억 번의 미소를 만든 방식</h3>
-            <div class="sb-sub light">성수 책상의 닳은 삼각대·빈 커피잔 → 오후 6시 00분 정시 퇴근</div>
+            <div class="sb-sub light">성수 책상 닳은 삼각대 · 오후 6시 정시 퇴근</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
@@ -933,13 +940,13 @@ body.scroll-mode .side-arrow { display: none; }
         <span class="page-dot">12</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="12" data-title="ACT 6 · CUT 18 1.0초의 정적, 당신의 다음 15분에게">
+    <div class="slide-wrap" data-index="12" data-title="ACT 6 · CUT 18 1.0초의 정적, 다음 15분에게">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(12)">PPT 보기 ↗</button>
-      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 13 ACT 6 · CUT 18 1.0초의 정적, 당신의 다음 15분에게">
+      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 13 ACT 6 · CUT 18 1.0초의 정적, 다음 15분에게">
         
       <div class="sb-split">
         <div class="sb-left dark">
-          <div class="sb-photo"><img data-kv="7" alt="1.0초의 정적, 당신의 다음 15분에게" /></div>
+          <div class="sb-photo"><img data-kv="7" alt="1.0초의 정적, 다음 15분에게" /></div>
           <div class="sb-left-info dark">
             <div class="sb-punch dark"><span class="ln">&quot;지난 10년, 누군가의 하루 15분에 미소가 되어 준</span><span class="ln">성수동의 모든 분들에게 정말 고맙습니다.&quot;</span></div>
             <div class="sb-specs dark">
@@ -951,8 +958,8 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-right dark">
           <div class="sb-rhead">
             <div class="sb-tag dark">ACT 6 · CUT 18 · 수미상관 · 1.0초 정적 → 96F 이중노출</div>
-            <h3 class="sb-title dark">1.0초의 정적, 당신의 다음 15분에게</h3>
-            <div class="sb-sub dark">96F 성수 노을→2호선 이중노출 수미상관 · 맑은 피아노 여운 엔딩</div>
+            <h3 class="sb-title dark">1.0초의 정적, 다음 15분에게</h3>
+            <div class="sb-sub dark">96F 성수→2호선 이중노출 · 피아노 여운 엔딩</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
@@ -982,7 +989,7 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="row-between">
           <div>
             <div class="eyebrow light">TRACK 01 FULL SCRIPT I · 00:00–02:35</div>
-            <h2 class="h2-light-sm">5분 순수 감동 스크립트 I — <span class="hl-blue">1막 일상 · 2막 뚝섬 · 3막 177억 번의 미소</span></h2>
+            <h2 class="h2-light-sm">5분 감동 스크립트 I — <span class="hl-blue">1막 일상 · 2막 뚝섬 · 3막 확장</span></h2>
           </div>
           <button type="button" class="aw-btn-primary" onclick="goToSlide(14)" style="padding: 9px 18px; font-size: 16px;">II. 4–5막 이어서 보기 →</button>
         </div>
@@ -1018,18 +1025,18 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="row-between">
           <div>
             <div class="eyebrow light">TRACK 01 FULL SCRIPT II · 02:35–04:20</div>
-            <h2 class="h2-light-sm">5분 순수 감동 스크립트 II — <span class="hl-blue">시청자 편지 3편 · 오후 6시 00분 퇴근</span></h2>
+            <h2 class="h2-light-sm">5분 감동 스크립트 II — <span class="hl-blue">4막 시청자 편지 · 5막 18시 퇴근</span></h2>
           </div>
           <button type="button" class="aw-btn-primary" onclick="goToSlide(15)" style="padding: 9px 18px; font-size: 16px;">III. 6막 피날레 &amp; 전문 복사 →</button>
         </div>
         <div class="grid-2 gap-24 flex-1-row" style="padding-bottom: 6px;">
         <div class="script-col wide">
-          <div class="sc-tc">ACT 4 · 02:35–03:30 (화면 너머에서 돌아온 편지들)</div>
+          <div class="sc-tc">ACT 4 · 02:35–03:30 · 화면 너머의 편지들</div>
           <div class="sc-vis">[화면] 독서실 수험생 · 타국 부엌 밥친구 · 거실 소파에서 함께 웃는 아버지와 딸 × 댓글 3편</div>
           <div class="sc-na wide"><div class="na-stanza"><span class="na-line">화면 너머에서 돌아온 한 줄의 댓글을 읽을 때마다,</span><span class="na-line">우리는 조금씩 깨달았습니다.</span></div><div class="na-stanza"><span class="na-line">우리가 매일 깎고 다듬어 올린 건</span><span class="na-line">그냥 15분짜리 영상 파일이 아니었다는 걸.</span></div><div class="na-stanza"><span class="na-line">누군가에게는 막막한 새벽을 견디게 한 작은 위로였고,</span><span class="na-line">누군가에게는 멀리 떨어진 가족과 나눈 오랜만의 대화였고,</span><span class="na-line">누군가에게는 내일을 다시 살아내게 하는 소소한 미소였다는 걸.</span></div><div class="na-stanza"><span class="na-line">177억 번의 클릭은 숫자가 아니라,</span><span class="na-line">그렇게 우리가 함께 건넨 177억 번의 미소였습니다.</span></div></div>
         </div>
         <div class="script-col wide">
-          <div class="sc-tc">ACT 5 · 03:30–04:20 (만드는 사람이 먼저 웃을 수 있어야)</div>
+          <div class="sc-tc">ACT 5 · 03:30–04:20 · 오후 6시 정시 퇴근</div>
           <div class="sc-vis">[화면] 노을 진 성수 책상 위 닳은 삼각대·빈 아아 컵 → 18:00 시계·소등·웃으며 퇴근하는 뒷모습</div>
           <div class="sc-na wide"><div class="na-stanza"><span class="na-line">성수동의 책상 위엔 수많은 고민의 흔적들이 쌓였지만,</span><span class="na-line">어썸이 10년 내내 끝까지 지킨 원칙이 하나 있습니다.</span></div><div class="na-stanza"><span class="na-line">우리는 누군가의 밤을 갈아 넣어</span><span class="na-line">조회수를 만들지 않았습니다.</span></div><div class="na-stanza"><span class="na-line">만드는 사람이 먼저 웃을 수 있어야,</span><span class="na-line">화면 너머 보는 사람도 진심으로 웃을 수 있다고</span><span class="na-line">믿었기 때문입니다.</span></div><div class="na-stanza"><span class="na-line">내일 또 좋은 이야기를 들려주기 위해,</span><span class="na-line">우리는 오늘의 우리를 먼저 지켰습니다.</span></div></div>
         </div></div>
@@ -1047,7 +1054,7 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="tcr-col" style="justify-content: flex-start; gap: 16px;">
           <div>
             <div class="eyebrow dark">TRACK 01 FULL SCRIPT III · 04:20–05:00</div>
-            <h2 class="tcr-h2">1.0초 정적 &amp; <span class="c-blue">96F 수미상관 피날레</span></h2>
+            <h2 class="tcr-h2">6막 1.0초 정적 &amp; <span class="c-blue">96F 수미상관</span></h2>
           </div>
           <div class="sc2-stack">
         <div class="sc2-row">
@@ -1064,10 +1071,10 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="tcr-col right-pad" style="justify-content: flex-start; gap: 16px;">
           <div class="row-between" style="align-items: center;">
             <div>
-              <div class="eyebrow dark">VOICE · BGM DIRECTING &amp; 1-CLICK COPY</div>
-              <h2 class="tcr-h2">감동 보이스 디렉팅 &amp; 전문 복사</h2>
+              <div class="eyebrow dark">VOICE · BGM DIRECTING</div>
+              <h2 class="tcr-h2">보이스 · BGM 디렉팅</h2>
             </div>
-            <button type="button" class="aw-btn-primary" id="btnCopyMassNa" onclick="copyMassScript()" style="padding: 10px 16px; font-size: 16px; flex-shrink: 0;">5분 내레이션 전문 복사</button>
+            <button type="button" class="aw-btn-primary" id="btnCopyMassNa" onclick="copyMassScript()" style="padding: 10px 16px; font-size: 16px; flex-shrink: 0;">5분 전문 복사</button>
           </div>
           <div class="tcr-stack" style="margin: 0; gap: 14px;">
         <div class="split2-row">
@@ -1178,8 +1185,8 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
       <span class="aw-pill">10TH</span>
     </div>
           <div class="cs-body">
-            <div class="cs-tag dark">TRACK 02 · 04:00 · HUMAN ARCHIVE CINEMA</div>
-            <h1 class="cs-h1 dark"><span class="ln">《47,000개의 질문:</span><span class="ln">어느 시청자의 10년》</span></h1>
+            <div class="cs-tag dark">TRACK 02 · 04:00 · HUMAN ARCHIVE</div>
+            <h1 class="cs-h1 dark"><span class="ln">《47,000개의 질문》</span><span class="ln">어느 시청자의 10년</span></h1>
             <p class="cs-sub dark">2016년 스무 살의 밤 첫 질문부터 2026년 서른 살의 거실까지 — 시청자가 검색창에 던진 삶의 질문에 47,000편으로 답해 온 어썸 10년의 성장 서사</p>
           </div>
           <div class="cs-foot dark">
@@ -1200,24 +1207,24 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
       <div class="s-body">
         <div>
           <div class="eyebrow light">TRACK 02 STRATEGY · QUESTIONS WE ANSWERED</div>
-          <h2 class="h2-light max-w-980">4만 7천 편의 진짜 의미, <span class="hl-blue">질문에 답하며 함께 자란 10년</span></h2>
+          <h2 class="h2-light">4만 7천 편의 의미, <span class="hl-blue">질문에 답하며 함께 자란 10년</span></h2>
         </div>
         <div class="grid-3 gap-32 flex-1-row">
         <div class="hair-col light">
           <div class="hc-num light">01</div>
-          <h3 class="hc-title light">어썸만 할 수 있는 기획: 질문과 해답의 10년</h3>
+          <h3 class="hc-title light">질문과 해답으로 엮은 10년</h3>
           <p class="hc-body light">지식인사이드·보다 BODA·머니인사이드·책과삶까지 어썸 47,000편 영상의 본질은 모두 &#x27;시청자가 품은 삶의 질문&#x27;에 대한 성실한 해답이었습니다.</p>
         </div>
 
         <div class="hair-col light">
           <div class="hc-num light">02</div>
-          <h3 class="hc-title light">배민·토스급 검증 서사: 한 시청자의 2016→2026</h3>
+          <h3 class="hc-title light">한 시청자의 2016→2026</h3>
           <p class="hc-body light">숫자를 나열하는 대신 2016년 스무 살이던 한 시청자가 서른 살이 되기까지 품었던 실제 질문들을 10년 타임라인으로 따라가며 깊은 공감을 만듭니다.</p>
         </div>
 
         <div class="hair-col light">
           <div class="hc-num light">03</div>
-          <h3 class="hc-title light">검색창 타이포 × 풀 AI 비주얼 메타포</h3>
+          <h3 class="hc-title light">검색창 타이포 × 풀 AI 은유</h3>
           <p class="hc-body light">인물 대사 없이 &#x27;깨끗한 검색창 질문 한 줄&#x27;과 방 스탠드에서 우주로 열리는 35mm 시네마 은유만으로 4분 내내 눈을 뗄 수 없는 몰입감을 줍니다.</p>
         </div></div>
         <p class="closing-thesis light">핵심 — 어썸의 지난 10년은 트래픽 경쟁이 아니라, 시청자의 질문이 자라는 만큼 함께 깊어져 온 진심의 아카이브였습니다.</p>
@@ -1234,7 +1241,7 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <div class="row-between">
           <div>
             <div class="eyebrow dark">TRACK 02 TIMELINE · 04:00 · 2016 → 2026 → 2036</div>
-            <h2 class="h2-dark-sm">《47,000개의 질문》 <span class="c-blue">6막 성장 서사</span> (클릭 시 이동)</h2>
+            <h2 class="h2-dark-sm">《47,000개의 질문》 <span class="c-blue">6막 성장 타임라인</span></h2>
           </div>
           <button type="button" class="aw-btn-primary" onclick="goToSlide(25)" style="padding: 9px 18px; font-size: 16px;">4분 풀 스크립트 보기 →</button>
         </div>
@@ -1281,13 +1288,13 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <span class="page-dot">19</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="19" data-title="Q 01 · 2016 첫 질문 2016 스무 살의 밤, 첫 번째 질문">
+    <div class="slide-wrap" data-index="19" data-title="Q 01 · 2016 첫 질문 2016 스무 살, 첫 번째 질문">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(19)">PPT 보기 ↗</button>
-      <section class="slide theme-white p-0 scene-slide" aria-label="Slide 20 Q 01 · 2016 첫 질문 2016 스무 살의 밤, 첫 번째 질문">
+      <section class="slide theme-white p-0 scene-slide" aria-label="Slide 20 Q 01 · 2016 첫 질문 2016 스무 살, 첫 번째 질문">
         
       <div class="sb-split">
         <div class="sb-left light">
-          <div class="sb-photo"><img data-kv="11" alt="2016 스무 살의 밤, 첫 번째 질문" /></div>
+          <div class="sb-photo"><img data-kv="11" alt="2016 스무 살, 첫 번째 질문" /></div>
           <div class="sb-left-info light">
             <div class="sb-punch light"><span class="ln">&quot;2016년 어느 밤, 누군가의 작은 질문에서</span><span class="ln">어썸의 10년이 함께 시작되었습니다.&quot;</span></div>
             <div class="sb-specs light">
@@ -1299,8 +1306,8 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <div class="sb-right light">
           <div class="sb-rhead">
             <div class="sb-tag light">Q 01 · 2016 첫 질문 · 2016 · 스무 살 · 검색창 커서 오프닝</div>
-            <h3 class="sb-title light">2016 스무 살의 밤, 첫 번째 질문</h3>
-            <div class="sb-sub light">비 오는 자취방 작은 책상 위의 노트북 불빛과 같은 밤 뚝섬의 화이트보드</div>
+            <h3 class="sb-title light">2016 스무 살, 첫 번째 질문</h3>
+            <div class="sb-sub light">비 오는 자취방 노트북 불빛 · 같은 밤 뚝섬</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
@@ -1341,7 +1348,7 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
           <div class="sb-rhead">
             <div class="sb-tag dark">Q 02 · 2018 호기심 · 2018 · 보다 BODA · 인물→우주 매치컷</div>
             <h3 class="sb-title dark">책상 스탠드에서 열린 밤하늘</h3>
-            <div class="sb-sub dark">전공과 상관없던 순수한 지적 호기심이 밤하늘의 성운으로 번지는 순간</div>
+            <div class="sb-sub dark">순수한 지적 호기심이 밤하늘 별빛으로 번지다</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
@@ -1382,7 +1389,7 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
           <div class="sb-rhead">
             <div class="sb-tag light">Q 03 · 2021 첫 출근 · 2021 · 지식·머니·책과삶 · 토스 〈The Journey〉 현실 공감</div>
             <h3 class="sb-title light">첫 정장을 입은 아침의 질문</h3>
-            <div class="sb-sub light">불안한 사회초년생에게 단단한 기준을 건넨 지식인사이드 · 머니인사이드 · 책과삶</div>
+            <div class="sb-sub light">사회초년생의 기준이 된 지식·머니·책과삶</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
@@ -1423,7 +1430,7 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
           <div class="sb-rhead">
             <div class="sb-tag dark">Q 04 · 2023 함께 · 2023 · 30+·글로벌 · 배민 〈영수증〉 관계 중심 서사</div>
             <h3 class="sb-title dark">혼자 보던 화면, 가족의 대화로</h3>
-            <div class="sb-sub dark">스무 살의 작은 화면이 부모님·동료·세계와 함께 웃는 이야기가 된 시간</div>
+            <div class="sb-sub dark">혼자 보던 화면이 가족과 함께 웃는 이야기로</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
@@ -1468,7 +1475,7 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
           <div class="sb-rhead">
             <div class="sb-tag light">Q 05 · 2026 성수 · 2026 · 성수 본사 · 질문을 빚는 사람들의 오후 6시</div>
             <h3 class="sb-title light">47,000번째 해답을 만드는 자리</h3>
-            <div class="sb-sub light">성수 SK V1 기획 회의실의 치열한 낮과 오후 6시 00분 건강한 퇴근길</div>
+            <div class="sb-sub light">성수 SK V1 회의실의 낮과 18시 건강한 퇴근</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
@@ -1513,7 +1520,7 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
           <div class="sb-rhead">
             <div class="sb-tag dark">Q 06 · 2036 커서 · 다음 10년 · 수미상관 · 빈 검색창 커서 |</div>
             <h3 class="sb-title dark">다음 10년의 첫 번째 질문</h3>
-            <div class="sb-sub dark">2016년의 밤과 2026년 성수 노을 위에서 다시 깜빡이는 빈 검색창 커서(|)</div>
+            <div class="sb-sub dark">뚝섬과 성수 노을 위 다시 깜빡이는 커서(|)</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
@@ -1543,13 +1550,13 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <div class="row-between">
           <div>
             <div class="eyebrow light">TRACK 02 FULL SCRIPT · 04:00 (240s) · 2016 → 2036</div>
-            <h2 class="h2-light-sm">《47,000개의 질문》 4분 풀 스크립트 — <span class="hl-blue">질문이 자라는 만큼 자란 10년</span></h2>
+            <h2 class="h2-light-sm">《47,000개의 질문》 <span class="hl-blue">4분 풀 내레이션 스크립트</span></h2>
           </div>
-          <button type="button" class="aw-btn-primary" id="btnCopyQuestionsNa" onclick="copyQuestionsScript()" style="padding: 10px 18px; font-size: 16px; flex-shrink: 0;">질문의 10년 내레이션 복사</button>
+          <button type="button" class="aw-btn-primary" id="btnCopyQuestionsNa" onclick="copyQuestionsScript()" style="padding: 10px 18px; font-size: 16px; flex-shrink: 0;">4분 전문 복사</button>
         </div>
         <div class="grid-2 gap-24 flex-1-row" style="padding-bottom: 8px;">
         <div class="script-col wide">
-          <div class="sc-tc">PART I · 00:00–02:00 (2016 첫 질문 → 2018 호기심 → 2021 첫 출근)</div>
+          <div class="sc-tc">PART I · 00:00–02:00 · 2016 → 2021</div>
           <div class="sc-vis">톤: 담백하고 지적인 35mm 다큐 내레이션 · 화면마다 깨끗한 검색창 질문 타이포 1줄</div>
           <div class="bo-items-wrap">
             <div class="bo-item">
@@ -1566,7 +1573,7 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
             </div></div>
         </div>
         <div class="script-col wide accent-blue">
-          <div class="sc-tc">PART II · 02:00–04:00 (2023 가족의 대화 → 2026 성수의 우리 → 2036 커서)</div>
+          <div class="sc-tc">PART II · 02:00–04:00 · 2023 → 2036</div>
           <div class="sc-vis">톤: 서정적 현악 앙상블 확장 → 18시 성수 노을 → 빈 검색창 커서(|) 정적 엔딩</div>
           <div class="bo-items-wrap">
             <div class="bo-item">
@@ -1640,8 +1647,8 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
       <span class="aw-pill">10TH</span>
     </div>
           <div class="cs-body">
-            <div class="cs-tag dark">TRACK 03 · 02:30 · OFFICIAL IP STUDIO SHORT</div>
-            <h1 class="cs-h1 dark"><span class="ln">《작은 친구들의</span><span class="ln">성수동 10주년 하루》</span></h1>
+            <div class="cs-tag dark">TRACK 03 · 02:30 · OFFICIAL IP SHORT</div>
+            <h1 class="cs-h1 dark"><span class="ln">《작은 친구들의 하루》</span><span class="ln">성수동 10주년 단편</span></h1>
             <p class="cs-sub dark">오후 6시 모두 퇴근한 성수동 본사에서 무사히·든든이·도도히·고도리가 10주년 축하 스케치북과 영상을 몰래 준비하는 사랑스러운 헌정 단편</p>
           </div>
           <div class="cs-foot dark">
@@ -1660,25 +1667,28 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
       <section class="slide theme-white" aria-label="Slide 28 공식 캐릭터 4인방 라인업 &amp; 외형·사운드 락">
         
       <div class="s-body gap-18">
-        <h2 class="h2-light-sm">출연 공식 캐릭터 4인방 — <span class="hl-blue">공식 시트 100% 비주얼 · 사운드 락</span></h2>
+        <div>
+          <div class="eyebrow light">OFFICIAL IP LINEUP · 100% SHEET LOCKED</div>
+          <h2 class="h2-light-sm">공식 캐릭터 4인방 — <span class="hl-blue">시트 100% 비주얼 · 사운드 락</span></h2>
+        </div>
         <div class="grid-4 gap-22 flex-1-row">
         <div class="char-col">
           <div class="char-img"><img data-kv="3" alt="무사히 (Musahee)" /></div>
-          <div class="char-chan">오늘도 무사히 (@musaheetoday)</div>
+          <div class="char-chan">@musaheetoday</div>
           <h3 class="char-name">무사히 (Musahee)</h3>
           <p class="char-lock">약 20cm 크림화이트 토끼. 정면 오른쪽 귀 끝만 검정(뒷모습은 왼쪽), 분홍 프릴 헤어밴드, 구슬 눈, 짧은 팔·뭉툭한 발, 의상 없음.</p>
           <div class="char-snd">사운드: 대사·찍찍 금지, 닫힌 입 높고 작은 무언 소리 + 자막·말풍선.</div>
         </div>
         <div class="char-col">
           <div class="char-img"><img data-kv="4" alt="든든이 (Dundeuni)" /></div>
-          <div class="char-chan">오늘도 무사히 메인 파트너</div>
+          <div class="char-chan">오늘도 무사히 파트너</div>
           <h3 class="char-name">든든이 (Dundeuni)</h3>
           <p class="char-lock">무사히의 6~7배 거대한 카라멜 브라운 서양배형 곰. 거대한 몸 대비 작은 머리·얼굴, 작은 구슬 눈, 의상 없음.</p>
           <div class="char-snd">사운드: 굵고 낮은 닫힌 입 단일 허밍(&quot;음~~~&quot;). 말소리·자음 섞임 금지.</div>
         </div>
         <div class="char-col">
           <div class="char-img"><img data-kv="15" alt="도도히 (Dodohi)" /></div>
-          <div class="char-chan">AROA 고양이 (@dodohi_cat)</div>
+          <div class="char-chan">AROA @dodohi_cat</div>
           <h3 class="char-name">도도히 (Dodohi)</h3>
           <p class="char-lock">검정 단발머리와 고양이 귀, 정면 오른쪽 귀 빨간 리본핀 + 목 리본, 하얀 체형에 분홍 젤리 발바닥.</p>
           <div class="char-snd">포지션: 성수 오크 책상에서 무사히와 함께 10주년 스케치북·슬레이트를 준비하는 꼼꼼 콤비.</div>
@@ -1695,13 +1705,13 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <span class="page-dot">28</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="28" data-title="CHAR 01 · 오후 6시 이후 모두 퇴근한 성수 편집실의 비밀">
+    <div class="slide-wrap" data-index="28" data-title="CHAR 01 · 오후 6시 이후 모두 퇴근한 성수 편집실">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(28)">PPT 보기 ↗</button>
-      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 29 CHAR 01 · 오후 6시 이후 모두 퇴근한 성수 편집실의 비밀">
+      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 29 CHAR 01 · 오후 6시 이후 모두 퇴근한 성수 편집실">
         
       <div class="sb-split">
         <div class="sb-left dark">
-          <div class="sb-photo"><img data-kv="3" alt="모두 퇴근한 성수 편집실의 비밀" /></div>
+          <div class="sb-photo"><img data-kv="3" alt="모두 퇴근한 성수 편집실" /></div>
           <div class="sb-left-info dark">
             <div class="sb-punch dark"><span class="ln">&quot;다들 퇴근했지? 우리도 오늘 밤,</span><span class="ln">10주년 축하 인사 멋지게 준비하자!&quot;</span></div>
             <div class="sb-specs dark">
@@ -1713,8 +1723,8 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <div class="sb-right dark">
           <div class="sb-rhead">
             <div class="sb-tag dark">CHAR 01 · 오후 6시 이후 · 성수 편집실 · 시트 락 + NO MUSIC</div>
-            <h3 class="sb-title dark">모두 퇴근한 성수 편집실의 비밀</h3>
-            <div class="sb-sub dark">회전의자에 앉은 거대한 든든이와 키보드 위 20cm 무사히의 야간 대작전</div>
+            <h3 class="sb-title dark">모두 퇴근한 성수 편집실</h3>
+            <div class="sb-sub dark">회전의자 든든이와 키보드 위 무사히의 대작전</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
@@ -1736,16 +1746,16 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <span class="page-dot">29</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="29" data-title="CHAR 02 · 뚝섬과 스케치북 2016 뚝섬의 기억 &amp; 성수 스케치북">
+    <div class="slide-wrap" data-index="29" data-title="CHAR 02 · 뚝섬과 스케치북 2016 뚝섬 &amp; 성수 스케치북">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(29)">PPT 보기 ↗</button>
-      <section class="slide theme-white p-0 scene-slide" aria-label="Slide 30 CHAR 02 · 뚝섬과 스케치북 2016 뚝섬의 기억 &amp; 성수 스케치북">
+      <section class="slide theme-white p-0 scene-slide" aria-label="Slide 30 CHAR 02 · 뚝섬과 스케치북 2016 뚝섬 &amp; 성수 스케치북">
         
       <div class="sb-split">
         <div class="sb-left light">
           
         <div class="sb-diptych">
-          <div><img data-kv="4" alt="2016 뚝섬의 기억 &amp; 성수 스케치북 1" /></div>
-          <div><img data-kv="15" alt="2016 뚝섬의 기억 &amp; 성수 스케치북 2" /></div>
+          <div><img data-kv="4" alt="2016 뚝섬 &amp; 성수 스케치북 1" /></div>
+          <div><img data-kv="15" alt="2016 뚝섬 &amp; 성수 스케치북 2" /></div>
         </div>
           <div class="sb-left-info light">
             <div class="sb-punch light"><span class="ln">&quot;작은 작업실 복도에서 시작해 여기 성수동까지,</span><span class="ln">우리가 같이 걸어온 게 벌써 10년이야.&quot;</span></div>
@@ -1758,8 +1768,8 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <div class="sb-right light">
           <div class="sb-rhead">
             <div class="sb-tag light">CHAR 02 · 뚝섬과 스케치북 · 추억·준비 · 시트 1순위 락 · 소품 고증</div>
-            <h3 class="sb-title light">2016 뚝섬의 기억 &amp; 성수 스케치북</h3>
-            <div class="sb-sub light">뚝섬 첫 작업실 복도를 지나 성수 오크 책상 위 무사히·도도히의 10주년 슬레이트 준비</div>
+            <h3 class="sb-title light">2016 뚝섬 &amp; 성수 스케치북</h3>
+            <div class="sb-sub light">뚝섬 복도 추억 · 오크 책상 무사히·도도히</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
@@ -1781,13 +1791,13 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <span class="page-dot">30</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="30" data-title="CHAR 03 · 라운지 완전체 성수 라운지 완전체 &amp; 반려 0건 3원칙">
+    <div class="slide-wrap" data-index="30" data-title="CHAR 03 · 라운지 완전체 성수 라운지 완전체 &amp; 3원칙">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(30)">PPT 보기 ↗</button>
-      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 31 CHAR 03 · 라운지 완전체 성수 라운지 완전체 &amp; 반려 0건 3원칙">
+      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 31 CHAR 03 · 라운지 완전체 성수 라운지 완전체 &amp; 3원칙">
         
       <div class="sb-split">
         <div class="sb-left dark">
-          <div class="sb-photo"><img data-kv="5" alt="성수 라운지 완전체 &amp; 반려 0건 3원칙" /></div>
+          <div class="sb-photo"><img data-kv="5" alt="성수 라운지 완전체 &amp; 3원칙" /></div>
           <div class="sb-left-info dark">
             <div class="sb-punch dark"><span class="ln">&quot;열 살의 어썸엔터테인먼트 진심으로 축하해.</span><span class="ln">우리의 다음 10년도, 오늘도 무사히!&quot;</span></div>
             <div class="sb-specs dark">
@@ -1799,8 +1809,8 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <div class="sb-right dark">
           <div class="sb-rhead">
             <div class="sb-tag dark">CHAR 03 · 라운지 완전체 · 완전체·수칙 · 4인방 공식 시트 100% 고증</div>
-            <h3 class="sb-title dark">성수 라운지 완전체 &amp; 반려 0건 3원칙</h3>
-            <div class="sb-sub dark">든든이·무사히·도도히·고도리 4인방의 진심 어린 10주년 인사 &amp; QA 락</div>
+            <h3 class="sb-title dark">성수 라운지 완전체 &amp; 3원칙</h3>
+            <div class="sb-sub dark">든든이·무사히·도도히·고도리 10주년 인사</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
@@ -1822,51 +1832,54 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <span class="page-dot">31</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="31" data-title="레퍼런스 모음 I — 국내 10주년 브랜드 필름 · 공감 서사">
+    <div class="slide-wrap" data-index="31" data-title="레퍼런스 I — 국내 10주년 브랜드 필름 · 공감 서사">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(31)">PPT 보기 ↗</button>
-      <section class="slide theme-white" aria-label="Slide 32 레퍼런스 모음 I — 국내 10주년 브랜드 필름 · 공감 서사">
+      <section class="slide theme-white" aria-label="Slide 32 레퍼런스 I — 국내 10주년 브랜드 필름 · 공감 서사">
         
       <div class="s-body">
-        <h2 class="h2-ppf light">레퍼런스 모음 I — 국내 10주년 브랜드 필름 · 공감 서사 (클릭 시 유튜브 바로 이동)</h2>
+        <div>
+          <div class="eyebrow light">REFERENCES I · 카드 클릭 시 유튜브 바로 이동</div>
+          <h2 class="h2-ppf light">레퍼런스 I — 국내 10주년 브랜드 필름 · 공감 서사</h2>
+        </div>
         <div class="grid-4 gap-22 flex-1-row" style="grid-template-rows: 1fr 1fr;">
         <a class="ref-line-card light key-ref" href="https://www.youtube.com/results?search_query=토스+브랜드필름+The+Journey" target="_blank" rel="noopener">
           <div class="rlc-top light"><span>정체성 · 다큐</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title light">토스 브랜드 필름 〈The Journey〉 (유스·시니어 편)</h3>
+          <h3 class="rlc-title light">토스 〈The Journey〉</h3>
           <p class="rlc-note light">거창한 자랑 대신 구체적 한 사람의 현실과 질문을 따라가며 공감시키는 정석</p>
         </a>
         <a class="ref-line-card light" href="https://www.youtube.com/results?search_query=배달의민족+배민영수증+캠페인" target="_blank" rel="noopener">
           <div class="rlc-top light"><span>데이터 × 온기</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title light">배달의민족 〈배민영수증 프로젝트〉</h3>
+          <h3 class="rlc-title light">배민 〈영수증 프로젝트〉</h3>
           <p class="rlc-note light">사용자가 남긴 실제 텍스트 한 줄을 10년 브랜드 철학으로 승화한 대표 사례</p>
         </a>
         <a class="ref-line-card light" href="https://www.youtube.com/results?search_query=토스+10주년+10to100+브랜드필름" target="_blank" rel="noopener">
           <div class="rlc-top light"><span>국민 10주년</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title light">토스 10주년 〈10to100〉 브랜드 필름</h3>
+          <h3 class="rlc-title light">토스 10주년 〈10to100〉</h3>
           <p class="rlc-note light">일상 타임워프 + 한국형 브랜드 필름 감동 아카이빙 레퍼런스</p>
         </a>
         <a class="ref-line-card light" href="https://www.youtube.com/results?search_query=당근마켓+리브랜딩+천만의+인사" target="_blank" rel="noopener">
           <div class="rlc-top light"><span>커뮤니티 위트</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title light">당근 리브랜딩 〈천만의 말씀 / 천만의 인사〉</h3>
+          <h3 class="rlc-title light">당근 〈천만의 인사〉</h3>
           <p class="rlc-note light">이웃 간의 일상 에피소드와 언어유희로 본질적 가치를 각인한 캠페인</p>
         </a>
         <a class="ref-line-card light" href="https://www.youtube.com/watch?v=5GpV7r5HG58" target="_blank" rel="noopener">
           <div class="rlc-top light"><span>정극 반전</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title light">돌고래유괴단 — 그랑사가 〈연극의 왕〉</h3>
+          <h3 class="rlc-title light">그랑사가 〈연극의 왕〉</h3>
           <p class="rlc-note light">영화적 긴장감을 끝까지 유지하다 위트 있는 카피 한 줄로 회수하는 리듬</p>
         </a>
         <a class="ref-line-card light" href="https://www.youtube.com/watch?v=4Uv7t1L4W7c" target="_blank" rel="noopener">
           <div class="rlc-top light"><span>휴먼 반전</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title light">돌고래유괴단 — 캐논 〈최현석의 포토킥〉</h3>
+          <h3 class="rlc-title light">캐논 〈최현석 포토킥〉</h3>
           <p class="rlc-note light">따뜻한 일상 톤과 위트 있는 내레이션 사이의 절묘한 완급 조절 참고</p>
         </a>
         <a class="ref-line-card light" href="https://www.youtube.com/results?search_query=배달의민족+브랜드필름+사장님" target="_blank" rel="noopener">
           <div class="rlc-top light"><span>일상 헌사</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title light">배달의민족 10·13주년 브랜드 필름</h3>
+          <h3 class="rlc-title light">배민 10·13주년 필름</h3>
           <p class="rlc-note light">자사 지표 자랑 대신 함께 만든 사람들의 하루로 엔딩을 회수하는 구성</p>
         </a>
         <a class="ref-line-card light" href="https://www.youtube.com/results?search_query=빠더너스+주식회사+빠더너스+모큐멘터리" target="_blank" rel="noopener">
           <div class="rlc-top light"><span>스튜디오 다큐</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title light">빠더너스(BDNS) — 주식회사 빠더너스</h3>
+          <h3 class="rlc-title light">주식회사 빠더너스</h3>
           <p class="rlc-note light">제작진과 스튜디오 일상의 사실적인 디테일을 매력적으로 담아내는 연출 참고</p>
         </a></div>
       </div>
@@ -1874,51 +1887,54 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <span class="page-dot">32</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="32" data-title="레퍼런스 모음 II — 글로벌 스토리텔링 · 시네마 · 아카이브">
+    <div class="slide-wrap" data-index="32" data-title="레퍼런스 II — 글로벌 스토리텔링 · 시네마 · 아카이브">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(32)">PPT 보기 ↗</button>
-      <section class="slide theme-dark" aria-label="Slide 33 레퍼런스 모음 II — 글로벌 스토리텔링 · 시네마 · 아카이브">
+      <section class="slide theme-dark" aria-label="Slide 33 레퍼런스 II — 글로벌 스토리텔링 · 시네마 · 아카이브">
         
       <div class="s-body">
-        <h2 class="h2-ppf dark">레퍼런스 모음 II — 글로벌 스토리텔링 · 시네마 · 아카이브 (클릭 시 유튜브 바로 이동)</h2>
+        <div>
+          <div class="eyebrow dark">REFERENCES II · 카드 클릭 시 유튜브 바로 이동</div>
+          <h2 class="h2-ppf dark">레퍼런스 II — 글로벌 스토리텔링 · 시네마 · 아카이브</h2>
+        </div>
         <div class="grid-4 gap-22 flex-1-row" style="grid-template-rows: 1fr 1fr;">
         <a class="ref-line-card dark" href="https://www.youtube.com/results?search_query=Brand+Film+Awards+anniversary+brand+film" target="_blank" rel="noopener">
           <div class="rlc-top dark"><span>어워드 프레임</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title dark">Brand Film Awards — Best Anniversary Films</h3>
+          <h3 class="rlc-title dark">Brand Film Awards</h3>
           <p class="rlc-note dark">전 세계 스튜디오·미디어 기업의 10주년 필름 구조(Micro-to-Macro) 정석</p>
         </a>
         <a class="ref-line-card dark" href="https://www.youtube.com/watch?v=VGa1imApfdg" target="_blank" rel="noopener">
           <div class="rlc-top dark"><span>3D · 공간 확장</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title dark">Coca-Cola 〈Masterpiece〉 글로벌 캠페인</h3>
+          <h3 class="rlc-title dark">코카콜라 〈Masterpiece〉</h3>
           <p class="rlc-note dark">빛과 시선의 연쇄 이동을 통해 공간과 작품이 연결되는 시각 리듬 참고</p>
         </a>
         <a class="ref-line-card dark" href="https://www.youtube.com/results?search_query=Apple+The+Underdogs+ad" target="_blank" rel="noopener">
           <div class="rlc-top dark"><span>스튜디오 팀워크</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title dark">Apple at Work 〈The Underdogs〉 시리즈</h3>
+          <h3 class="rlc-title dark">Apple 〈The Underdogs〉</h3>
           <p class="rlc-note dark">제작진 회의실과 사무실의 소소한 일상을 세련된 팀워크 서사로 엮는 톤</p>
         </a>
         <a class="ref-line-card dark" href="https://www.youtube.com/results?search_query=2001+Space+Odyssey+match+cut" target="_blank" rel="noopener">
           <div class="rlc-top dark"><span>타임 매치컷</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title dark">〈2001 스페이스 오디세이〉 최장 타임점프 매치컷</h3>
+          <h3 class="rlc-title dark">〈2001 스페이스 오디세이〉</h3>
           <p class="rlc-note dark">2016 뚝섬 → 2026 성수 → 2036 미래를 1프레임으로 잇는 시간 전환 교과서</p>
         </a>
         <a class="ref-line-card dark" href="https://www.youtube.com/results?search_query=Nike+You+Cant+Stop+Us+split+screen" target="_blank" rel="noopener">
           <div class="rlc-top dark"><span>이중노출 · 스플릿</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title dark">Nike 〈You Can&#x27;t Stop Us〉 50:50 매치컷</h3>
+          <h3 class="rlc-title dark">Nike 〈You Can&#x27;t Stop Us〉</h3>
           <p class="rlc-note dark">두 시간대(2016↔2026)와 두 공간을 물 흐르듯 연결하는 물리적 매치컷 기준</p>
         </a>
         <a class="ref-line-card dark" href="https://www.youtube.com/results?search_query=Oceans+Eleven+montage+scene" target="_blank" rel="noopener">
           <div class="rlc-top dark"><span>전사 몽타주</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title dark">〈오션스 일레븐〉 팀 브리핑 빠른 컷 전환</h3>
+          <h3 class="rlc-title dark">〈오션스 일레븐〉 몽타주</h3>
           <p class="rlc-note dark">30+ 전사 사업부의 전문성을 경쾌하고 세련되게 엮는 리드미컬 편집 참고</p>
         </a>
         <a class="ref-line-card dark" href="https://www.youtube.com/results?search_query=In+the+Mood+for+Love+corridor+slow+motion" target="_blank" rel="noopener">
           <div class="rlc-top dark"><span>멜로 미장센</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title dark">왕가위 〈화양연화〉 복도 슬로우모션</h3>
+          <h3 class="rlc-title dark">왕가위 〈화양연화〉</h3>
           <p class="rlc-note dark">2016 뚝섬 좁은 계단과 창가의 정서를 깊은 필름 톤으로 담아내는 조명 기준</p>
         </a>
         <a class="ref-line-card dark" href="https://www.youtube.com/results?search_query=Volvo+Trucks+Epic+Split" target="_blank" rel="noopener">
           <div class="rlc-top dark"><span>원테이크 긴장감</span><span>유튜브 ↗</span></div>
-          <h3 class="rlc-title dark">Volvo Trucks 〈The Epic Split〉 원테이크 리듬</h3>
+          <h3 class="rlc-title dark">Volvo 〈The Epic Split〉</h3>
           <p class="rlc-note dark">긴 설명 없이 단일 롱테이크와 절제된 사운드만으로 압도하는 미니멀 연출</p>
         </a></div>
       </div>
@@ -1933,7 +1949,7 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
       <div class="s-body gap-18">
         <div>
           <div class="eyebrow light">BONUS BACKUP POOL · REALISTIC &amp; SHARP</div>
-          <h2 class="h2-light-sm">단독 숏필름으로 바로 뺄 수 있는 <span class="hl-blue">세련된 보너스 아이디어 5선</span></h2>
+          <h2 class="h2-light-sm">단독 숏필름 확장 가능한 <span class="hl-blue">보너스 아이디어 5선</span></h2>
         </div>
         <div class="grid-5 gap-16 flex-1-row" style="padding-right: 12px;">
         <div class="bonus-col">
@@ -1943,9 +1959,9 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
           <p class="bonus-desc">2016 뚝섬역에서 탄 지하철 한 칸이 문을 열 때마다 2020→2023→2026 성수역으로 바뀌는 원테이크 성장물.</p>
         </div>
         <div class="bonus-col">
-          <div class="bonus-img"><img data-kv="9" alt="《댓글 100줄의 합창》" /></div>
+          <div class="bonus-img"><img data-kv="9" alt="《댓글 100줄 합창》" /></div>
           <div class="bonus-tag">보너스 02</div>
-          <h3 class="bonus-title">《댓글 100줄의 합창》</h3>
+          <h3 class="bonus-title">《댓글 100줄 합창》</h3>
           <p class="bonus-desc">10년간 전사 채널에 달린 감동·감사 베스트 댓글 100줄을 AI 보이스 다성 합창처럼 겹쳐 쌓는 사운드 필름.</p>
         </div>
         <div class="bonus-col">
@@ -1955,9 +1971,9 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
           <p class="bonus-desc">A(AROA)·B(BODA)·K(K-Culture)부터 Z까지 30+ 전사 채널과 사업부를 우아한 모션 타이포로 엮은 브랜드 북.</p>
         </div>
         <div class="bonus-col">
-          <div class="bonus-img"><img data-kv="7" alt="《2036년에서 온 편지》" /></div>
+          <div class="bonus-img"><img data-kv="7" alt="《2036년의 편지》" /></div>
           <div class="bonus-tag">보너스 04</div>
-          <h3 class="bonus-title">《2036년에서 온 편지》</h3>
+          <h3 class="bonus-title">《2036년의 편지》</h3>
           <p class="bonus-desc">창립 20주년을 맞은 2036년의 성수 크루가 오늘의 10주년 종무식장에 보낸 영상 편지 형식의 미래 선언 필름.</p>
         </div>
         <div class="bonus-col">
@@ -1979,7 +1995,7 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
         <div class="c2-left">
           <div>
             <div class="eyebrow dark">11/25 (WED) 14:00 DECISION BOARD</div>
-            <h2 class="h2-dark">내일 3인 회의에서 결정할 일</h2>
+            <h2 class="h2-dark">내일 3인 회의 결정 사항</h2>
           </div>
           <p class="c2-sub">Track 01(순수 감동 《당신의 15분》) · Track 02(성장 서사 《47,000개의 질문》) · Track 03(캐릭터 단편 《성수동 하루》) 중 메인 노선을 고르고 아래 자료를 수급하면 내일 오후 바로 제작 착수합니다.</p>
           <div class="slot-rows">
@@ -2000,8 +2016,8 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
             <label class="chk-line"><input type="checkbox" data-chk="3" /><span>04 · 실제 시청자 감동 댓글 3편 선정 &amp; 공식 캐릭터 시트 락 적용 여부 확정</span></label>
           </div>
           <div class="sign-off-bar">
-            <span>AWESOME ENTERTAINMENT · 10TH ANNIVERSARY</span>
-            <strong>Prepared by AI PD 전지용 · 2026.11.24</strong>
+            <span>AWESOME ENT · 10TH</span>
+            <strong>AI PD 전지용 · 2026.11.24</strong>
           </div>
         </div>
       </div>
@@ -2088,11 +2104,11 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
   };
 
   window.copyMassScript = function() {
-    window.copyScriptById('massNaRaw', 'btnCopyMassNa', '5분 내레이션 전문 복사');
+    window.copyScriptById('massNaRaw', 'btnCopyMassNa', '5분 전문 복사');
   };
 
   window.copyQuestionsScript = function() {
-    window.copyScriptById('questionsNaRaw', 'btnCopyQuestionsNa', '질문의 10년 내레이션 복사');
+    window.copyScriptById('questionsNaRaw', 'btnCopyQuestionsNa', '4분 전문 복사');
   };
 
   function updateScale() {
@@ -2162,7 +2178,7 @@ AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
     }
   });
 
-  const STORE_KEY = 'awesome10th_v13_checks';
+  const STORE_KEY = 'awesome10th_v14_checks';
   const chkInputs = Array.from(document.querySelectorAll('#decisionChecks input[type="checkbox"]'));
   const checkCountEl = document.getElementById('checkCount');
   let saved = [];

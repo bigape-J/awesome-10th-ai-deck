@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>어썸엔터테인먼트 10주년 종무식 AI 영상 기획안 (v18)</title>
+  <title>어썸엔터테인먼트 10주년 종무식 AI 영상 기획안 (v20)</title>
   <style>
 
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
@@ -156,10 +156,10 @@ body.scroll-mode .side-arrow { display: none; }
 
 /* Split Covers */
 .aw-cover-split { display: grid; grid-template-columns: 560px 720px; width: 1280px; height: 720px; }
-.cs-left { padding: 44px 38px 44px 48px; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; }
+.cs-left { padding: 36px 38px 36px 48px; display: flex; flex-direction: column; justify-content: space-between; min-width: 0; }
 .cs-left.dark { background: var(--aw-ink); color: #FFFFFF; }
 .cs-left.light { background: #FFFFFF; color: var(--aw-ink); }
-.cs-body { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.cs-body { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
 .cs-tag { font-size: 16px; font-weight: 700; font-family: var(--font-sans); font-variant-numeric: tabular-nums; letter-spacing: 0.01em; white-space: nowrap; }
 .cs-tag.dark { color: #54A5FF; }
 .cs-tag.light { color: var(--aw-blue); }
@@ -167,10 +167,41 @@ body.scroll-mode .side-arrow { display: none; }
 .cs-h1 .ln { white-space: nowrap; }
 .cs-h1.dark { color: #FFFFFF; }
 .cs-h1.light { color: var(--aw-ink); }
-.cs-sub { font-size: 18.5px; line-height: 1.58; letter-spacing: -0.015em; }
+.cs-sub { font-size: 18px; line-height: 1.5; letter-spacing: -0.015em; }
 .cs-sub.dark { color: #E4E6EB; }
 .cs-sub.light { color: #27272A; }
-.cs-foot { border-top: 1px solid #23262E; padding-top: 20px; display: flex; flex-direction: column; gap: 14px; align-items: flex-start; }
+.cs-refs { margin-top: 2px; padding-top: 10px; border-top: 1px solid #262A34; display: flex; flex-direction: column; gap: 7px; }
+.cs-refs.light { border-top-color: #E5E7EB; }
+.cs-refs-head { display: flex; align-items: baseline; gap: 8px; font-size: 16px; white-space: nowrap; overflow: hidden; }
+.cs-refs-head strong { font-weight: 800; flex-shrink: 0; }
+.cs-refs-head.dark strong { color: #54A5FF; }
+.cs-refs-head.light strong { color: var(--aw-blue); }
+.cs-refs-head span { font-weight: 600; overflow: hidden; text-overflow: ellipsis; }
+.cs-refs-head.dark span { color: #A1A1AA; }
+.cs-refs-head.light span { color: #52525B; }
+.cs-refs-row { display: flex; flex-wrap: wrap; gap: 6px 7px; }
+.cs-ref-pill {
+  display: inline-flex; align-items: center; padding: 4px 9px; border-radius: 6px;
+  font-size: 16px; font-weight: 700; text-decoration: none; white-space: nowrap; line-height: 1.3;
+  transition: opacity 0.15s;
+}
+.cs-ref-pill.dark { background: #141923; border: 1px solid #2B3A55; color: #93C5FD; }
+.cs-ref-pill.light { background: #EDF5FF; border: 1px solid #BFDBFE; color: var(--aw-blue); }
+.cs-ref-pill:hover { opacity: 0.82; text-decoration: underline; }
+.strat-ref-strip {
+  display: flex; align-items: center; gap: 10px; padding: 9px 14px; border-radius: 6px;
+  margin-top: 12px; white-space: nowrap;
+}
+.strat-ref-strip.dark { background: #141923; border-left: 3px solid var(--aw-blue); }
+.strat-ref-strip.light { background: var(--aw-mist); border-left: 3px solid var(--aw-blue); }
+.srs-lbl { font-size: 16px; font-weight: 800; flex-shrink: 0; }
+.srs-lbl.dark { color: #54A5FF; }
+.srs-lbl.light { color: var(--aw-blue); }
+.srs-links { display: inline-flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.srs-note { margin-left: auto; font-size: 16px; font-weight: 600; overflow: hidden; text-overflow: ellipsis; }
+.srs-note.dark { color: #D4D4D8; }
+.srs-note.light { color: #52525B; }
+.cs-foot { border-top: 1px solid #23262E; padding-top: 16px; display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
 .cs-foot.light { border-top-color: #E5E7EB; }
 .cs-meta { font-size: 16.5px; font-weight: 700; display: flex; gap: 10px; align-items: center; flex-wrap: nowrap; white-space: nowrap; }
 .cs-meta.dark { color: #E4E4E7; }
@@ -579,18 +610,18 @@ body.scroll-mode .side-arrow { display: none; }
         </button>
         <button type="button" class="hub-card" onclick="goToSlide(17)">
           <div class="hub-img"><img data-kv="10" alt="《47,000개의 질문》" /></div>
-          <div class="hub-top"><span>TRACK 02</span><span class="hub-tag">04:00 · 6막 18컷</span></div>
+          <div class="hub-top"><span>TRACK 02</span><span class="hub-tag">04:00 · 기승전결 18컷</span></div>
           <h3 class="hub-title">《47,000개의 질문》</h3>
           <div class="hub-sub">어느 시청자의 10년 · 성장 서사</div>
-          <p class="hub-desc">2016년 스무 살의 밤 첫 질문부터 2026년 서른 살까지 — 시청자의 검색창 질문에 답해 온 어썸 47,000편의 10년을 한 사람의 성장으로 엮은 다큐 시네마.</p>
+          <p class="hub-desc">스무 살 자취방 첫 검색부터 거실의 엔터키(J-Cut)를 타고 성수 회의실 화이트보드로 이어지는 기·승·전·결 성장 다큐. 제작과정을 자연스레 회수합니다.</p>
           <div class="hub-foot"><span>지식·보다 본질 관통</span><strong>자세히 보기 →</strong></div>
         </button>
         <button type="button" class="hub-card" onclick="goToSlide(27)">
           <div class="hub-img"><img data-kv="15" alt="《무사히·고도리 10주년 종무식》" /></div>
-          <div class="hub-top"><span>TRACK 03</span><span class="hub-tag">02:30 · 6씬 풀스크립트</span></div>
+          <div class="hub-top"><span>TRACK 03</span><span class="hub-tag">02:30 · 기승전결 6씬</span></div>
           <h3 class="hub-title">《무사히·고도리 10주년 종무식》</h3>
-          <div class="hub-sub">10주년 종무식 기념 · 공식 IP 축하 필름</div>
-          <p class="hub-desc">어썸 10주년 종무식 현장을 무사히와 고도리가 직접 축하하는 공식 IP 헌정 단편. 10개의 촛불·10년 회고·종무식 축포 피날레까지 전 직원에게 따뜻한 축하를 전합니다.</p>
+          <div class="hub-sub">10주년 종무식 기념 · 공식 IP 단편</div>
+          <p class="hub-desc">늦은 든든이·도도리를 기다리며 먼저 종무식 무대를 지키는 무사히·고도리의 기·승·전·결 축하 작전. 복선과 축포 피날레 완전체 등장이 하나로 맞물립니다.</p>
           <div class="hub-foot"><span>무사히·고도리 종무식 헌정</span><strong>자세히 보기 →</strong></div>
         </button></div>
       </div>
@@ -664,6 +695,10 @@ body.scroll-mode .side-arrow { display: none; }
             <div class="cs-tag light">TRACK 01 · 05:00 · PURE EMOTIONAL</div>
             <h1 class="cs-h1 light"><span class="ln">《당신의 15분》</span><span class="ln">177억 번의 미소</span></h1>
             <p class="cs-sub light">개그와 과장을 덜어내고, 버려지던 15분(起) → 2016 뚝섬·30+ 증명(承) → 공식 반전·편지·18시 해답(轉) → 96F 수미상관(結)으로 완성한 순도 100% 감동 필름</p>
+            <div class="cs-refs light">
+              <div class="cs-refs-head light"><strong>핵심 레퍼런스</strong><span>일상 온기 · 댓글 편지 · 10주년 헌사 레퍼런스</span></div>
+              <div class="cs-refs-row"><a class="cs-ref-pill light" href="https://www.youtube.com/watch?v=ZaRNwfofeig" target="_blank" rel="noopener">▶ 배민 〈한 끼의 시간〉 ↗</a><a class="cs-ref-pill light" href="https://www.youtube.com/watch?v=TQ6P4iyAU8s" target="_blank" rel="noopener">▶ 배민 〈영수증〉 ↗</a><a class="cs-ref-pill light" href="https://www.youtube.com/watch?v=IytRLTKXwds" target="_blank" rel="noopener">▶ 토스 〈New World〉 ↗</a></div>
+            </div>
           </div>
           <div class="cs-foot light">
             <div class="cs-meta light"><span>기·승·전·결 &amp; 5대 전환 브리지</span> <span class="cs-dot">·</span> <span>6막 18컷 상세 연결 스크립트</span></div>
@@ -684,6 +719,11 @@ body.scroll-mode .side-arrow { display: none; }
         <div>
           <div class="eyebrow dark">TRACK 01 STRATEGY · PURE EMOTIONAL CINEMA</div>
           <h2 class="h2-dark">개그도 과장도 없이, <span class="c-blue">순도 100% 감동으로 가는 이유</span></h2>
+        <div class="strat-ref-strip dark">
+          <span class="srs-lbl dark">레퍼런스 영상</span>
+          <div class="srs-links"><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=ZaRNwfofeig" target="_blank" rel="noopener">▶ 배민 〈한 끼의 시간〉 ↗</a><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=TQ6P4iyAU8s" target="_blank" rel="noopener">▶ 배민 〈영수증〉 ↗</a><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=IytRLTKXwds" target="_blank" rel="noopener">▶ 토스 〈New World〉 ↗</a></div>
+          <span class="srs-note dark">일상 온기 · 댓글 편지 · 10주년 헌사 레퍼런스</span>
+        </div>
         </div>
         <div class="grid-3 gap-32 flex-1-row">
         <div class="hair-col dark">
@@ -1109,7 +1149,7 @@ body.scroll-mode .side-arrow { display: none; }
           <h3 class="sc-title">버려지던 15분의 질문</h3>
           <div class="sc-beats"><div class="sc-beat-ln">C01–02 (00:00) 2호선·혼밥 [피아노 단음]</div><div class="sc-beat-ln">C03 (00:24) 비 온 퇴근버스 [빗소리]</div><div class="sc-beat-ln">C04 (00:36) 새벽 폰 빛·미소 [정적]</div></div>
           <div class="sc-na compact"><div class="na-stanza"><span class="na-line">세상은 자극적인 15초에 열광하지만,</span><span class="na-line">하루에서 가장 길고 외로운 건</span><span class="na-line">무심코 흘려보내는 &#x27;15분&#x27;입니다.</span></div><div class="na-stanza"><span class="na-line">한강 위 2호선, 혼밥, 비 오는 버스,</span><span class="na-line">잠들기 전 이불 속 조용한 15분.</span></div><div class="na-stanza"><span class="na-line">아무도 주목 않던 그 작은 15분에서,</span><span class="na-line">우리의 10년이 시작됐습니다.</span></div></div>
-          <div class="sc-bridge">전환 → 폰 빛→REC 매치컷 · 2.39:1 확장 · 빗소리 J-Cut</div>
+          <div class="sc-bridge">전환 → 폰 빛→REC 매치컷 · 2.39:1 확장</div>
         </div>
         <div class="script-col tight">
           <div class="sc-tc">ACT 2 [承] · 00:50–01:40 · 3.5s/컷</div>
@@ -1337,13 +1377,17 @@ body.scroll-mode .side-arrow { display: none; }
       <span class="aw-pill">10TH</span>
     </div>
           <div class="cs-body">
-            <div class="cs-tag dark">TRACK 02 · 04:00 · HUMAN ARCHIVE</div>
+            <div class="cs-tag dark">TRACK 02 · 04:00 · CAUSAL HUMAN ARCHIVE</div>
             <h1 class="cs-h1 dark"><span class="ln">《47,000개의 질문》</span><span class="ln">어느 시청자의 10년</span></h1>
-            <p class="cs-sub dark">2016년 스무 살의 밤 첫 질문부터 2026년 서른 살의 거실까지 — 시청자가 검색창에 던진 삶의 질문에 47,000편으로 답해 온 어썸 10년의 성장 서사</p>
+            <p class="cs-sub dark">2016 스무 살의 첫 검색(起)이 뚝섬 스튜디오를 깨우고, 거실의 엔터키 1타(轉)로 성수 회의실 화이트보드와 18시 퇴근·빈 커서(|)(結)까지 단단히 이어지는 성장 서사</p>
+            <div class="cs-refs dark">
+              <div class="cs-refs-head dark"><strong>핵심 레퍼런스</strong><span>검색 질문 · 현실 공감 · 회의실 팀워크 레퍼런스</span></div>
+              <div class="cs-refs-row"><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=Vv_sjpclsZ8" target="_blank" rel="noopener">▶ Google 〈Year in Search〉 ↗</a><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=yp19GG2ryJw" target="_blank" rel="noopener">▶ 토스 〈THE JOURNEY〉 ↗</a><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=JJwdhWM9d0Y" target="_blank" rel="noopener">▶ Apple 〈The Underdogs〉 ↗</a></div>
+            </div>
           </div>
           <div class="cs-foot dark">
-            <div class="cs-meta dark"><span>배민 영수증 × 토스 The Journey 문법</span> <span class="cs-dot">·</span> <span>검색창 타이포 × 35mm 성장 시네마</span></div>
-            <button type="button" class="aw-btn-primary" onclick="goToSlide(18)">왜 어썸만 가능한 기획인가 →</button>
+            <div class="cs-meta dark"><span>엔터키(J-Cut)→성수 시점 전환</span> <span class="cs-dot">·</span> <span>검색창 × 35mm 성장 시네마</span></div>
+            <button type="button" class="aw-btn-primary" onclick="goToSlide(18)">기·승·전·결 기획 의도 보기 →</button>
           </div>
         </div>
         <div class="cs-photo"><img data-kv="10" alt="2016 스무 살 자취방 밤의 첫 질문" /></div>
@@ -1360,18 +1404,23 @@ body.scroll-mode .side-arrow { display: none; }
         <div>
           <div class="eyebrow light">TRACK 02 STRATEGY · QUESTIONS WE ANSWERED</div>
           <h2 class="h2-light">4만 7천 편의 의미, <span class="hl-blue">질문에 답하며 함께 자란 10년</span></h2>
+        <div class="strat-ref-strip light">
+          <span class="srs-lbl light">레퍼런스 영상</span>
+          <div class="srs-links"><a class="cs-ref-pill light" href="https://www.youtube.com/watch?v=Vv_sjpclsZ8" target="_blank" rel="noopener">▶ Google 〈Year in Search〉 ↗</a><a class="cs-ref-pill light" href="https://www.youtube.com/watch?v=yp19GG2ryJw" target="_blank" rel="noopener">▶ 토스 〈THE JOURNEY〉 ↗</a><a class="cs-ref-pill light" href="https://www.youtube.com/watch?v=JJwdhWM9d0Y" target="_blank" rel="noopener">▶ Apple 〈The Underdogs〉 ↗</a></div>
+          <span class="srs-note light">검색 질문 · 현실 공감 · 회의실 팀워크 레퍼런스</span>
+        </div>
         </div>
         <div class="grid-3 gap-32 flex-1-row">
         <div class="hair-col light">
           <div class="hc-num light">01</div>
-          <h3 class="hc-title light">질문과 해답으로 엮은 10년</h3>
-          <p class="hc-body light">지식인사이드·보다 BODA·머니인사이드·책과삶까지 어썸 47,000편 영상의 본질은 모두 &#x27;시청자가 품은 삶의 질문&#x27;에 대한 성실한 해답이었습니다.</p>
+          <h3 class="hc-title light">질문과 해답의 기·승·전·결</h3>
+          <p class="hc-body light">스무 살의 첫 검색이 뚝섬 작업실 불빛을 켜고(起) → 호기심과 출근길로 확장된 뒤(承) → 시청자의 엔터키(J-Cut)를 타고 성수 회의실(轉)과 빈 커서(結)로 닫힙니다.</p>
         </div>
 
         <div class="hair-col light">
           <div class="hc-num light">02</div>
-          <h3 class="hc-title light">한 시청자의 2016→2026</h3>
-          <p class="hc-body light">숫자를 나열하는 대신 2016년 스무 살이던 한 시청자가 서른 살이 되기까지 품었던 실제 질문들을 10년 타임라인으로 따라가며 깊은 공감을 만듭니다.</p>
+          <h3 class="hc-title light">시점 전환의 쾌감 (시청자→제작진)</h3>
+          <p class="hc-body light">4막 거실에서 시청자가 입력한 질문과 엔터 소리가 1프레임 만에 5막 성수 SK V1 회의실 화이트보드로 이어져 &#x27;왜 47,000편을 만들었는가&#x27;가 단번에 납득됩니다.</p>
         </div>
 
         <div class="hair-col light">
@@ -1379,61 +1428,61 @@ body.scroll-mode .side-arrow { display: none; }
           <h3 class="hc-title light">검색창 타이포 × 풀 AI 은유</h3>
           <p class="hc-body light">인물 대사 없이 &#x27;깨끗한 검색창 질문 한 줄&#x27;과 방 스탠드에서 우주로 열리는 35mm 시네마 은유만으로 4분 내내 눈을 뗄 수 없는 몰입감을 줍니다.</p>
         </div></div>
-        <p class="closing-thesis light">핵심 — 어썸의 지난 10년은 트래픽 경쟁이 아니라, 시청자의 질문이 자라는 만큼 함께 깊어져 온 진심의 아카이브였습니다.</p>
+        <p class="closing-thesis light">핵심 — 어썸의 지난 10년은 트래픽 경쟁이 아니라, 시청자의 질문이 자라는 만큼 성수동 회의실의 답도 함께 깊어져 온 기·승·전·결 서사였습니다.</p>
       </div>
     
         <span class="page-dot">19</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="19" data-title="Track 02 · 《47,000개의 질문》 6막 타임라인 지도">
+    <div class="slide-wrap" data-index="19" data-title="Track 02 · 《47,000개의 질문》 기·승·전·결 타임라인 지도">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(19)">PPT 보기 ↗</button>
-      <section class="slide theme-dark" aria-label="Slide 20 Track 02 · 《47,000개의 질문》 6막 타임라인 지도">
+      <section class="slide theme-dark" aria-label="Slide 20 Track 02 · 《47,000개의 질문》 기·승·전·결 타임라인 지도">
         
       <div class="s-body gap-14">
         <div class="row-between">
           <div>
-            <div class="eyebrow dark">TRACK 02 TIMELINE · 04:00 · 2016 → 2026 → 2036</div>
-            <h2 class="h2-dark-sm">《47,000개의 질문》 <span class="c-blue">6막 성장 타임라인</span></h2>
+            <div class="eyebrow dark">TRACK 02 TIMELINE · 04:00 · 기·승·전·결 CAUSAL TIMELINE</div>
+            <h2 class="h2-dark-sm">《47,000개의 질문》 <span class="c-blue">기·승·전·결 성장 타임라인</span></h2>
           </div>
-          <button type="button" class="aw-btn-primary" onclick="goToSlide(26)" style="padding: 9px 18px; font-size: 16px;">4분 풀 스크립트 보기 →</button>
+          <button type="button" class="aw-btn-primary" onclick="goToSlide(26)" style="padding: 9px 18px; font-size: 16px;">4분 인과 스크립트 보기 →</button>
         </div>
-        <div class="bo-banner">2016 스무 살 첫 질문 ──▶ 2018 호기심(보다) ──▶ 2021 첫 정장(지식·머니·책과삶) ──▶ 2023 가족의 대화 ──▶ 2026 성수 18시 ──▶ 2036 빈 커서(|)</div>
+        <div class="bo-banner">起 첫 검색·뚝섬 불 켜짐 ──▶ 承 우주·첫 정장 확장 ──▶ 轉 엔터키 J-Cut → 성수 화이트보드·18시 ──▶ 結 빈 커서(|) 수미상관</div>
         <div class="bo-grid-3x2">
         <button type="button" class="tl-card dark" onclick="goToSlide(20)">
-          <div class="tl-thumb"><img data-kv="10" alt="스무 살 자취방의 검색창" /></div>
-          <div class="tl-meta dark">Q 01 · 2016 첫 질문</div>
-          <h3 class="tl-title dark">스무 살 자취방의 검색창</h3>
-          <p class="tl-note dark">&quot;미래가 막막한 밤&quot; × 같은 밤 뚝섬의 시작</p>
+          <div class="tl-thumb"><img data-kv="10" alt="자취방 첫 검색 → 뚝섬 시작" /></div>
+          <div class="tl-meta dark">Q 01 [起] · 2016 첫 질문</div>
+          <h3 class="tl-title dark">자취방 첫 검색 → 뚝섬 시작</h3>
+          <p class="tl-note dark">스무 살 첫 검색이 뚝섬 작업실 불빛을 켜다</p>
         </button>
         <button type="button" class="tl-card dark" onclick="goToSlide(21)">
           <div class="tl-thumb"><img data-kv="11" alt="책상 스탠드에서 열린 우주" /></div>
-          <div class="tl-meta dark">Q 02 · 2018 호기심</div>
+          <div class="tl-meta dark">Q 02 [承] · 2018 호기심</div>
           <h3 class="tl-title dark">책상 스탠드에서 열린 우주</h3>
-          <p class="tl-note dark">&quot;밤하늘 너머엔 뭐가 있을까?&quot; (보다 BODA)</p>
+          <p class="tl-note dark">첫 답에 마음 연 시청자 · 밤하늘 우주(보다)</p>
         </button>
         <button type="button" class="tl-card dark" onclick="goToSlide(22)">
           <div class="tl-thumb"><img data-kv="12" alt="첫 정장, 2호선 아침의 불안" /></div>
-          <div class="tl-meta dark">Q 03 · 2021 첫 월급</div>
+          <div class="tl-meta dark">Q 03 [承] · 2021 첫 월급</div>
           <h3 class="tl-title dark">첫 정장, 2호선 아침의 불안</h3>
-          <p class="tl-note dark">&quot;돈과 일은 어떻게 지켜야 할까?&quot; (지식·책과삶)</p>
+          <p class="tl-note dark">질문이 현실로 깊어지자 지식·책과삶도 성장</p>
         </button>
         <button type="button" class="tl-card dark" onclick="goToSlide(23)">
-          <div class="tl-thumb"><img data-kv="8" alt="혼자 보던 화면, 가족의 대화로" /></div>
-          <div class="tl-meta dark">Q 04 · 2023 공유</div>
-          <h3 class="tl-title dark">혼자 보던 화면, 가족의 대화로</h3>
-          <p class="tl-note dark">&quot;부모님과 함께 볼 만한 이야기&quot; (30+·글로벌)</p>
+          <div class="tl-thumb"><img data-kv="8" alt="거실의 대화 → 새 질문 입력" /></div>
+          <div class="tl-meta dark">Q 04 [轉] · 2023 공유·엔터</div>
+          <h3 class="tl-title dark">거실의 대화 → 새 질문 입력</h3>
+          <p class="tl-note dark">부녀 웃음 끝, 화면 속 &#x27;엔터키(Enter)&#x27; 입력</p>
         </button>
         <button type="button" class="tl-card dark" onclick="goToSlide(24)">
-          <div class="tl-thumb"><img data-kv="13" alt="47,000번째 해답을 만드는 자리" /></div>
-          <div class="tl-meta dark">Q 05 · 2026 성수의 답</div>
-          <h3 class="tl-title dark">47,000번째 해답을 만드는 자리</h3>
-          <p class="tl-note dark">성수 SK V1 회의실 &amp; 오후 6시의 건강한 퇴근</p>
+          <div class="tl-thumb"><img data-kv="13" alt="엔터 J-Cut → 성수 화이트보드" /></div>
+          <div class="tl-meta dark">Q 05 [轉] · 2026 성수의 답</div>
+          <h3 class="tl-title dark">엔터 J-Cut → 성수 화이트보드</h3>
+          <p class="tl-note dark">그 질문에 답을 찾는 성수 회의실과 18시 퇴근</p>
         </button>
         <button type="button" class="tl-card dark" onclick="goToSlide(25)">
-          <div class="tl-thumb"><img data-kv="6" alt="다음 10년, 빈 검색창의 커서 |" /></div>
-          <div class="tl-meta dark">Q 06 · 2036 커서</div>
-          <h3 class="tl-title dark">다음 10년, 빈 검색창의 커서 |</h3>
-          <p class="tl-note dark">&quot;다음 10년엔 어떤 질문에 답할까요?&quot; 여운 엔딩</p>
+          <div class="tl-thumb"><img data-kv="6" alt="18시 2호선 위 빈 커서(|)" /></div>
+          <div class="tl-meta dark">Q 06 [結] · 2036 커서</div>
+          <h3 class="tl-title dark">18시 2호선 위 빈 커서(|)</h3>
+          <p class="tl-note dark">&quot;다음 10년엔 어떤 질문에 답할까요?&quot; 수미상관</p>
         </button></div>
       </div>
     
@@ -1448,34 +1497,34 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-left light">
           <div class="sb-photo"><img data-kv="10" alt="2016 스무 살, 첫 번째 질문" /></div>
           <div class="sb-left-info light">
-            <div class="sb-punch light"><span class="ln">&quot;2016년 어느 밤, 누군가의 작은 질문에서</span><span class="ln">어썸의 10년이 함께 시작되었습니다.&quot;</span></div>
+            <div class="sb-punch light"><span class="ln">&quot;2016년 비 오는 밤, 누군가의 막막한 첫 검색이</span><span class="ln">뚝섬의 작은 스튜디오 불을 처음 켰습니다.&quot;</span></div>
             <div class="sb-specs light">
               <div><strong>TIME · CAM</strong><span>00:00–00:40 · 2.39:1 · 35mm 자취방 창가 측면 픽스</span></div>
-              <div><strong>PIPELINE</strong><span>Seedream 4.5 + 클린 타이포 · PD 1</span><button type="button" class="inline-jump-btn" onclick="goToSlide(26)">질문의 10년 스크립트 보기 →</button></div>
+              <div><strong>PIPELINE</strong><span>Seedream 4.5 + 클린 타이포 · PD 1</span><button type="button" class="inline-jump-btn" onclick="goToSlide(26)">질문의 10년 인과 스크립트 보기 →</button></div>
             </div>
           </div>
         </div>
         <div class="sb-right light">
           <div class="sb-rhead">
             <div class="sb-top-row">
-              <div class="sb-tag light">Q 01 · 2016 첫 질문 · 2016 · 스무 살</div>
+              <div class="sb-tag light">Q 01 · 2016 첫 질문 · 起 · 발단 · 스무 살</div>
               <a class="sb-ref-link light" href="https://www.youtube.com/watch?v=Vv_sjpclsZ8" target="_blank" rel="noopener">▶ Google 〈Year in Search〉 ↗</a>
             </div>
             <h3 class="sb-title light">2016 스무 살, 첫 번째 질문</h3>
-            <div class="sb-sub light">비 오는 자취방 노트북 불빛 · 같은 밤 뚝섬</div>
+            <div class="sb-sub light">비 오는 자취방 노트북 불빛 · 같은 밤 뚝섬 불 켜짐</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
               <span>VISUAL · 화면 및 블로킹</span>
-              <ul class="sb-beats light"><li>2016년 비 내리는 밤, 작은 자취방 책상 앞 스무 살 청년의 얼굴을 노트북 화면이 은은히 비춘다.</li><li>화면 위 깨끗한 검색창에 조용히 떠오르는 질문 하나: &#x27;스무 살, 나는 앞으로 무엇을 좋아하게 될까?&#x27;</li></ul>
+              <ul class="sb-beats light"><li>2016년 비 내리는 밤, 자취방 책상 앞 스무 살 청년의 검색창에 &#x27;나는 앞으로 뭘 좋아할까?&#x27;가 뜬다.</li><li>질문 엔터와 동시에 같은 비 오는 밤, 그 질문에 답할 뚝섬 작은 작업실 스탠드 불이 똑같이 켜진다.</li></ul>
             </div>
             <div class="sb-row light">
               <span>AUDIO · EDIT · 사운드 및 컷 호흡</span>
-              <ul class="sb-beats light"><li>빗소리 위로 조용한 키보드 타건 두어 번, 그리고 맑고 미니멀한 피아노 아르페지오가 열린다.</li><li>같은 빗속 2016년 뚝섬 사무실의 작은 화이트보드로 자연스럽게 컷이 이어진다.</li></ul>
+              <ul class="sb-beats light"><li>빗소리 위로 키보드 타건 두어 번, 그리고 맑은 피아노 단음과 함께 뚝섬의 작업실 스위치음이 이어진다.</li><li>두 공간의 빗소리를 하나로 묶어 &#x27;시청자의 질문이 어썸을 탄생시킨 기(起)&#x27; 인과를 분명히 세운다.</li></ul>
             </div>
             <div class="sb-row light">
               <span>DIRECTION · 연출 포인트</span>
-              <p>기업 역사를 연표로 읊는 대신 &#x27;한 젊은 시청자의 질문&#x27;과 &#x27;뚝섬의 시작&#x27;을 같은 밤에 나란히 놓는다.</p>
+              <p>기업 연혁을 읊는 대신 &#x27;한 젊은이의 막막한 검색&#x27;이 &#x27;뚝섬의 카메라를 켰다&#x27;는 인과로 이야기를 시작한다.</p>
             </div>
           </div>
         </div>
@@ -1492,7 +1541,7 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-left dark">
           <div class="sb-photo"><img data-kv="11" alt="책상 스탠드에서 열린 밤하늘" /></div>
           <div class="sb-left-info dark">
-            <div class="sb-punch dark"><span class="ln">&quot;궁금증이 생길 때마다 문을 두드리면,</span><span class="ln">어썸은 늘 재미있고 믿을 수 있는 답을 준비했습니다.&quot;</span></div>
+            <div class="sb-punch dark"><span class="ln">&quot;첫 질문에 진심이 닿자, 시청자는 매일 밤</span><span class="ln">더 넓은 세상의 문을 두드리기 시작했습니다.&quot;</span></div>
             <div class="sb-specs dark">
               <div><strong>TIME · CAM</strong><span>00:40–01:20 · 2.39:1 · 35mm 스탠드 → 밤하늘 틸트업</span></div>
               <div><strong>PIPELINE</strong><span>Seedream 4.5 + Seedance 2.5 · PD 2</span></div>
@@ -1502,24 +1551,24 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-right dark">
           <div class="sb-rhead">
             <div class="sb-top-row">
-              <div class="sb-tag dark">Q 02 · 2018 호기심 · 2018 · 보다 BODA</div>
+              <div class="sb-tag dark">Q 02 · 2018 호기심 · 承 · 확장 I · 보다 BODA</div>
               <a class="sb-ref-link dark" href="https://www.youtube.com/watch?v=VGa1imApfdg" target="_blank" rel="noopener">▶ 코카콜라 〈Masterpiece〉 ↗</a>
             </div>
             <h3 class="sb-title dark">책상 스탠드에서 열린 밤하늘</h3>
-            <div class="sb-sub dark">순수한 지적 호기심이 밤하늘 별빛으로 번지다</div>
+            <div class="sb-sub dark">첫 답에 마음 연 시청자 · 순수 호기심의 우주</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
               <span>VISUAL · 화면 및 블로킹</span>
-              <ul class="sb-beats dark"><li>어두운 방 안 따뜻한 황동 스탠드가 지구본을 비추자, 창밖 서울 밤하늘이 맑은 별빛과 성운으로 열린다.</li><li>검색창 질문 타이포: &#x27;잠들기 전 15분, 우리가 몰랐던 우주의 비밀은 뭘까?&#x27;</li></ul>
+              <ul class="sb-beats dark"><li>첫 해답에 마음을 연 시청자가 밤마다 문을 두드리자, 어두운 방 황동 스탠드가 별빛 우주로 열린다.</li><li>검색창 질문 타이포: &#x27;잠들기 전 15분, 우리가 몰랐던 밤하늘 너머엔 뭐가 있을까?&#x27;</li></ul>
             </div>
             <div class="sb-row dark">
               <span>AUDIO · EDIT · 사운드 및 컷 호흡</span>
-              <ul class="sb-beats dark"><li>신비롭지만 과하지 않은 맑은 첼로와 엠비언트 피아노가 밤공기처럼 화면을 채운다.</li><li>지식·과학 채널 &#x27;보다(BODA)&#x27;가 단순한 유튜브 영상이 아닌 &#x27;지적 쉼터&#x27;였음을 시각화한다.</li></ul>
+              <ul class="sb-beats dark"><li>신비롭지만 과하지 않은 맑은 첼로와 엠비언트 피아노가 밤공기처럼 화면을 가득 채운다.</li><li>지식·과학 채널 &#x27;보다(BODA)&#x27;가 1회성 클릭을 넘어 매일 찾는 &#x27;지적 안식처&#x27;였음을 보여준다.</li></ul>
             </div>
             <div class="sb-row dark">
               <span>DIRECTION · 연출 포인트</span>
-              <p>시청자가 밤마다 던진 순수한 호기심을 스탠드 불빛과 별빛이라는 단 두 요소로 시적으로 표현한다.</p>
+              <p>스무 살의 작은 질문이 풀리자 더 큰 세상이 궁금해진 시청자의 호기심을 스탠드 불빛→우주 은유로 잇는다.</p>
             </div>
           </div>
         </div>
@@ -1536,7 +1585,7 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-left light">
           <div class="sb-photo"><img data-kv="12" alt="첫 정장을 입은 아침의 질문" /></div>
           <div class="sb-left-info light">
-            <div class="sb-punch light"><span class="ln">&quot;시청자의 질문이 자라는 만큼,</span><span class="ln">어썸의 이야기도 함께 깊어졌습니다.&quot;</span></div>
+            <div class="sb-punch light"><span class="ln">&quot;청년이 어른이 되어 질문이 깊어지는 만큼,</span><span class="ln">어썸의 이야기도 함께 깊어졌습니다.&quot;</span></div>
             <div class="sb-specs light">
               <div><strong>TIME · CAM</strong><span>01:20–02:00 · 2.39:1 · 2호선 아침 35mm 핸드헬드</span></div>
               <div><strong>PIPELINE</strong><span>Seedream 4.5 + Seedance 2.5 · PD 2</span></div>
@@ -1546,24 +1595,24 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-right light">
           <div class="sb-rhead">
             <div class="sb-top-row">
-              <div class="sb-tag light">Q 03 · 2021 첫 출근 · 2021 · 지식·머니·책과삶</div>
+              <div class="sb-tag light">Q 03 · 2021 첫 출근 · 承 · 확장 II · 지식·책과삶</div>
               <a class="sb-ref-link light" href="https://www.youtube.com/watch?v=yp19GG2ryJw" target="_blank" rel="noopener">▶ 토스 〈THE JOURNEY〉 ↗</a>
             </div>
             <h3 class="sb-title light">첫 정장을 입은 아침의 질문</h3>
-            <div class="sb-sub light">사회초년생의 기준이 된 지식·머니·책과삶</div>
+            <div class="sb-sub light">사회인이 된 시청자 · 함께 깊어진 지식·머니·책과삶</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
               <span>VISUAL · 화면 및 블로킹</span>
-              <ul class="sb-beats light"><li>햇살 비치는 2호선 창가, 첫 정장을 입은 20대 후반의 직장인이 한강을 보며 안도한 듯 미소 짓는다.</li><li>질문 타이포: &#x27;어설픈 첫 월급과 막막한 세상, 이제 나는 무엇을 기준으로 살아야 할까?&#x27;</li></ul>
+              <ul class="sb-beats light"><li>시간이 흘러 첫 정장을 입고 2호선에 오른 스물다섯 직장인이 한강을 보며 안도한 듯 미소 짓는다.</li><li>질문 타이포: &#x27;어설픈 첫 월급과 막막한 세상, 이제 무엇을 기준으로 살아야 할까?&#x27;</li></ul>
             </div>
             <div class="sb-row light">
               <span>AUDIO · EDIT · 사운드 및 컷 호흡</span>
-              <ul class="sb-beats light"><li>출근길 열차 소리가 따뜻한 어쿠스틱 기타·현악 코드로 바뀌며 안정감 있는 리듬을 만든다.</li><li>어썸의 엔지니어링 기반 데이터 기획과 전문가 대담·책과삶 출판의 진정성이 겹쳐 흐른다.</li></ul>
+              <ul class="sb-beats light"><li>출근길 열차 소리가 따뜻한 어쿠스틱 기타·현악 코드로 바뀌며 현실에 발 디딘 단단한 리듬을 만든다.</li><li>시청자의 질문이 생존과 삶의 기준으로 깊어질수록 지식인사이드·머니·책과삶으로 답이 확장된다.</li></ul>
             </div>
             <div class="sb-row light">
               <span>DIRECTION · 연출 포인트</span>
-              <p>시청자가 나이를 먹으며 질문이 깊어질 때마다 어썸 역시 함께 성장해 왔음을 설득력 있게 보여준다.</p>
+              <p>청년이 사회인이 되며 질문의 무게가 달라질 때마다 어썸 역시 함께 공부하고 성장해 왔음을 설득한다.</p>
             </div>
           </div>
         </div>
@@ -1580,9 +1629,9 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-left dark">
           <div class="sb-photo"><img data-kv="8" alt="혼자 보던 화면, 가족의 대화로" /></div>
           <div class="sb-left-info dark">
-            <div class="sb-punch dark"><span class="ln">&quot;좋은 질문 하나가 결국 세대와 국경을 넘어,</span><span class="ln">서로를 한 자리에 모이게 만들었습니다.&quot;</span></div>
+            <div class="sb-punch dark"><span class="ln">&quot;화면 너머에서 또 하나의 질문이 도착하는 순간,</span><span class="ln">이제 카메라는 그 답을 만드는 곳으로 향합니다.&quot;</span></div>
             <div class="sb-specs dark">
-              <div><strong>TIME · CAM</strong><span>02:00–02:40 · 2.39:1 · 35mm 거실 자연등 픽스</span></div>
+              <div><strong>TIME · CAM</strong><span>02:00–02:40 · 2.39:1 · 35mm 거실 픽스 → 엔터 클로즈</span></div>
               <div><strong>PIPELINE</strong><span>Seedream 4.5 + 서정 타이포 · PD 2</span></div>
             </div>
           </div>
@@ -1590,24 +1639,24 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-right dark">
           <div class="sb-rhead">
             <div class="sb-top-row">
-              <div class="sb-tag dark">Q 04 · 2023 함께 · 2023 · 30+·글로벌</div>
+              <div class="sb-tag dark">Q 04 · 2023 함께 · 轉 · 공유→엔터키</div>
               <a class="sb-ref-link dark" href="https://www.youtube.com/watch?v=TQ6P4iyAU8s" target="_blank" rel="noopener">▶ 배민 〈영수증 프로젝트〉 ↗</a>
             </div>
             <h3 class="sb-title dark">혼자 보던 화면, 가족의 대화로</h3>
-            <div class="sb-sub dark">혼자 보던 화면이 가족과 함께 웃는 이야기로</div>
+            <div class="sb-sub dark">거실 부녀의 웃음 뒤, 다음 질문을 치는 &#x27;엔터키&#x27;</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
               <span>VISUAL · 화면 및 블로킹</span>
-              <ul class="sb-beats dark"><li>저녁 거실 소파, 나란히 앉은 아버지와 자녀가 하나의 스마트폰을 보며 다정히 웃고 대화를 나눈다.</li><li>질문 타이포: &#x27;오늘 퇴근 후, 아버지와 함께 보며 웃을 만한 이야기는 없을까?&#x27;</li></ul>
+              <ul class="sb-beats dark"><li>저녁 거실 소파, 나란히 앉은 아버지와 자녀가 하나의 폰을 보며 다정히 웃고 대화를 나눈다.</li><li>장면 끝, 시청자가 검색창에 새 질문(&#x27;앞으로 우리의 내일은?&#x27;)을 적고 손가락으로 &#x27;엔터&#x27;를 꾹 누른다.</li></ul>
             </div>
             <div class="sb-row dark">
               <span>AUDIO · EDIT · 사운드 및 컷 호흡</span>
-              <ul class="sb-beats dark"><li>현악 앙상블이 가장 따뜻하게 감싸며 &#x27;혼자의 시청&#x27;에서 &#x27;세대 간의 연결&#x27;로 시야를 넓힌다.</li><li>2023 한국 유튜브 상위권과 해외 채널(어썸코리아) 확장을 자랑 대신 관계의 온도로 푼다.</li></ul>
+              <ul class="sb-beats dark"><li>따뜻한 현악 앙상블 뒤, 02:39 딱 한 번 맑게 울리는 키보드 엔터 소리(J-Cut)로 시점을 성수로 넘긴다.</li><li>혼자 보던 화면이 세대·국경을 넘은 뒤, 마침내 &#x27;누가 이 답을 빚고 있는가&#x27;로 시선이 전환된다.</li></ul>
             </div>
             <div class="sb-row dark">
               <span>DIRECTION · 연출 포인트</span>
-              <p>좋은 콘텐츠는 결국 혼자 보던 사람들을 같은 소파 위로 모이게 만든다는 보편적 진실을 짚는다.</p>
+              <p>Q04 끝의 엔터키 타건 한 번으로 시청자의 방에서 성수동 제작진 회의실로 넘어가는 물리적 인과를 만든다.</p>
             </div>
           </div>
         </div>
@@ -1628,7 +1677,7 @@ body.scroll-mode .side-arrow { display: none; }
           <div><img data-kv="7" alt="47,000번째 해답을 만드는 자리 2" /></div>
         </div>
           <div class="sb-left-info light">
-            <div class="sb-punch light"><span class="ln">&quot;4만 7천 번의 질문에 답해 온 건 알고리즘이 아니라,</span><span class="ln">내일도 궁금해할 줄 아는 성수동의 우리였습니다.&quot;</span></div>
+            <div class="sb-punch light"><span class="ln">&quot;4만 7천 번의 해답을 빚어온 건 알고리즘이 아니라,</span><span class="ln">질문을 소중히 여기며 6시에 웃고 떠나는 우리였습니다.&quot;</span></div>
             <div class="sb-specs light">
               <div><strong>TIME · CAM</strong><span>02:40–03:20 · 2.39:1 · 성수 회의실 · 18:00 퇴근 노을</span></div>
               <div><strong>PIPELINE</strong><span>Seedream 4.5 + Seedance 2.5 · PD 3</span></div>
@@ -1638,24 +1687,24 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-right light">
           <div class="sb-rhead">
             <div class="sb-top-row">
-              <div class="sb-tag light">Q 05 · 2026 성수 · 2026 · 성수 본사</div>
+              <div class="sb-tag light">Q 05 · 2026 성수 · 轉 · 시점 역전 · 성수</div>
               <a class="sb-ref-link light" href="https://www.youtube.com/watch?v=JJwdhWM9d0Y" target="_blank" rel="noopener">▶ Apple 〈The Underdogs〉 ↗</a>
             </div>
             <h3 class="sb-title light">47,000번째 해답을 만드는 자리</h3>
-            <div class="sb-sub light">성수 SK V1 회의실의 낮과 18시 건강한 퇴근</div>
+            <div class="sb-sub light">질문이 꽂힌 성수 화이트보드 &amp; 18시 정시 퇴근</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
               <span>VISUAL · 화면 및 블로킹</span>
-              <ul class="sb-beats light"><li>서울숲 햇살이 드는 성수동 유리 회의실, 열정적으로 질문과 기획안을 나누는 4인의 제작진.</li><li>이어 시계가 오후 6시에 닿자 조명이 꺼지고, 노을 아래 웃으며 가볍게 퇴근하는 동료들의 뒷모습.</li></ul>
+              <ul class="sb-beats light"><li>Q04 엔터 소리와 1프레임 만에, 성수동 회의실 화이트보드 위 바로 그 질문이 마커로 적혀 나간다.</li><li>열정적으로 해답을 빚던 4인의 제작진이 18시 소등과 함께 노을 속 웃으며 가볍게 퇴근한다.</li></ul>
             </div>
             <div class="sb-row light">
               <span>AUDIO · EDIT · 사운드 및 컷 호흡</span>
-              <ul class="sb-beats light"><li>회의실의 기분 좋은 공기음 뒤, 18시 소등과 함께 맑은 피아노와 첼로가 다시 정돈된다.</li><li>10년 연속 흑자와 7년 연속 성장 뒤엔 &#x27;건강하게 일해 온 성수동의 하루&#x27;가 있었음을 비춘다.</li></ul>
+              <ul class="sb-beats light"><li>마커 스치는 소리·회의실 공기음 뒤, 18시 소등 딸깍음과 함께 맑은 피아노·첼로가 정돈된다.</li><li>&#x27;47,000개의 답을 내놓기 위해선 만드는 사람부터 건강히 웃어야 한다&#x27;는 어썸의 본질이 증명된다.</li></ul>
             </div>
             <div class="sb-row light">
               <span>DIRECTION · 연출 포인트</span>
-              <p>47,000개의 답을 내놓은 주인공이 AI도 알고리즘도 아닌 &#x27;성수동의 매일 웃으며 일하는 우리&#x27;임을 강조한다.</p>
+              <p>뜬금없이 회사가 등장하지 않고 &#x27;시청자가 보낸 질문이 성수 회의실 보드에 꽂히며 답이 만들어진다&#x27;는 깔끔한 반전.</p>
             </div>
           </div>
         </div>
@@ -1676,9 +1725,9 @@ body.scroll-mode .side-arrow { display: none; }
           <div><img data-kv="6" alt="다음 10년의 첫 번째 질문 2" /></div>
         </div>
           <div class="sb-left-info dark">
-            <div class="sb-punch dark"><span class="ln">&quot;스무 살에서 서른 살까지 함께 건너온 10년.</span><span class="ln">어썸의 47,001번째 질문이 지금 시작됩니다.&quot;</span></div>
+            <div class="sb-punch dark"><span class="ln">&quot;스무 살에서 서른 살까지 함께 답해 온 10년.</span><span class="ln">어썸의 47,001번째 질문이 지금 시작됩니다.&quot;</span></div>
             <div class="sb-specs dark">
-              <div><strong>TIME · CAM</strong><span>03:20–04:00 · 2.39:1 · 96F 디졸브 · 성수 옥상 노을</span></div>
+              <div><strong>TIME · CAM</strong><span>03:20–04:00 · 2.39:1 · 96F 디졸브 · 성수 옥상→2호선</span></div>
               <div><strong>PIPELINE</strong><span>Premiere Mix + 클린 타이포 · PD 3</span></div>
             </div>
           </div>
@@ -1686,24 +1735,24 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-right dark">
           <div class="sb-rhead">
             <div class="sb-top-row">
-              <div class="sb-tag dark">Q 06 · 2036 커서 · 다음 10년</div>
+              <div class="sb-tag dark">Q 06 · 2036 커서 · 結 · 수미상관 엔딩</div>
               <a class="sb-ref-link dark" href="https://www.youtube.com/watch?v=GbQomqb28os" target="_blank" rel="noopener">▶ Nike 〈You Can&#x27;t Stop Us〉 ↗</a>
             </div>
             <h3 class="sb-title dark">다음 10년의 첫 번째 질문</h3>
-            <div class="sb-sub dark">뚝섬과 성수 노을 위 다시 깜빡이는 커서(|)</div>
+            <div class="sb-sub dark">18시 퇴근길 2호선 창가 위 다시 깜빡이는 커서(|)</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
               <span>VISUAL · 화면 및 블로킹</span>
-              <ul class="sb-beats dark"><li>2016 뚝섬의 작은 작업실과 2026 성수 SK V1 옥상 노을이 4초간 우아하게 겹쳐진다.</li><li>화면 한가운데 맑은 화이트 검색창이 열리고, 다음 질문의 시작을 기다리는 커서(|)만 조용히 깜빡인다.</li></ul>
+              <ul class="sb-beats dark"><li>2016 뚝섬의 작은 작업실과 2026 성수 옥상 노을이 4초간 겹쳐진 뒤, 저녁 2호선 창가 폰으로 돌아온다.</li><li>1막 자취방처럼 맑은 화이트 검색창이 열리고, 다음 질문의 시작을 기다리는 커서(|)만 조용히 깜빡인다.</li></ul>
             </div>
             <div class="sb-row dark">
               <span>AUDIO · EDIT · 사운드 및 컷 호흡</span>
-              <ul class="sb-beats dark"><li>모든 악기가 조용히 숨을 고른 뒤, 맑은 피아노 한 음과 함께 &quot;다음 10년엔 어떤 질문에 답할까요?&quot; 내레이션.</li><li>AWESOME ENTERTAINMENT 10TH ANNIVERSARY 타이틀과 함께 깊은 울림을 남기며 닫힌다.</li></ul>
+              <ul class="sb-beats dark"><li>악기가 숨을 고른 뒤 맑은 피아노 한 음과 &quot;다음 10년, 우리는 어떤 질문에 답할까요?&quot; 내레이션이 울린다.</li><li>AWESOME ENTERTAINMENT 10TH ANNIVERSARY 타이틀과 함께 완성도 높은 원형 구조(수미상관)로 닫힌다.</li></ul>
             </div>
             <div class="sb-row dark">
               <span>DIRECTION · 연출 포인트</span>
-              <p>과거를 훑고 끝나는 게 아니라 &#x27;다음 10년의 새로운 질문&#x27;을 객석에 건네는 가장 세련된 종무식 엔딩.</p>
+              <p>Q01의 검색창이 10년 뒤 Q06의 빈 커서로 돌아오며, 시청자와 어썸이 다음 10년으로 함께 넘어가는 엔딩.</p>
             </div>
           </div>
         </div>
@@ -1712,91 +1761,88 @@ body.scroll-mode .side-arrow { display: none; }
         <span class="page-dot">26</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="26" data-title="《47,000개의 질문》 4분 풀 내레이션 스크립트 &amp; 전문 복사">
+    <div class="slide-wrap" data-index="26" data-title="《47,000개의 질문》 4분 기·승·전·결 스크립트 &amp; 전문 복사">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(26)">PPT 보기 ↗</button>
-      <section class="slide theme-mist" aria-label="Slide 27 《47,000개의 질문》 4분 풀 내레이션 스크립트 &amp; 전문 복사">
+      <section class="slide theme-mist" aria-label="Slide 27 《47,000개의 질문》 4분 기·승·전·결 스크립트 &amp; 전문 복사">
         
-      <div class="s-body gap-16">
+      <div class="s-body gap-14">
         <div class="row-between">
           <div>
-            <div class="eyebrow light">TRACK 02 FULL SCRIPT · 04:00 (240s) · 2016 → 2036</div>
-            <h2 class="h2-light-sm">《47,000개의 질문》 <span class="hl-blue">4분 풀 내레이션 스크립트</span></h2>
+            <div class="eyebrow light">TRACK 02 FULL SCRIPT · 04:00 (240s) · 기·승·전·결 인과 서사</div>
+            <h2 class="h2-light-sm">《47,000개의 질문》 <span class="hl-blue">4분 기·승·전·결 스크립트</span></h2>
           </div>
           <button type="button" class="aw-btn-primary" id="btnCopyQuestionsNa" onclick="copyQuestionsScript()" style="padding: 10px 18px; font-size: 16px; flex-shrink: 0;">4분 전문 복사</button>
         </div>
-        <div class="grid-2 gap-24 flex-1-row" style="padding-bottom: 8px;">
-        <div class="script-col wide">
-          <div class="sc-tc">PART I · 00:00–02:00 · 2016 → 2021</div>
-          <div class="sc-vis">톤: 담백하고 지적인 35mm 다큐 내레이션 · 화면마다 깨끗한 검색창 질문 타이포 1줄</div>
-          <div class="bo-items-wrap">
-            <div class="bo-item">
-              <div class="bo-item-tc">Q 01 · 2016</div>
-              <div class="bo-item-lines"><span class="na-line">2016년 어느 비 오는 밤, 스무 살의 책상 앞.</span><span class="na-line">&quot;나는 앞으로 무엇을 궁금해하며 살아갈까?&quot;</span><span class="na-line">누군가의 작은 질문에서, 어썸의 10년이 함께 시작됐습니다.</span></div>
+        <div class="grid-2 gap-24 flex-1-row">
+        <div class="script-col wide tight">
+          <div class="sc-tc">PART I [起·承] · 00:00–02:00 · 질문의 시작과 성장</div>
+          <div class="sc-vis" style="padding: 6px 10px;">연결 축: 자취방 검색(起) → 뚝섬 불 켜짐 → 우주·출근길 확장(承) → 엔터키 예고</div>
+          <div class="bo-items-wrap tight">
+            <div class="bo-item tight">
+              <div class="bo-item-tc">Q 01 [起] · 2016 첫 검색 → 뚝섬</div>
+              <div class="bo-item-lines"><span class="na-line">2016 비 오는 밤, 스무 살 책상 위 첫 검색 &#x27;나는 뭘 좋아할까?&#x27;</span><span class="na-line">질문 엔터가 울리던 바로 그 밤, 뚝섬의 작은 작업실 스탠드 불도</span><span class="na-line">그 막막함에 대답해 주기 위해 조용히 함께 켜졌습니다.</span></div>
             </div>
-            <div class="bo-item">
-              <div class="bo-item-tc">Q 02 · 2018</div>
-              <div class="bo-item-lines"><span class="na-line">&quot;잠들기 전 15분, 밤하늘 너머엔 무엇이 있을까?&quot;</span><span class="na-line">책상 스탠드 불빛 하나가 별빛 우주로 번지던 밤.</span><span class="na-line">어썸은 궁금함의 문을 두드리면 언제나 열린 해답이 됐습니다.</span></div>
+            <div class="bo-item tight">
+              <div class="bo-item-tc">Q 02 [承] · 2018 우주 · 보다</div>
+              <div class="bo-item-lines"><span class="na-line">첫 해답에 마음을 연 시청자가 밤마다 문을 두드리자,</span><span class="na-line">방의 작은 스탠드는 잠들기 전 15분의 별빛 우주(보다)로 열렸고</span><span class="na-line">질문이 닿는 곳마다 어썸의 이야기가 세상으로 넓어졌습니다.</span></div>
             </div>
-            <div class="bo-item">
-              <div class="bo-item-tc">Q 03 · 2021</div>
-              <div class="bo-item-lines"><span class="na-line">첫 정장을 입고 2호선에 오른 스물다섯의 아침.</span><span class="na-line">&quot;어설픈 첫 월급과 막막한 세상, 어떤 기준을 가져야 할까?&quot;</span><span class="na-line">시청자의 질문이 깊어질수록 어썸의 이야기도 단단해졌습니다.</span></div>
+            <div class="bo-item tight">
+              <div class="bo-item-tc">Q 03 [承] · 2021 첫 정장 · 2호선</div>
+              <div class="bo-item-lines"><span class="na-line">스물다섯 첫 정장을 입고 2호선에 오른 아침, 질문은 현실이 됐죠.</span><span class="na-line">&#x27;첫 월급과 막막한 세상, 이제 무엇을 기준으로 살아야 할까?&#x27;</span><span class="na-line">시청자의 삶이 자라는 만큼 지식·머니·책과삶의 답도 단단해졌습니다.</span></div>
             </div></div>
+          <div class="sc-bridge">인과 연결 → 질문이 깊어질수록 혼자만의 화면이 확장 · 엔터키 준비</div>
         </div>
-        <div class="script-col wide accent-blue">
-          <div class="sc-tc">PART II · 02:00–04:00 · 2023 → 2036</div>
-          <div class="sc-vis">톤: 서정적 현악 앙상블 확장 → 18시 성수 노을 → 빈 검색창 커서(|) 정적 엔딩</div>
-          <div class="bo-items-wrap">
-            <div class="bo-item">
-              <div class="bo-item-tc">Q 04 · 2023</div>
-              <div class="bo-item-lines"><span class="na-line">&quot;오늘 퇴근 후, 아버지와 함께 웃으며 볼 이야기는 없을까?&quot;</span><span class="na-line">혼자 보던 작은 화면이 거실의 대화가 되고 세계와 닿던 시간.</span><span class="na-line">좋은 질문은 결국 사람과 사람을 한 소파 위로 모이게 했습니다.</span></div>
+        <div class="script-col wide tight accent-blue">
+          <div class="sc-tc">PART II [轉·結] · 02:00–04:00 · 시점 역전과 다음 10년</div>
+          <div class="sc-vis" style="padding: 6px 10px;">연결 축: 거실 엔터키(J-Cut) → 성수 화이트보드·18시 퇴근(轉) → 빈 커서(|)(結)</div>
+          <div class="bo-items-wrap tight">
+            <div class="bo-item tight">
+              <div class="bo-item-tc">Q 04 [轉] · 2023 거실 → 엔터키</div>
+              <div class="bo-item-lines"><span class="na-line">혼자 보던 화면이 거실 아버지와 함께 웃는 대화가 된 시간.</span><span class="na-line">영상 끝, 누군가 새 질문 한 줄을 치고 &#x27;엔터(Enter)&#x27;를 누르자</span><span class="na-line">카메라는 질문이 꽂히는 그 해답의 방으로 1프레임 만에 점프합니다.</span></div>
             </div>
-            <div class="bo-item">
-              <div class="bo-item-tc">Q 05 · 2026</div>
-              <div class="bo-item-lines"><span class="na-line">지난 10년, 어썸이 답해 온 4만 7천 개의 질문들.</span><span class="na-line">그 답을 만들어 온 건 알고리즘이 아니라 오후 6시에 웃으며</span><span class="na-line">집으로 돌아가는 성수동 스튜디오의 건강한 우리였습니다.</span></div>
+            <div class="bo-item tight">
+              <div class="bo-item-tc">Q 05 [轉] · 2026 성수 회의실·18시</div>
+              <div class="bo-item-lines"><span class="na-line">화이트보드에 그 질문이 적히는 성수동 회의실과 18시의 소등.</span><span class="na-line">4만 7천 개의 답을 빚어온 건 알고리즘이 아니라, 낮엔 치열히 묻고</span><span class="na-line">오후 여섯 시엔 웃으며 퇴근하는 성수동의 건강한 우리였습니다.</span></div>
             </div>
-            <div class="bo-item">
-              <div class="bo-item-tc">Q 06 · 2036</div>
-              <div class="bo-item-lines"><span class="na-line">스무 살이 서른 살이 되기까지, 한 걸음씩 같이 건너온 10년.</span><span class="na-line">[빈 검색창 커서 | ] &quot;앞으로의 10년, 우리는 어떤 질문에 답할까요?&quot;</span><span class="na-line">열 살의 어썸엔터테인먼트, 47,001번째 이야기를 시작합니다.</span></div>
+            <div class="bo-item tight">
+              <div class="bo-item-tc">Q 06 [結] · 2036 빈 검색창 커서 |</div>
+              <div class="bo-item-lines"><span class="na-line">18시 퇴근길 2호선 창가 위, 다시 깜빡이는 빈 검색창 커서(|).</span><span class="na-line">&quot;앞으로의 10년, 우리는 또 어떤 질문에 답하게 될까요?&quot;</span><span class="na-line">열 살의 어썸엔터테인먼트, 47,001번째 이야기를 시작합니다.</span></div>
             </div></div>
+          <div class="sc-bridge">인과 연결 → 엔터키 1F 성수 보드 전환 → 18시 퇴근·빈 커서(|) 회수</div>
         </div></div>
-        <textarea id="questionsNaRaw" class="sr-only-copy" readonly tabindex="-1">[작품명] 《47,000개의 질문: 어느 시청자의 10년》 (04:00 · 신기획 성장 서사 풀 AI)
+        <textarea id="questionsNaRaw" class="sr-only-copy" readonly tabindex="-1">[작품명] 《47,000개의 질문: 어느 시청자의 10년》 (04:00 · 기·승·전·결 인과 다큐)
 
-[Q 01 · 2016 스무 살 — 비 오는 자취방 &amp; 뚝섬]
-2016년 어느 비 오는 밤, 스무 살의 작은 책상 앞.
-(검색창) &quot;스무 살, 나는 앞으로 무엇을 좋아하고 궁금해하며 살아갈까?&quot;
-누군가의 조용한 질문에서, 뚝섬의 작은 작업실도 함께 시작되었습니다.
+================================================================
+【起 · 발단 (00:00–00:40)】 Q 01 · 2016 스무 살 첫 검색 → 뚝섬 시작
+================================================================
+- [화면] 비 오는 자취방 노트북 검색창(&quot;나는 앞으로 뭘 좋아할까?&quot;) → 엔터 소리와 동시에 같은 빗속 2016 뚝섬 작업실 스탠드 불 켜짐
+- [내레이션] &quot;2016년 비 오는 밤, 스무 살의 작은 책상 앞. &#x27;나는 앞으로 무엇을 좋아하고 궁금해하며 살아갈까?&#x27; 누군가의 막막한 첫 검색이 울리던 그 밤, 그 질문에 답하기 위해 뚝섬의 작은 작업실 스탠드도 조용히 켜졌습니다.&quot;
+[인과 전환 →] 첫 질문에 답이 돌아오자, 시청자는 매일 밤 더 큰 세상의 문을 두드리기 시작함
 
-[Q 02 · 2018 호기심 — 책상 스탠드에서 열린 우주 (보다)]
-(검색창) &quot;잠들기 전 15분, 저 밤하늘 너머엔 무엇이 있을까?&quot;
-책상 위 스탠드 불빛 하나가 별빛 우주로 번지던 밤.
-궁금증이 생길 때마다 문을 두드리면,
-어썸은 늘 재미있고 믿을 수 있는 첫 번째 해답이 되어 주었습니다.
+================================================================
+【承 · 확장 (00:40–02:00)】 Q 02~03 · 우주(보다) → 첫 정장(지식·책과삶)
+================================================================
+- [Q 02 · 2018 화면] 어두운 방 황동 스탠드 빛이 밤하늘 성운·우주로 확장 (검색창: &quot;밤하늘 너머엔 뭐가 있을까?&quot;)
+  [내레이션] &quot;첫 해답에 마음을 연 시청자가 밤마다 문을 두드릴 때마다, 작은 책상 스탠드는 15분의 별빛 우주로 열렸습니다.&quot;
+- [Q 03 · 2021 화면] 첫 정장을 입고 아침 2호선에 오른 스물다섯 청년 (검색창: &quot;첫 월급과 막막한 세상, 어떤 기준을 가져야 할까?&quot;)
+  [내레이션] &quot;어느덧 청년이 첫 정장을 입고 세상에 나설 때, 질문의 무게만큼 지식인사이드·머니·책과삶의 해답도 함께 단단해졌습니다.&quot;
+[인과 전환 →] 혼자 보던 화면이 거실의 가족과 닿은 뒤, 마침내 새 질문의 &#x27;엔터키&#x27;가 눌림
 
-[Q 03 · 2021 첫 출근 — 2호선 위의 불안과 기준 (지식·머니·책과삶)]
-첫 정장을 입고 2호선에 오른 스물다섯의 아침.
-(검색창) &quot;어설픈 첫 월급과 막막한 세상, 이제 무엇을 기준으로 살아야 할까?&quot;
-시청자가 나이를 먹으며 질문이 깊어지는 만큼,
-어썸의 이야기도 세상과 삶을 읽는 지혜로 함께 깊어졌습니다.
+================================================================
+【轉 · 시점 역전 (02:00–03:20)】 Q 04 엔터키 J-Cut → Q 05 성수 화이트보드
+================================================================
+- [Q 04 · 2023 화면] 거실 소파에서 스마트폰을 보며 함께 웃는 아버지와 딸 → 마지막 컷, 검색창에 새 질문을 쓰고 엔터(Enter) 딱 누르는 손
+  [사운드] 맑은 엔터키 타건음 1타(J-Cut)
+  [내레이션] &quot;혼자 보던 작은 화면은 가족과 함께 웃는 대화가 되었고, 3,340만 명을 지나 마침내 또 하나의 질문이 도착합니다.&quot;
+- [Q 05 · 2026 화면] 엔터 소리와 1F 매치컷으로 성수 SK V1 유리 회의실 화이트보드에 바로 그 질문이 마커로 적힘 → 치열한 회의 뒤 18:00 소등 &amp; 노을 퇴근
+  [내레이션] &quot;4만 7천 개의 질문에 성실히 답해 온 건 차가운 알고리즘이 아니라, 낮에는 치열하게 묻고 오후 여섯 시엔 웃으며 집으로 돌아가는 성수동의 건강한 우리였습니다.&quot;
+[인과 전환 →] 18시 성수 퇴근 노을이 2016 뚝섬의 불빛과 96F로 겹친 뒤, 퇴근길 2호선 위 빈 검색창 커서로 회수
 
-[Q 04 · 2023 함께 — 혼자 보던 화면에서 거실의 대화로 (30+·글로벌)]
-(검색창) &quot;오늘 퇴근 후, 아버지와 함께 웃으며 볼 만한 이야기는 없을까?&quot;
-혼자 보던 작은 스마트폰 화면이 어느새 부모님과의 대화가 되고,
-국경 너머 3,340만 명과 나누는 즐거움이 되었습니다.
-좋은 질문 하나는 결국 사람과 사람을 한 자리로 모이게 만들었습니다.
-
-[Q 05 · 2026 성수 — 47,000번째 해답을 만드는 우리]
-지난 10년, 어썸엔터테인먼트가 성실히 답해 온 4만 7천 개의 질문들.
-그 수많은 해답을 만들어 온 건 차가운 알고리즘이 아니라
-낮에는 치열하게 묻고, 오후 여섯 시엔 웃으며 집으로 돌아가는
-성수동의 건강한 우리였습니다.
-
-[Q 06 · 2036 커서 — 다음 10년의 첫 번째 질문]
-스무 살이 서른 살이 되기까지, 한 걸음씩 같이 건너온 10년.
-(빈 검색창 커서 | 깜빡이며)
-&quot;앞으로의 10년, 우리는 또 어떤 질문에 답하게 될까요?&quot;
-
-열 살의 어썸엔터테인먼트.
-당신과 함께 47,001번째 이야기를 시작합니다.</textarea>
+================================================================
+【結 · 수미상관 (03:20–04:00)】 Q 06 · 2036 빈 검색창 커서 |
+================================================================
+- [화면] 뚝섬과 성수 노을 디졸브 뒤, 저녁 2호선 창가 폰 화면 가운데 깜빡이는 빈 검색창 커서(|)
+- [내레이션] &quot;스무 살이 서른 살이 되기까지, 한 걸음씩 같이 건너온 10년. 앞으로의 10년, 우리는 또 어떤 질문에 답하게 될까요? 열 살의 어썸엔터테인먼트, 당신과 함께 47,001번째 이야기를 시작합니다.&quot; </textarea>
       </div>
     
         <span class="page-dot">27</span>
@@ -1817,13 +1863,17 @@ body.scroll-mode .side-arrow { display: none; }
       <span class="aw-pill">10TH</span>
     </div>
           <div class="cs-body">
-            <div class="cs-tag dark">TRACK 03 · 02:30 · 10TH CEREMONY SPECIAL</div>
+            <div class="cs-tag dark">TRACK 03 · 02:30 · CAUSAL IP STORY</div>
             <h1 class="cs-h1 dark"><span class="ln">《무사히·고도리》</span><span class="ln">어썸 10주년 종무식</span></h1>
-            <p class="cs-sub dark">어썸엔터테인먼트 창립 10주년 종무식을 기념해 대표 IP 무사히와 고도리가 직접 10개의 촛불을 켜고, 지난 10년을 돌아보며 성수동 전 직원에게 축하와 감사를 전하는 8슬라이드 풀 기획</p>
+            <p class="cs-sub dark">축포 선물을 들고 오기로 한 든든이·도도히가 늦자(起·복선), 무사히·고도리가 단상을 지키며 10년 회고·전 팀 감사(承·轉)를 이어가고, 발걸음 진동·축포·4인방 완전체(結)로 회수되는 기승전결 단편</p>
+            <div class="cs-refs dark">
+              <div class="cs-refs-head dark"><strong>핵심 레퍼런스</strong><span>실사 플러시 질감 · 기념일 온기 · 공식 IP 톤 레퍼런스</span></div>
+              <div class="cs-refs-row"><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=jfwLZniY9mE" target="_blank" rel="noopener">▶ 〈포켓몬 컨시어지〉 ↗</a><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=atpyjjgBhCA" target="_blank" rel="noopener">▶ 〈리락쿠마와 가오루씨〉 ↗</a><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=vQqd2_2aig4" target="_blank" rel="noopener">▶ 오늘도 무사히 공식 ↗</a></div>
+            </div>
           </div>
           <div class="cs-foot dark">
-            <div class="cs-meta dark"><span>무사히·고도리 종무식 투톱 MC</span> <span class="cs-dot">·</span> <span>6씬 타임라인 &amp; 2분30초 풀 스크립트</span></div>
-            <button type="button" class="aw-btn-primary" onclick="goToSlide(28)">종무식 기획 의도 보기 →</button>
+            <div class="cs-meta dark"><span>지각 복선 → 축포·완전체 회수</span> <span class="cs-dot">·</span> <span>6씬 지도 &amp; 기승전결 스크립트</span></div>
+            <button type="button" class="aw-btn-primary" onclick="goToSlide(28)">복선·회수 기획 의도 보기 →</button>
           </div>
         </div>
         <div class="cs-photo"><img data-kv="15" alt="10개의 촛불 어썸 10주년 종무식 무사히와 고도리" /></div>
@@ -1840,6 +1890,11 @@ body.scroll-mode .side-arrow { display: none; }
         <div>
           <div class="eyebrow dark">TRACK 03 STRATEGY · 10TH CEREMONY SPECIAL</div>
           <h2 class="h2-dark">무사히·고도리가 <span class="c-blue">10주년 종무식 MC로 나서는 이유</span></h2>
+        <div class="strat-ref-strip dark">
+          <span class="srs-lbl dark">레퍼런스 영상</span>
+          <div class="srs-links"><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=jfwLZniY9mE" target="_blank" rel="noopener">▶ 〈포켓몬 컨시어지〉 ↗</a><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=atpyjjgBhCA" target="_blank" rel="noopener">▶ 〈리락쿠마와 가오루씨〉 ↗</a><a class="cs-ref-pill dark" href="https://www.youtube.com/watch?v=vQqd2_2aig4" target="_blank" rel="noopener">▶ 오늘도 무사히 공식 ↗</a></div>
+          <span class="srs-note dark">실사 플러시 질감 · 기념일 온기 · 공식 IP 톤 레퍼런스</span>
+        </div>
         </div>
         <div class="grid-3 gap-32 flex-1-row">
         <div class="hair-col dark">
@@ -1856,10 +1911,10 @@ body.scroll-mode .side-arrow { display: none; }
 
         <div class="hair-col dark">
           <div class="hc-num dark">03</div>
-          <h3 class="hc-title dark">종무식 맞춤 6씬 기승전결</h3>
-          <p class="hc-body dark">10개의 촛불 점화(오프닝) → 10년 회고·팀별 감사 무대(본편) → 블루·골드 축포와 패밀리 완전체 인사(피날레)로 행사 몰입을 극대화합니다.</p>
+          <h3 class="hc-title dark">복선과 회수가 있는 기승전결</h3>
+          <p class="hc-body dark">오프닝에 심은 &#x27;든든이·도도히 지각 복선(00:30)&#x27; → 둘만의 무대 사수(승) → 진심 감사(전) → 문 밖 진동·축포·4인방 완전체 등장(결)로 빈틈없이 연결됩니다.</p>
         </div></div>
-        <p class="closing-thesis dark">핵심 — 단순한 캐릭터 브이로그가 아니라, 어썸 창립 10주년 종무식 무대를 여는 공식 IP 헌정 필름입니다.</p>
+        <p class="closing-thesis dark">핵심 — 마지막에 든든이·도도히가 갑자기 붙지 않고, 오프닝 복선(00:30)에서 출발해 축포 폭발과 완전체 인사로 깔끔히 회수되는 한 편의 단편입니다.</p>
       </div>
     
         <span class="page-dot">29</span>
@@ -1871,7 +1926,7 @@ body.scroll-mode .side-arrow { display: none; }
         
       <div class="s-body gap-18">
         <div>
-          <div class="eyebrow light">10TH CEREMONY HOSTS (MUSAHEE &amp; GODORI) + FAMILY CAMEO</div>
+          <div class="eyebrow light">10TH CEREMONY HOSTS (MUSAHEE &amp; GODORI) + FINALE DUO</div>
           <h2 class="h2-light-sm">종무식 공식 캐스트 — <span class="hl-blue">무사히 · 고도리 투톱 중심</span></h2>
         </div>
         <div class="grid-4 gap-22 flex-1-row">
@@ -1880,98 +1935,98 @@ body.scroll-mode .side-arrow { display: none; }
           <div class="char-chan">MAIN 01 · 종무식 MC</div>
           <h3 class="char-name">무사히 (Musahee)</h3>
           <p class="char-lock">약 20cm 크림화이트 토끼. 정면 오른쪽 귀 끝만 검정(뒷모습은 왼쪽), 분홍 프릴 헤어밴드, 구슬 눈, 짧은 팔, 의상 없음.</p>
-          <div class="char-snd">역할: 10개의 촛불을 켜고 10주년 종무식의 문을 여는 메인 호스트(닫힌 입 무언 소리 + 말풍선).</div>
+          <div class="char-snd">역할: 촛불을 켜고 든든이·도도히가 올 때까지 침착하게 종무식 무대를 사수하는 메인 진행자.</div>
         </div>
         <div class="char-col main-cast">
           <div class="char-img"><img data-kv="16" alt="고도리 (Godori)" /></div>
           <div class="char-chan">MAIN 02 · 종무식 MC</div>
           <h3 class="char-name">고도리 (Godori)</h3>
           <p class="char-lock">폭신한 크림베이지 키링 곰(약 19cm). 머리 위 은색 볼체인 고리·목걸이, 검은 구슬 눈, 짧은 팔다리, 의상 없음.</p>
-          <div class="char-snd">역할: 무사히와 함께 10년 하이라이트와 전 직원 감사 인사를 전하는 종무식 투톱 호스트.</div>
+          <div class="char-snd">역할: 00:30 시계를 보고 &#x27;둘이 아직 안 왔어!&#x27; 복선을 던지며 무사히와 무대를 이끄는 공동 MC.</div>
         </div>
         <div class="char-col sub-cast">
           <div class="char-img"><img data-kv="3" alt="든든이 (Dundeuni)" /></div>
-          <div class="char-chan">SUPPORT · 종무식 축사</div>
+          <div class="char-chan">SUPPORT · 선물·축포 해결</div>
           <h3 class="char-name">든든이 (Dundeuni)</h3>
           <p class="char-lock">무사히의 6~7배 거대한 카라멜 브라운 곰. 큰 몸 대비 작은 머리·얼굴, 구슬 눈, 의상 없음.</p>
-          <div class="char-snd">역할: 피날레에 합류해 특유의 저음 허밍(&quot;음~~~&quot;)으로 10주년 축하를 더하는 든든한 지원군.</div>
+          <div class="char-snd">역할: 제일 큰 10주년 축포·선물을 안고 오느라 늦게 도착해, 01:40 &#x27;쿵·쿵&#x27; 진동과 함께 피날레를 터뜨림.</div>
         </div>
         <div class="char-col sub-cast">
           <div class="char-img"><img data-kv="14" alt="도도히 (Dodohi)" /></div>
-          <div class="char-chan">CAMEO · 피날레 합류</div>
+          <div class="char-chan">CAMEO · 피날레 완성</div>
           <h3 class="char-name">도도히 (Dodohi)</h3>
           <p class="char-lock">검정 단발머리와 고양이 귀, 정면 오른쪽 귀 빨간 리본핀 + 목 리본, 하얀 체형에 분홍 젤리 발바닥.</p>
-          <div class="char-snd">역할: 10주년 종무식 축포 엔딩에 합류해 어썸 IP 패밀리 인사를 완성하는 카메오.</div>
+          <div class="char-snd">역할: &#x27;피날레는 원래 마지막에 등장하는 법!&#x27;이라며 리본 매만지고 합류해 4인방 완전체 엔딩을 완성.</div>
         </div></div>
       </div>
     
         <span class="page-dot">30</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="30" data-title="Track 03 · 02:30 10주년 종무식 6씬 타임라인 지도">
+    <div class="slide-wrap" data-index="30" data-title="Track 03 · 02:30 10주년 종무식 기·승·전·결 타임라인">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(30)">PPT 보기 ↗</button>
-      <section class="slide theme-dark" aria-label="Slide 31 Track 03 · 02:30 10주년 종무식 6씬 타임라인 지도">
+      <section class="slide theme-dark" aria-label="Slide 31 Track 03 · 02:30 10주년 종무식 기·승·전·결 타임라인">
         
       <div class="s-body gap-14">
         <div class="row-between">
           <div>
-            <div class="eyebrow dark">TRACK 03 TIMELINE · 02:30 (150s · 6 SCENES · NO MUSIC LOCK)</div>
-            <h2 class="h2-dark-sm">《무사히·고도리 10주년 종무식》 <span class="c-blue">6씬 구성 지도</span></h2>
+            <div class="eyebrow dark">TRACK 03 TIMELINE · 02:30 · 복선→사수→진동·축포→완전체 회수</div>
+            <h2 class="h2-dark-sm">《무사히·고도리 10주년 종무식》 <span class="c-blue">기·승·전·결 6씬 지도</span></h2>
           </div>
-          <button type="button" class="aw-btn-primary" onclick="goToSlide(34)" style="padding: 9px 18px; font-size: 16px;">2분30초 풀 스크립트 보기 →</button>
+          <button type="button" class="aw-btn-primary" onclick="goToSlide(34)" style="padding: 9px 18px; font-size: 16px;">2분30초 인과 스크립트 보기 →</button>
         </div>
-        <div class="bo-banner">00:00–00:45 10개 촛불 오프닝 ──▶ 00:45–01:40 10년 회고·팀별 감사 무대 ──▶ 01:40–02:30 축포 피날레·완전체 인사</div>
+        <div class="bo-banner">起 비밀 촛불·지각 복선(00:45) ──▶ 承·轉 무대 사수·전 팀 감사(01:40) ──▶ 轉·結 진동·축포·4인방 완전체 회수(02:30)</div>
         <div class="bo-grid-3x2">
         <button type="button" class="tl-card dark" onclick="goToSlide(31)">
-          <div class="tl-thumb"><img data-kv="15" alt="종무식장 불이 켜지다" /></div>
-          <div class="tl-meta dark">SCENE 01 · 00:00–00:20</div>
-          <h3 class="tl-title dark">종무식장 불이 켜지다</h3>
-          <p class="tl-note dark">10개 금빛 촛불 점화 · 서울 노을 라운지</p>
+          <div class="tl-thumb"><img data-kv="15" alt="18시 후, 비밀 촛불 준비" /></div>
+          <div class="tl-meta dark">SCENE 01 [起] · 00:00–00:20</div>
+          <h3 class="tl-title dark">18시 후, 비밀 촛불 준비</h3>
+          <p class="tl-note dark">퇴근 후 라운지 · 10개 금빛 촛불 몰래 점화</p>
         </button>
         <button type="button" class="tl-card dark" onclick="goToSlide(31)">
-          <div class="tl-thumb"><img data-kv="15" alt="투톱 MC의 첫 환영 인사" /></div>
-          <div class="tl-meta dark">SCENE 02 · 00:20–00:45</div>
-          <h3 class="tl-title dark">투톱 MC의 첫 환영 인사</h3>
-          <p class="tl-note dark">무사히·고도리 정면 등장 · 개막 말풍선</p>
+          <div class="tl-thumb"><img data-kv="15" alt="든든이·도도히가 아직 안 왔다" /></div>
+          <div class="tl-meta dark">SCENE 02 [起] · 00:20–00:45</div>
+          <h3 class="tl-title dark">든든이·도도히가 아직 안 왔다</h3>
+          <p class="tl-note dark">시계 확인 후 당황 → 마지막 합류 복선(00:30)</p>
         </button>
         <button type="button" class="tl-card dark" onclick="goToSlide(32)">
-          <div class="tl-thumb"><img data-kv="16" alt="2016 뚝섬 → 2026 성수" /></div>
-          <div class="tl-meta dark">SCENE 03 · 00:45–01:15</div>
-          <h3 class="tl-title dark">2016 뚝섬 → 2026 성수</h3>
-          <p class="tl-note dark">종무식 단상 트로피 · 10년 하이라이트 회고</p>
+          <div class="tl-thumb"><img data-kv="16" alt="올 때까지 우리가 무대 사수" /></div>
+          <div class="tl-meta dark">SCENE 03 [承] · 00:45–01:15</div>
+          <h3 class="tl-title dark">올 때까지 우리가 무대 사수</h3>
+          <p class="tl-note dark">단상으로 이동해 뚝섬→성수 10년 회고 진행</p>
         </button>
         <button type="button" class="tl-card dark" onclick="goToSlide(32)">
-          <div class="tl-thumb"><img data-kv="16" alt="성수동 전 팀에게 감사를" /></div>
-          <div class="tl-meta dark">SCENE 04 · 01:15–01:40</div>
-          <h3 class="tl-title dark">성수동 전 팀에게 감사를</h3>
-          <p class="tl-note dark">제작·기획·디자인·경영 팀별 감사 헌사</p>
+          <div class="tl-thumb"><img data-kv="16" alt="선물보다 먼저 전하는 진심" /></div>
+          <div class="tl-meta dark">SCENE 04 [轉] · 01:15–01:40</div>
+          <h3 class="tl-title dark">선물보다 먼저 전하는 진심</h3>
+          <p class="tl-note dark">문은 안 열려도 전 팀에게 먼저 건네는 감사</p>
         </button>
         <button type="button" class="tl-card dark" onclick="goToSlide(33)">
-          <div class="tl-thumb"><img data-kv="17" alt="10주년 블루·골드 축포" /></div>
-          <div class="tl-meta dark">SCENE 05 · 01:40–02:05</div>
-          <h3 class="tl-title dark">10주년 블루·골드 축포</h3>
-          <p class="tl-note dark">어썸 블루 컨페티 · 투톱 축하 피날레</p>
+          <div class="tl-thumb"><img data-kv="17" alt="발걸음 진동 + 블루 축포" /></div>
+          <div class="tl-meta dark">SCENE 05 [轉] · 01:40–02:05</div>
+          <h3 class="tl-title dark">발걸음 진동 + 블루 축포</h3>
+          <p class="tl-note dark">문 밖 &#x27;쿵… 쿵…&#x27; 진동 직후 축포 팡!! 터짐</p>
         </button>
         <button type="button" class="tl-card dark" onclick="goToSlide(33)">
-          <div class="tl-thumb"><img data-kv="4" alt="든든이·도도히 완전체 인사" /></div>
-          <div class="tl-meta dark">SCENE 06 · 02:05–02:30</div>
-          <h3 class="tl-title dark">든든이·도도히 완전체 인사</h3>
-          <p class="tl-note dark">4인방 패밀리 합류 · 10주년 타이틀 엔딩</p>
+          <div class="tl-thumb"><img data-kv="4" alt="지각 해결 &amp; 4인방 완전체" /></div>
+          <div class="tl-meta dark">SCENE 06 [結] · 02:05–02:30</div>
+          <h3 class="tl-title dark">지각 해결 &amp; 4인방 완전체</h3>
+          <p class="tl-note dark">큰 축포 챙기느라 늦은 든든이·도도히 합류 엔딩</p>
         </button></div>
       </div>
     
         <span class="page-dot">31</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="31" data-title="CHAR 01 · 종무식 오프닝 10개의 촛불, 어썸 10주년 종무식">
+    <div class="slide-wrap" data-index="31" data-title="CHAR 01 · 비밀 준비·복선 10개의 촛불 &amp; 사라진 두 친구">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(31)">PPT 보기 ↗</button>
-      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 32 CHAR 01 · 종무식 오프닝 10개의 촛불, 어썸 10주년 종무식">
+      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 32 CHAR 01 · 비밀 준비·복선 10개의 촛불 &amp; 사라진 두 친구">
         
       <div class="sb-split">
         <div class="sb-left dark">
-          <div class="sb-photo"><img data-kv="15" alt="10개의 촛불, 어썸 10주년 종무식" /></div>
+          <div class="sb-photo"><img data-kv="15" alt="10개의 촛불 &amp; 사라진 두 친구" /></div>
           <div class="sb-left-info dark">
-            <div class="sb-punch dark"><span class="ln">&quot;성수동 식구들 모두 모였지? 어썸 10주년 종무식 시작이야!&quot;</span><span class="ln">&quot;10년 동안 수고한 우리 모두를 위해 촛불 열 개를 켰어!&quot;</span></div>
+            <div class="sb-punch dark"><span class="ln">&quot;큰 선물 들고 올 든든이랑 도도히가 아직 안 왔대!&quot;</span><span class="ln">&quot;올 때까지 우리가 먼저 무대 열어두고 시간 벌자!&quot;</span></div>
             <div class="sb-specs dark">
               <div><strong>TIME · CAM</strong><span>00:00–00:45 · 1.85:1 → 2.39:1 · 케이크 정면 · 투톱 클로즈</span></div>
               <div><strong>PIPELINE</strong><span>Nano Banana 2.1(시트) + Seedance</span><button type="button" class="inline-jump-btn" onclick="goToSlide(34)">2분30초 풀 스크립트 보기 →</button></div>
@@ -1981,24 +2036,24 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-right dark">
           <div class="sb-rhead">
             <div class="sb-top-row">
-              <div class="sb-tag dark">CHAR 01 · 종무식 오프닝 · 10개의 촛불</div>
+              <div class="sb-tag dark">CHAR 01 · 비밀 준비·복선 · 起 · 발단 · 복선(00:30)</div>
               <a class="sb-ref-link dark" href="https://www.youtube.com/watch?v=jfwLZniY9mE" target="_blank" rel="noopener">▶ 〈포켓몬 컨시어지〉 ↗</a>
             </div>
-            <h3 class="sb-title dark">10개의 촛불, 어썸 10주년 종무식</h3>
-            <div class="sb-sub dark">10주년 케이크 앞 무사히와 고도리의 종무식 오프닝</div>
+            <h3 class="sb-title dark">10개의 촛불 &amp; 사라진 두 친구</h3>
+            <div class="sb-sub dark">18시 비밀 케이크 점화 → &#x27;든든이·도도히가 아직 안 왔어!&#x27;</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
               <span>VISUAL · 화면 및 블로킹</span>
-              <ul class="sb-beats dark"><li>00:00–00:20: 10개 금빛 촛불 점화와 함께 창밖 서울 노을이 비치는 성수동 종무식 라운지가 열린다.</li><li>00:20–00:45: 화이트 케이크 앞 무사히·고도리 투톱 정면 클로즈업, 고개 갸웃 환영 인사로 개막을 알린다.</li></ul>
+              <ul class="sb-beats dark"><li>00:00–00:20 [起]: 18시 이후 텅 빈 성수 라운지, 무사히·고도리가 10주년 케이크 위 금빛 촛불 10개를 몰래 켠다.</li><li>00:20–00:45 [복선]: 시계를 본 고도리가 당황하고(&quot;큰 선물 가져올 든든이·도도히가 아직 안 왔어!&quot;), 무사히가 단상을 가리킨다.</li></ul>
             </div>
             <div class="sb-row dark">
               <span>AUDIO · EDIT · 사운드 및 컷 호흡</span>
-              <ul class="sb-beats dark"><li>NO MUSIC 최상단·네거티브 고정. 작은 촛불 점화음과 종무식장의 따뜻한 환호 앰비언스만 자연스럽게 얹는다.</li><li>무사히의 작고 귀여운 무언 소리와 고도리 볼체인 작은 딸랑임 위로 환영 자막·말풍선을 띄운다.</li></ul>
+              <ul class="sb-beats dark"><li>NO MUSIC 최상단·네거티브 고정. 작은 촛불 점화음과 시계 똑딱임, 무사히·고도리의 조바심 난 무언 옹알이만 얹는다.</li><li>00:30에 &#x27;왜 뒤에 든든이·도도히가 나오는지&#x27; 복선을 명확히 심어야 후반 피날레 등장이 뜬금없지 않고 반갑다.</li></ul>
             </div>
             <div class="sb-row dark">
               <span>DIRECTION · 연출 포인트</span>
-              <p>단순한 일상 브이로그가 아니라 &#x27;어썸 10주년 종무식 축하 무대의 개막&#x27;임을 첫 프레임에서 선명히 각인한다.</p>
+              <p>평면적 환영 인사가 아니라 &#x27;축포 담당 친구들이 늦어서 둘이 먼저 무대를 버텨야 하는&#x27; 1분 드라마를 연다.</p>
             </div>
           </div>
         </div>
@@ -2007,15 +2062,15 @@ body.scroll-mode .side-arrow { display: none; }
         <span class="page-dot">32</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="32" data-title="CHAR 02 · 10년의 감사 지난 10년을 돌아보는 축하 무대">
+    <div class="slide-wrap" data-index="32" data-title="CHAR 02 · 무대 사수·진심 올 때까지 무대 사수 &amp; 진심 감사">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(32)">PPT 보기 ↗</button>
-      <section class="slide theme-white p-0 scene-slide" aria-label="Slide 33 CHAR 02 · 10년의 감사 지난 10년을 돌아보는 축하 무대">
+      <section class="slide theme-white p-0 scene-slide" aria-label="Slide 33 CHAR 02 · 무대 사수·진심 올 때까지 무대 사수 &amp; 진심 감사">
         
       <div class="sb-split">
         <div class="sb-left light">
-          <div class="sb-photo"><img data-kv="16" alt="지난 10년을 돌아보는 축하 무대" /></div>
+          <div class="sb-photo"><img data-kv="16" alt="올 때까지 무대 사수 &amp; 진심 감사" /></div>
           <div class="sb-left-info light">
-            <div class="sb-punch light"><span class="ln">&quot;2016 뚝섬에서 여기 성수동까지, 정말 멋지게 걸어왔어.&quot;</span><span class="ln">&quot;올 한 해도, 그리고 지난 10년도 모두 정말 고마워!&quot;</span></div>
+            <div class="sb-punch light"><span class="ln">&quot;아직 문은 안 열렸지만, 큰 선물보다 먼저 하고 싶은 말 있어.&quot;</span><span class="ln">&quot;지난 10년도, 올 한 해도 6시 퇴근 지켜준 식구들 정말 고마워!&quot;</span></div>
             <div class="sb-specs light">
               <div><strong>TIME · CAM</strong><span>00:45–01:40 · 2.39:1 · 종무식 단상 정면 · 35mm</span></div>
               <div><strong>PIPELINE</strong><span>Nano Banana 2.1(무사히+고도리 시트)</span></div>
@@ -2025,24 +2080,24 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-right light">
           <div class="sb-rhead">
             <div class="sb-top-row">
-              <div class="sb-tag light">CHAR 02 · 10년의 감사 · 종무식 무대</div>
+              <div class="sb-tag light">CHAR 02 · 무대 사수·진심 · 承·轉 · 공간 이동·감사</div>
               <a class="sb-ref-link light" href="https://www.youtube.com/watch?v=atpyjjgBhCA" target="_blank" rel="noopener">▶ 〈리락쿠마와 가오루씨〉 ↗</a>
             </div>
-            <h3 class="sb-title light">지난 10년을 돌아보는 축하 무대</h3>
-            <div class="sb-sub light">종무식 단상 위 무사히·고도리의 10년 감사 인사</div>
+            <h3 class="sb-title light">올 때까지 무대 사수 &amp; 진심 감사</h3>
+            <div class="sb-sub light">단상 위 10년 회고(承) → 선물보다 먼저 전한 진심(轉)</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row light">
               <span>VISUAL · 화면 및 블로킹</span>
-              <ul class="sb-beats light"><li>00:45–01:15: 코발트블루·화이트 꽃과 트로피가 놓인 종무식 단상 위 무사히·고도리가 10년 여정을 회고한다.</li><li>01:15–01:40: 제작·기획·디자인·경영 전 팀의 노고에 감사를 전하는 팀별 감사 말풍선 헌사가 교차된다.</li></ul>
+              <ul class="sb-beats light"><li>00:45–01:15 [承]: 케이크 앞을 떠나 블루 꽃장식 단상으로 이동한 둘이 2016 뚝섬→2026 성수 10년을 소개하며 시간을 번다.</li><li>01:15–01:40 [轉]: 문이 안 열려 잠시 멈칫한 뒤 &quot;선물보다 진짜 하고 싶은 말부터 전하자&quot;며 전 팀에 감사 말풍선을 건넨다.</li></ul>
             </div>
             <div class="sb-row light">
               <span>AUDIO · EDIT · 사운드 및 컷 호흡</span>
-              <ul class="sb-beats light"><li>NO MUSIC 유지 후 후반 편집에서 따뜻한 연말 어쿠스틱 피아노와 객석 박수 효과음을 깔끔하게 믹싱한다.</li><li>구슬 눈·닫힌 입 락을 지킨 채 작은 고개 끄덕임과 말풍선으로 전 팀에 따뜻한 감사를 전한다.</li></ul>
+              <ul class="sb-beats light"><li>NO MUSIC 유지 후 후반 편집에서 따뜻한 연말 피아노와 단상 나무 두드리는 소리·객석 박수를 믹싱한다.</li><li>01:40 진심 어린 마지막 감사 문장이 끝나자마자, 문 밖에서 묵직한 &#x27;쿵… 쿵…&#x27; 발걸음 진동(J-Cut)이 울린다.</li></ul>
             </div>
             <div class="sb-row light">
               <span>DIRECTION · 연출 포인트</span>
-              <p>임직원 모두가 1년과 10년을 함께 회고하며 미소 짓는 종무식 본행사의 핵심 축하 파트로 기능한다.</p>
+              <p>캐릭터들이 &#x27;왜 단상으로 옮겨가서 10년 얘기를 꺼냈는가(승)&#x27;와 &#x27;진심이 먼저 닿는 순간(전)&#x27;에 확실한 이유를 준다.</p>
             </div>
           </div>
         </div>
@@ -2051,21 +2106,21 @@ body.scroll-mode .side-arrow { display: none; }
         <span class="page-dot">33</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="33" data-title="CHAR 03 · 축포 피날레 10주년 축포 &amp; 성수동 완전체 인사">
+    <div class="slide-wrap" data-index="33" data-title="CHAR 03 · 진동·축포·완전체 문 밖의 진동, 축포 &amp; 완전체 회수">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(33)">PPT 보기 ↗</button>
-      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 34 CHAR 03 · 축포 피날레 10주년 축포 &amp; 성수동 완전체 인사">
+      <section class="slide theme-dark p-0 scene-slide" aria-label="Slide 34 CHAR 03 · 진동·축포·완전체 문 밖의 진동, 축포 &amp; 완전체 회수">
         
       <div class="sb-split">
         <div class="sb-left dark">
           
         <div class="sb-diptych">
-          <div><img data-kv="17" alt="10주년 축포 &amp; 성수동 완전체 인사 1" /></div>
-          <div><img data-kv="4" alt="10주년 축포 &amp; 성수동 완전체 인사 2" /></div>
+          <div><img data-kv="17" alt="문 밖의 진동, 축포 &amp; 완전체 회수 1" /></div>
+          <div><img data-kv="4" alt="문 밖의 진동, 축포 &amp; 완전체 회수 2" /></div>
         </div>
           <div class="sb-left-info dark">
-            <div class="sb-punch dark"><span class="ln">&quot;어썸엔터테인먼트 창립 10주년, 진심으로 축하해!&quot;</span><span class="ln">&quot;우리의 다음 10년도, 무사히·고도리가 응원할게!&quot;</span></div>
+            <div class="sb-punch dark"><span class="ln">&quot;미안! 제일 큰 10주년 축포 챙겨 오느라 늦었어(음~~~)!&quot;</span><span class="ln">&quot;어썸 10주년 진심으로 축하해! 다음 10년도 다 같이 함께하자!&quot;</span></div>
             <div class="sb-specs dark">
-              <div><strong>TIME · CAM</strong><span>01:40–02:30 · 2.39:1 · 종무식 축포 풀샷 · 라운지 합류</span></div>
+              <div><strong>TIME · CAM</strong><span>01:40–02:30 · 2.39:1 · 축포 풀샷 → 4인방 라운지</span></div>
               <div><strong>PIPELINE</strong><span>Nano Banana 2.1(공식 시트 락)</span></div>
             </div>
           </div>
@@ -2073,24 +2128,24 @@ body.scroll-mode .side-arrow { display: none; }
         <div class="sb-right dark">
           <div class="sb-rhead">
             <div class="sb-top-row">
-              <div class="sb-tag dark">CHAR 03 · 축포 피날레 · 축포·완전체</div>
+              <div class="sb-tag dark">CHAR 03 · 진동·축포·완전체 · 轉·結 · 복선 완벽 회수</div>
               <a class="sb-ref-link dark" href="https://www.youtube.com/watch?v=vQqd2_2aig4" target="_blank" rel="noopener">▶ 오늘도 무사히 공식 톤 ↗</a>
             </div>
-            <h3 class="sb-title dark">10주년 축포 &amp; 성수동 완전체 인사</h3>
-            <div class="sb-sub dark">무사히·고도리 종무식 축포 → 든든이·도도히 합류</div>
+            <h3 class="sb-title dark">문 밖의 진동, 축포 &amp; 완전체 회수</h3>
+            <div class="sb-sub dark">&#x27;제일 큰 축하 챙기느라 늦었어!&#x27; — 든든이·도도히 합류</div>
           </div>
           <div class="sb-rows">
             <div class="sb-row dark">
               <span>VISUAL · 화면 및 블로킹</span>
-              <ul class="sb-beats dark"><li>01:40–02:05: 어썸 블루·화이트·골드 컨페티가 흩날리는 종무식 테이블 위 무사히·고도리가 축하 인사를 전한다.</li><li>02:05–02:30: 거대한 든든이(1:6~7 비율 락)와 도도히가 합류해 성수동 전 임직원 완전체 인사로 엔딩을 닫는다.</li></ul>
+              <ul class="sb-beats dark"><li>01:40–02:05 [轉]: &#x27;쿵… 쿵…&#x27; 진동과 함께 문이 열리며 지각했던 든든이가 품에 안고 온 블루·골드 컨페티 축포가 팡!! 쏟아진다.</li><li>02:05–02:30 [結]: 거대한 든든이(1:6~7)와 &quot;피날레는 원래 마지막&quot;이라며 달려온 도도히가 합류해 4인방 완전체로 인사한다.</li></ul>
             </div>
             <div class="sb-row dark">
               <span>AUDIO · EDIT · 사운드 및 컷 호흡</span>
-              <ul class="sb-beats dark"><li>① 무사히(오른쪽 검은 귀 끝)·고도리(은색 볼체인 고리·목걸이) 시트 락 ② 구슬 눈·손가락·파티모자/의상 금지 ③ NO MUSIC.</li><li>엔딩엔 컨페티 팝 사운드 위로 &quot;어썸엔터테인먼트 10주년 축하해! 다음 10년도 함께해!&quot; 타이틀이 뜬다.</li></ul>
+              <ul class="sb-beats dark"><li>① 무사히(오른쪽 검은 귀 끝)·고도리(볼체인 고리·목걸이)·든든이(1:6~7 비율) 시트 락 ② 구슬 눈·손가락·의상/모자 금지 ③ NO MUSIC.</li><li>진동음 → 컨페티 팝 사운드 → 든든이 저음 허밍(&quot;음~~~&quot;) 위로 10주년 타이틀이 뜨며 복선이 100% 회수된다.</li></ul>
             </div>
             <div class="sb-row dark">
               <span>DIRECTION · 연출 포인트</span>
-              <p>무사히·고도리가 주인공이 되어 종무식 객석의 박수와 웃음을 끌어내는 가장 품격 있고 사랑스러운 엔딩.</p>
+              <p>마지막에 든든이·도도히가 뜬금없이 붙지 않고, &#x27;큰 축포를 챙겨 오느라 늦은 주인공들&#x27;로 완벽하게 인과 회수된다.</p>
             </div>
           </div>
         </div>
@@ -2099,90 +2154,108 @@ body.scroll-mode .side-arrow { display: none; }
         <span class="page-dot">34</span>
       </section>
     </div>
-    <div class="slide-wrap" data-index="34" data-title="《무사히·고도리 10주년 종무식》 2분30초 풀 스크립트 &amp; 전문 복사">
+    <div class="slide-wrap" data-index="34" data-title="《무사히·고도리 10주년 종무식》 2분30초 기·승·전·결 스크립트 &amp; 전문 복사">
       <button type="button" class="jump-back-pill" onclick="enterPptAt(34)">PPT 보기 ↗</button>
-      <section class="slide theme-mist" aria-label="Slide 35 《무사히·고도리 10주년 종무식》 2분30초 풀 스크립트 &amp; 전문 복사">
+      <section class="slide theme-mist" aria-label="Slide 35 《무사히·고도리 10주년 종무식》 2분30초 기·승·전·결 스크립트 &amp; 전문 복사">
         
-      <div class="s-body gap-16">
+      <div class="s-body gap-14">
         <div class="row-between">
           <div>
-            <div class="eyebrow light">TRACK 03 FULL SCRIPT · 02:30 (150s) · SCENE 01–06</div>
-            <h2 class="h2-light-sm">《무사히·고도리 10주년 종무식》 <span class="hl-blue">2분30초 풀 스크립트</span></h2>
+            <div class="eyebrow light">TRACK 03 FULL SCRIPT · 02:30 (150s) · 복선·회수 완성본</div>
+            <h2 class="h2-light-sm">《무사히·고도리 10주년 종무식》 <span class="hl-blue">기·승·전·결 풀 스크립트</span></h2>
           </div>
           <button type="button" class="aw-btn-primary" id="btnCopyCharNa" onclick="copyCharScript()" style="padding: 10px 18px; font-size: 16px; flex-shrink: 0;">2분30초 전문 복사</button>
         </div>
-        <div class="grid-2 gap-24 flex-1-row" style="padding-bottom: 8px;">
-        <div class="script-col wide">
-          <div class="sc-tc">PART I · 00:00–01:15 · 오프닝 → 환영 → 10년 회고</div>
-          <div class="sc-vis">사운드: 생성 시 NO MUSIC 고정 · 후반에 촛불 점화음·무언 소리·따뜻한 연말 피아노 믹싱</div>
-          <div class="bo-items-wrap">
-            <div class="bo-item">
-              <div class="bo-item-tc">SCENE 01 · 00:00–00:20</div>
-              <div class="bo-item-lines"><span class="na-line">[화면] 성수 노을 라운지 · 10개 촛불 점화 · 무사히·고도리 등장</span><span class="na-line">[무사히 말풍선] &quot;성수동 식구들 다 모였지? 어썸 10주년 종무식 시작이야!&quot;</span><span class="na-line">[고도리 말풍선] (은색 볼체인 딸랑) &quot;10년 수고한 우리를 위해 초 열 개 켰어!&quot;</span></div>
+        <div class="grid-2 gap-24 flex-1-row">
+        <div class="script-col wide tight">
+          <div class="sc-tc">PART I [起·承] · 00:00–01:15 · 비밀 준비 → 복선 → 무대 사수</div>
+          <div class="sc-vis" style="padding: 6px 10px;">연결: 18시 비밀 촛불 → 지각 복선(00:30) → 올 때까지 단상 올라 무대 사수</div>
+          <div class="bo-items-wrap tight">
+            <div class="bo-item tight">
+              <div class="bo-item-tc">SCENE 01 [起] · 00:00–00:20 · 비밀 준비</div>
+              <div class="bo-item-lines"><span class="na-line">[화면] 18시 후 텅 빈 성수 라운지 · 10개 촛불 몰래 켜는 투톱</span><span class="na-line">[무사히 말풍선] &quot;성수동 식구들 몰래 10주년 서프라이즈 준비하자!&quot;</span><span class="na-line">[고도리 말풍선] (은색 볼체인 딸랑) &quot;10년 수고한 우리 위해 초 열 개!&quot;</span></div>
             </div>
-            <div class="bo-item">
-              <div class="bo-item-tc">SCENE 02 · 00:20–00:45</div>
-              <div class="bo-item-lines"><span class="na-line">[화면] 케이크 앞 투톱 클로즈업 · 구슬 눈 유지 · 고개 갸웃 교감</span><span class="na-line">[무사히] &quot;오늘 하루만큼은 조회수도 마감도 내려놓고 같이 웃자!&quot;</span><span class="na-line">[고도리] &quot;어썸의 열 번째 생일, 무사히랑 고도리가 직접 진행할게!&quot;</span></div>
+            <div class="bo-item tight">
+              <div class="bo-item-tc">SCENE 02 [起·복선] · 00:20–00:45 · 사라진 두 친구</div>
+              <div class="bo-item-lines"><span class="na-line">[화면] 촛불 다 켜고 시계 본 고도리 당황 · 문 쪽 쳐다보는 무사히</span><span class="na-line">[고도리] &quot;큰 선물 들고 올 든든이·도도히가 아직 안 왔어!&quot;</span><span class="na-line">[무사히] &quot;일단 올 때까지 우리가 먼저 무대 열어두고 시간 벌자!&quot;</span></div>
             </div>
-            <div class="bo-item">
-              <div class="bo-item-tc">SCENE 03 · 00:45–01:15</div>
-              <div class="bo-item-lines"><span class="na-line">[화면] 종무식 단상 트로피·블루 꽃장식 × 2016 뚝섬→성수 10년 몽타주</span><span class="na-line">[자막] &quot;2016 뚝섬 작은 공간에서 30+ 채널·177억 뷰의 성수동까지.&quot;</span><span class="na-line">[고도리] &quot;4만 7천 편 하나하나에 우리 모두의 진심이 담겨 있대!&quot;</span></div>
+            <div class="bo-item tight">
+              <div class="bo-item-tc">SCENE 03 [承] · 00:45–01:15 · 단상 위 무대 사수</div>
+              <div class="bo-item-lines"><span class="na-line">[화면] 케이크 앞→종무식 단상으로 이동해 뚝섬→성수 10년 회고 진행</span><span class="na-line">[자막] &quot;2016 뚝섬 작은 작업실에서 30+ 채널·177억 뷰의 성수동까지.&quot;</span><span class="na-line">[고도리] &quot;4만 7천 편 하나하나 우리 식구들 진심으로 채웠잖아!&quot;</span></div>
             </div></div>
+          <div class="sc-bridge">인과 연결 → 든든이·도도히 지각 복선(00:30) → 올 때까지 단상 사수</div>
         </div>
-        <div class="script-col wide accent-blue">
-          <div class="sc-tc">PART II · 01:15–02:30 · 팀별 감사 → 축포 → 완전체 엔딩</div>
-          <div class="sc-vis">연출: 표정 변화 최소 · 고개 기울기·말풍선 중심 · 피날레 든든이(1:6~7)·도도히 합류</div>
-          <div class="bo-items-wrap">
-            <div class="bo-item">
-              <div class="bo-item-tc">SCENE 04 · 01:15–01:40</div>
-              <div class="bo-item-lines"><span class="na-line">[화면] 단상 위 투톱 정면 · 제작·기획·디자인·경영 팀별 감사 컷 교차</span><span class="na-line">[무사히] &quot;밤샘 대신 6시에 웃으며 퇴근하게 지켜준 우리 문화, 진짜 멋져!&quot;</span><span class="na-line">[고도리] &quot;올 한 해도, 그리고 지난 10년도 각자 자리에서 정말 고마워!&quot;</span></div>
+        <div class="script-col wide tight accent-blue">
+          <div class="sc-tc">PART II [轉·結] · 01:15–02:30 · 진심 → 진동·축포 → 완전체</div>
+          <div class="sc-vis" style="padding: 6px 10px;">연결: 전 팀 진심 감사 직후 발걸음 진동(쿵·쿵) → 축포·4인방 완전체 회수</div>
+          <div class="bo-items-wrap tight">
+            <div class="bo-item tight">
+              <div class="bo-item-tc">SCENE 04 [轉] · 01:15–01:40 · 선물보다 먼저 진심</div>
+              <div class="bo-item-lines"><span class="na-line">[화면] 회고 끝났는데도 조용한 문 · 고개 끄덕이고 마이크 잡은 둘</span><span class="na-line">[무사히] &quot;큰 선물보다 먼저, 밤샘 없이 6시 퇴근 지켜준 우리 진짜 멋져!&quot;</span><span class="na-line">[고도리] &quot;올 한 해도, 지난 10년도 각자 자리에서 정말 고마워!&quot;</span></div>
             </div>
-            <div class="bo-item">
-              <div class="bo-item-tc">SCENE 05 · 01:40–02:05</div>
-              <div class="bo-item-lines"><span class="na-line">[화면] 어썸 블루·화이트·골드 컨페티 흩날리는 종무식 축포 테이블</span><span class="na-line">[효과음] 경쾌한 컨페티 팝 + 객석 환호 · 무사히 무언 소리 &amp; 고도리 옹알이</span><span class="na-line">[투톱 말풍선] &quot;어썸엔터테인먼트 창립 10주년, 진심으로 축하해!&quot;</span></div>
+            <div class="bo-item tight">
+              <div class="bo-item-tc">SCENE 05 [轉·해결] · 01:40–02:05 · 발걸음 진동 &amp; 축포</div>
+              <div class="bo-item-lines"><span class="na-line">[화면] 문 밖 &#x27;쿵… 쿵…&#x27; 진동에 케이크·볼체인 흔들 → 블루 축포 팡!!</span><span class="na-line">[사운드] 문 열리는 소리 + 컨페티 팝 + 객석 환호(무사히·고도리 깜짝)</span><span class="na-line">[투톱 말풍선] &quot;와아!! 든든이·도도히다! 제일 큰 축하 들고 왔구나!!&quot;</span></div>
             </div>
-            <div class="bo-item">
-              <div class="bo-item-tc">SCENE 06 · 02:05–02:30</div>
-              <div class="bo-item-lines"><span class="na-line">[화면] 거대한 든든이(&quot;음~~~&quot;)와 도도히 합류 → 4인방 성수 완전체 인사</span><span class="na-line">[엔딩 타이틀] AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)</span><span class="na-line">[엔딩 카피] &quot;우리의 다음 10년도, 무사히·고도리가 응원할게!&quot;</span></div>
+            <div class="bo-item tight">
+              <div class="bo-item-tc">SCENE 06 [結·회수] · 02:05–02:30 · 4인방 완전체 엔딩</div>
+              <div class="bo-item-lines"><span class="na-line">[화면] 큰 축포 안은 든든이(&quot;음~~~&quot;)와 리본 매만진 도도히 합류 4샷</span><span class="na-line">[도도히·든든이] &quot;피날레는 원래 마지막! 어썸 10주년 진심으로 축하해!&quot;</span><span class="na-line">[엔딩 타이틀] AWESOME ENTERTAINMENT 10TH · &quot;다음 10년도 함께해!&quot;</span></div>
             </div></div>
+          <div class="sc-bridge">인과 연결 → 전 팀 진심 감사 직후 발걸음 진동 → 축포·완전체 복선 회수</div>
         </div></div>
-        <textarea id="charNaRaw" class="sr-only-copy" readonly tabindex="-1">[작품명] 《무사히·고도리 10주년 종무식》 (02:30 · 6씬 · 공식 IP 종무식 기념 헌정 필름)
+        <textarea id="charNaRaw" class="sr-only-copy" readonly tabindex="-1">[작품명] 《무사히·고도리 10주년 종무식》 (02:30 · 6씬 · 기·승·전·결 복선·회수 완성본)
 
 [제작 락]
 - 이미지/영상 생성 시 프롬프트 최상단·네거티브 양쪽에 NO MUSIC 필수.
 - 무사히: 정면 오른쪽 귀 끝 검정, 구슬 눈(흰자/윙크 금지), 분홍 프릴 헤어밴드만, 짧은 팔, 손가락·의상·파티모자 금지.
 - 고도리: 크림베이지 털, 머리 위 은색 볼체인 고리 + 목 은색 볼체인 목걸이, 구슬 눈, 손가락·의상·파티모자 금지.
+- 든든이: 무사히의 6~7배 크기 카라멜 브라운 곰, 큰 몸 대비 작은 머리·얼굴, 의상 금지, 굵고 낮은 닫힌 입 허밍(&quot;음~~~&quot;).
 
-[SCENE 01 · 00:00–00:20 — 종무식장 불이 켜지다]
-(화면) 서울 노을이 비치는 성수동 종무식 라운지, 화이트 케이크 위 10개 금빛 촛불 점화.
-(사운드) 작은 촛불 점화음, 따뜻한 객석 환호 앰비언스.
-(무사히 말풍선) &quot;성수동 식구들 다 모였지? 어썸 10주년 종무식 시작이야!&quot;
-(고도리 말풍선) (볼체인 딸랑) &quot;10년 수고한 우리를 위해 초 열 개 켰어!&quot;
+================================================================
+【起 · 발단 &amp; 복선 (00:00–00:45)】 비밀 촛불 준비 → &quot;둘이 아직 안 왔어!&quot;
+================================================================
+- [SCENE 01 · 00:00–00:20]
+  (화면) 오후 6시 퇴근 후 불 꺼진 성수동 종무식 라운지. 무사히·고도리가 화이트 케이크 위 금빛 촛불 10개를 몰래 켠다.
+  (사운드) 작은 촛불 점화음, 따뜻한 노을 라운지 공기음.
+  (무사히 말풍선) &quot;성수동 식구들 몰래 10주년 서프라이즈 준비하자!&quot;
+  (고도리 말풍선) (볼체인 딸랑) &quot;10년 수고한 우리를 위해 초 열 개 켰어!&quot;
+- [SCENE 02 · 00:20–00:45 — 복선 삽입]
+  (화면) 뿌듯해하던 둘이 시계를 보더니 문 쪽을 쳐다보며 당황한다.
+  (고도리) &quot;어?! 제일 큰 10주년 축하 선물 들고 오기로 한 든든이랑 도도히가 아직 안 왔어!&quot;
+  (무사히) (고개 끄덕이며 단상을 가리킴) &quot;괜찮아! 둘이 올 때까지 우리가 먼저 무대 열어두고 시간 벌자!&quot;
+[인과 전환 →] 축포 선물을 맡은 든든이·도도히가 늦어지자, 무사히·고도리가 시간을 벌기 위해 단상으로 올라감
 
-[SCENE 02 · 00:20–00:45 — 투톱 MC의 첫 환영 인사]
-(화면) 케이크 앞 무사히·고도리 정면 클로즈업, 고개 갸웃거리며 교감.
-(무사히) &quot;오늘 하루만큼은 조회수도 마감도 내려놓고 같이 웃자!&quot;
-(고도리) &quot;어썸의 열 번째 생일, 무사히랑 고도리가 직접 진행할게!&quot;
+================================================================
+【承 · 무대 사수 (00:45–01:15)】 케이크 앞→단상 이동 &amp; 10년 회고
+================================================================
+- [SCENE 03 · 00:45–01:15]
+  (화면) 코발트블루·화이트 꽃과 트로피가 놓인 종무식 단상 위, 무사히·고도리가 시간 끌기 겸 10년 하이라이트를 소개한다.
+  (자막) &quot;2016 뚝섬 작은 작업실에서 30+ 채널·177억 뷰의 성수동까지.&quot;
+  (고도리) &quot;4만 7천 편 하나하나에 우리 모두의 진심이 담겨 있대! 이제 곧 오겠지?&quot;
+[인과 전환 →] 10년 회고가 끝났는데도 아직 문 밖이 조용하자, 둘은 선물보다 먼저 진짜 진심을 꺼내기로 함
 
-[SCENE 03 · 00:45–01:15 — 2016 뚝섬 → 2026 성수 10년 회고]
-(화면) 코발트블루·화이트 꽃장식과 트로피가 놓인 종무식 단상 위 무사히·고도리 × 10년 하이라이트 몽타주.
-(자막) &quot;2016 뚝섬 작은 공간에서 30+ 채널·177억 뷰의 성수동까지.&quot;
-(고도리) &quot;4만 7천 편 하나하나에 우리 모두의 진심이 담겨 있대!&quot;
+================================================================
+【轉 · 진심 전환 &amp; 해결 (01:15–02:05)】 전 팀 감사 직후 발걸음 진동 + 축포 폭발
+================================================================
+- [SCENE 04 · 01:15–01:40 — 감정 전환]
+  (화면) 살짝 긴장한 둘이 서로 고개를 끄덕이더니 객석을 바라보며 차분히 감사를 전한다.
+  (무사히) &quot;사실 큰 선물보다 먼저 꼭 하고 싶은 말 있어. 밤샘 없이 6시 퇴근 지켜준 우리 문화, 진짜 멋져!&quot;
+  (고도리) &quot;올 한 해도, 그리고 지난 10년도 각자 자리에서 정말 고마워!&quot;
+- [SCENE 05 · 01:40–02:05 — 발걸음 진동 &amp; 축포 폭발]
+  (사운드) 고도리의 마지막 말이 끝나는 순간, 문 밖에서 묵직한 &#x27;쿵… 쿵…&#x27; 발걸음 진동과 볼체인 딸랑임!
+  (화면) 문이 활짝 열리며 지각했던 든든이가 품에 안고 온 어썸 블루·화이트·골드 컨페티 축포가 테이블 위로 팡!! 쏟아진다.
+  (투톱 말풍선) &quot;와아!! 든든이·도도히다! 이 큰 축하 챙겨 오느라 늦었구나!!&quot;
+[인과 전환 →] 왜 두 친구가 마지막에 등장했는지(제일 큰 축하 준비) 단번에 풀리며 피날레로 직결
 
-[SCENE 04 · 01:15–01:40 — 성수동 전 팀에게 감사를]
-(화면) 제작·기획·디자인·경영 팀별 감사 인사 컷 교차.
-(무사히) &quot;밤샘 대신 6시에 웃으며 퇴근하게 지켜준 우리 문화, 진짜 멋져!&quot;
-(고도리) &quot;올 한 해도, 그리고 지난 10년도 각자 자리에서 정말 고마워!&quot;
-
-[SCENE 05 · 01:40–02:05 — 10주년 블루·골드 축포]
-(화면) 어썸 블루·화이트·골드 컨페티가 흩날리는 종무식 축포 테이블 위 투톱.
-(사운드) 경쾌한 컨페티 팝, 무사히 닫힌 입 무언 소리 &amp; 고도리 옹알이, 객석 박수.
-(투톱 말풍선) &quot;어썸엔터테인먼트 창립 10주년, 진심으로 축하해!&quot;
-
-[SCENE 06 · 02:05–02:30 — 든든이·도도히 완전체 엔딩]
-(화면) 거대한 든든이(1:6~7 비율, 저음 허밍 &quot;음~~~&quot;)와 도도히가 합류한 성수 완전체 인사.
-[ENDING TITLE] AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
-&quot;우리의 다음 10년도, 무사히·고도리가 응원할게!&quot; </textarea>
+================================================================
+【結 · 복선 회수 (02:05–02:30)】 4인방 완전체 인사 &amp; 타이틀 엔딩
+================================================================
+- [SCENE 06 · 02:05–02:30]
+  (화면) 컨페티 사이로 거대한 든든이(1:6~7 비율, 저음 허밍 &quot;음~~~&quot;)와 리본을 매만지며 달려온 도도히가 무사히·고도리 곁에 합류한 4인방 완전체 샷.
+  (든든이) &quot;음~~~ 제일 큰 축하 들고 오느라 늦었어!&quot;
+  (도도히) &quot;10주년 피날레는 원래 마지막에 등장하는 법이라구!&quot;
+  [ENDING TITLE] AWESOME ENTERTAINMENT 10TH ANNIVERSARY (2016 — 2026)
+  &quot;어썸 10주년 진심으로 축하해! 우리의 다음 10년도 무사히·고도리가 응원할게!&quot; </textarea>
       </div>
     
         <span class="page-dot">35</span>
@@ -2538,7 +2611,7 @@ body.scroll-mode .side-arrow { display: none; }
     }
   });
 
-  const STORE_KEY = 'awesome10th_v18_checks';
+  const STORE_KEY = 'awesome10th_v20_checks';
   const chkInputs = Array.from(document.querySelectorAll('#decisionChecks input[type="checkbox"]'));
   const checkCountEl = document.getElementById('checkCount');
   let saved = [];
